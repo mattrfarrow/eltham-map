@@ -1,0 +1,84 @@
+<html>
+
+<head>
+  <meta charset='utf-8' />
+  <title>Eltham Map</title>
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+  <script src='https://static-assets.mapbox.com/gl-pricing/dist/mapbox-gl.js'></script>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
+
+  <style>
+    body { margin:0; padding:0; }
+    #map { position:absolute; top:0; bottom:0; left:200; right: 0; }
+
+    #things-to-do { position:absolute; top:0; bottom:0; left: 0; }
+
+    #marker, #marker2 {
+      background-image: url('https://docs.mapbox.com/mapbox-gl-js/assets/washington-monument.jpg');
+      background-size: cover;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    .mapboxgl-popup {
+      max-width: 200px;
+    }
+
+  </style>
+</head>
+
+<body>
+ 
+
+ <div id="things-to-do">
+  <button id="best-kept-secret">Best Kept Secret</button>
+  <p>Eltham Palace</p>
+  <p>Eltham Park South</p>
+ </div>
+<div id='map'></div>
+ 
+<script>
+mapboxgl.accessToken = 'pk.eyJ1IjoibWF0dHJmYXJyb3ciLCJhIjoiS0gtNnVKUSJ9.9n4like7mmNyB4aDm27uXw';
+ 
+var monument = [0.055681, 51.450711];
+var eltham_park_south = [0.067033, 51.454722];
+
+var map = new mapboxgl.Map({
+container: 'map',
+style: 'mapbox://styles/mapbox/light-v10',
+center: monument,
+zoom: 15
+});
+
+
+
+ 
+var popup = new mapboxgl.Popup({ offset: 25 })
+.setText('Construction on the Washington Monument began in 1848.');
+ 
+// create DOM element for the marker
+var el = document.createElement('div');
+el.id = 'marker';
+ 
+ var el2 = document.createElement('div');
+el2.id = 'marker2';
+
+// create the marker
+new mapboxgl.Marker(el)
+.setLngLat(monument)
+.setPopup(popup) // sets a popup on this marker
+.addTo(map);
+
+// create the marker
+new mapboxgl.Marker(el2)
+.setLngLat(eltham_park_south)
+.setPopup(popup) // sets a popup on this marker
+.addTo(map);
+ 
+</script>
+ 
+</body>
+</html>
+
