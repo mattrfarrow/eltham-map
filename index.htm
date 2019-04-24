@@ -30,16 +30,20 @@
 </head>
 
 <body>
- 
 
  <div id="things-to-do">
-  <button id="best-kept-secret">Best Kept Secret</button>
+  <button id="best-kept-secret" onclick="clicked('best-kept-secret')">Best Kept Secret</button>
   <p>Eltham Palace</p>
   <p>Eltham Park South</p>
  </div>
 <div id='map'></div>
  
 <script>
+
+clicked = function(elem) {
+  console.log("clicked "+elem);
+}
+
 mapboxgl.accessToken = 'pk.eyJ1IjoibWF0dHJmYXJyb3ciLCJhIjoiS0gtNnVKUSJ9.9n4like7mmNyB4aDm27uXw';
  
 var monument = [0.055681, 51.450711];
@@ -47,12 +51,10 @@ var eltham_park_south = [0.067033, 51.454722];
 
 var map = new mapboxgl.Map({
 container: 'map',
-style: 'mapbox://styles/mapbox/light-v10',
+style: 'mapbox://styles/mapbox/streets-v11',
 center: monument,
 zoom: 15
 });
-
-
 
  
 var popup = new mapboxgl.Popup({ offset: 25 })
