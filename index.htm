@@ -27,39 +27,34 @@ clicked = function(elem) {
 
 mapboxgl.accessToken = 'pk.eyJ1IjoibWF0dHJmYXJyb3ciLCJhIjoiS0gtNnVKUSJ9.9n4like7mmNyB4aDm27uXw';
  
-var monument = [0.055681, 51.450711];
-var eltham_park_south = [0.067033, 51.454722];
+var monument = {name: "Monument", coords: [0.055681, 51.450711] };
+var eltham_park_south = {name: "Eltham Park South", coords: [0.067033, 51.454722] };
+var attractions = [monument, eltham_park_south];
+
 
 var map = new mapboxgl.Map({
 container: 'map',
 style: 'mapbox://styles/mapbox/streets-v11',
-center: monument,
+center: monument.coords,
 zoom: 15
 });
 
- 
-var popup = new mapboxgl.Popup({ offset: 25 })
-.setText('Construction on the Washington Monument began in 1848.');
- 
-// create DOM element for the marker
-var el = document.createElement('div');
-el.id = 'marker';
- 
- var el2 = document.createElement('div');
-el2.id = 'marker2';
 
-// create the marker
-new mapboxgl.Marker(el)
-.setLngLat(monument)
-.setPopup(popup) // sets a popup on this marker
-.addTo(map);
+attractions.forEach(function(attraction) {
+    var popup = new mapboxgl.Popup({ offset: 25 })
+    .setText(attraction.name);
 
-// create the marker
-new mapboxgl.Marker(el2)
-.setLngLat(eltham_park_south)
-.setPopup(popup) // sets a popup on this marker
-.addTo(map);
- 
+    // create DOM element for the marker
+    var el = document.createElement('div');
+    el.className = 'marker';
+
+    // create the marker
+    new mapboxgl.Marker(el)
+    .setLngLat(attraction.coords)
+    .setPopup(popup) // sets a popup on this marker
+    .addTo(map);
+});
+
 </script>
  
 </body>

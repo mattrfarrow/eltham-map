@@ -3,7 +3,7 @@ body { margin:0; padding:0; }
 
 #things-to-do { position:absolute; top:0; bottom:0; left: 0; }
 
-#marker, #marker2 {
+.marker {
   background-image: url('https://docs.mapbox.com/mapbox-gl-js/assets/washington-monument.jpg');
   background-size: cover;
   width: 50px;
