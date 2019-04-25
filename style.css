@@ -1,4 +1,5 @@
-body { margin:0; padding:0; }
+body { margin:0; padding:0;
+font-family:apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;}
 
 #map { position:absolute; top:30; bottom:0; left:200; right: 0; }
 #things-to-do { position:absolute; top:30; bottom:0; left: 0; }
@@ -16,9 +17,15 @@ body { margin:0; padding:0; }
   max-width: 200px;
 }
 
-.attraction {
-    height: 120;
+#attractionsTable {
     max-width: 200;
+}
+
+#attractionsTable tr:nth-child(even) {background: #dcfbe4}
+#attractionsTable tr:nth-child(odd) {background: #FFF}
+
+.attraction {
+    height: 140;
 }
 
 .attraction-name {

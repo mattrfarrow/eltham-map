@@ -72,20 +72,21 @@ function generateText(attraction) {
     el.appendChild(descDiv);
     el.onclick = function() {clicked(attraction.coords)};
 
-    var outerDiv = document.createElement("div");
-    outerDiv.className = "attraction";
-    outerDiv.appendChild(el);
-    return outerDiv;
+    var outerTr = document.createElement("tr");
+    outerTr.className = "attraction";
+    outerTr.appendChild(el);
+    return outerTr;
 }
 
 function generateTexts(attractions) {
-    var rootDiv = document.createElement("div");
+    var attractionsTable = document.createElement("table");
+    attractionsTable.id = "attractionsTable";
 
     attractions.forEach(function(attraction) {
        var el = generateText(attraction);
-       rootDiv.appendChild(el);
+       attractionsTable.appendChild(el);
     });
-    return rootDiv;
+    return attractionsTable;
 }
 
 attractions.forEach(addMarkers);
