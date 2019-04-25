@@ -18,22 +18,13 @@
  
 <script>
 
-<!--  <button id="best-kept-secret" onclick="clicked('best-kept-secret')">Best Kept Secret</button>-->
-<!--  <p>Eltham Palace</p>-->
-<!--  <p>Eltham Park South</p>-->
-
-clicked = function(coords) {
-  console.log(coords);
-  map.panTo(coords);
-}
-
 mapboxgl.accessToken = 'pk.eyJ1IjoibWF0dHJmYXJyb3ciLCJhIjoiS0gtNnVKUSJ9.9n4like7mmNyB4aDm27uXw';
- 
 
 var attractions = [
-    {name: "Monument", coords: [0.055681, 51.450711] },
-    {name: "Eltham Park South", coords: [0.067033, 51.454722] },
-    {name: "Bob Hope Theatre", coords: [0.049947, 51.450701] }
+    {name: "Eltham Centre", coords: [0.057588, 51.451554], desc: "Offers pool, gym and various sports activity courses. Participate in lessons like Group Cycle, Yoga and Power Pump." },
+    {name: "Eltham Park South", coords: [0.067033, 51.454722], desc: "Large, grassy area, good for informal ball games with splendid tree-lined avenues, a children's playground and a picnic area." },
+    {name: "Bob Hope Theatre", coords: [0.049947, 51.450701], desc: "Community theatre owned and run by the members of Eltham Little Theatre Company, running approximately 11 shows each year." },
+    {name: "Eltham Palace", coords: [0.048400, 51.446989], desc: "Fuses 1930s design with original medieval architecture, set in 19 acres of award-winning gardens." },
 ];
 
 var map = new mapboxgl.Map({
@@ -43,6 +34,10 @@ center: [0.055681, 51.450711],
 zoom: 15
 });
 
+clicked = function(coords) {
+  console.log(coords);
+  map.panTo(coords);
+}
 
 function addMarkers(attraction) {
     var popup = new mapboxgl.Popup({ offset: 25 })
@@ -60,10 +55,22 @@ function addMarkers(attraction) {
 }
 
 function generateText(attraction) {
-    var el = document.createElement('button');
+    var nameDiv = document.createElement("div");
+    nameDiv.innerHTML = attraction.name;
+    nameDiv.className = "attraction-name";
+
+    var descDiv = document.createElement("div");
+    descDiv.innerHTML = attraction.desc;
+
+    var el = document.createElement('div');
+    el.appendChild(nameDiv);
+    el.appendChild(descDiv);
     el.onclick = function() {clicked(attraction.coords)};
-    el.innerHTML = attraction.name;
-    return el;
+
+    var outerDiv = document.createElement("div");
+    outerDiv.className = "attraction";
+    outerDiv.appendChild(el);
+    return outerDiv;
 }
 
 function generateTexts(attractions) {
