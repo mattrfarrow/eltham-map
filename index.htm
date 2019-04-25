@@ -7,7 +7,6 @@
   <script src='https://static-assets.mapbox.com/gl-pricing/dist/mapbox-gl.js'></script>
   <link href='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
   <link rel="stylesheet" type="text/css" href='style.css'/>
-  
 </head>
 
 <body>
@@ -17,7 +16,9 @@
     <span class="section-header">What's on?</span>
 </div>
 
- <div id="things-to-do">
+ <div id="side-panel">
+     <div id="attractions">
+         </div>
  </div>
 <div id='map'></div>
  
@@ -59,7 +60,7 @@ function addMarkers(attraction) {
     .addTo(map);
 }
 
-function generateText(attraction) {
+function generateAttractionsTableRow(attraction) {
     var nameDiv = document.createElement("div");
     nameDiv.innerHTML = attraction.name;
     nameDiv.className = "attraction-name";
@@ -78,19 +79,30 @@ function generateText(attraction) {
     return outerTr;
 }
 
-function generateTexts(attractions) {
+function generateAttractionsTable(attractions) {
     var attractionsTable = document.createElement("table");
     attractionsTable.id = "attractionsTable";
 
     attractions.forEach(function(attraction) {
-       var el = generateText(attraction);
+       var el = generateAttractionsTableRow(attraction);
+       attractionsTable.appendChild(el);
+    });
+    return attractionsTable;
+}
+
+function generateAttractionsTable(attractions) {
+    var attractionsTable = document.createElement("table");
+    attractionsTable.id = "attractionsTable";
+
+    attractions.forEach(function(attraction) {
+       var el = generateAttractionsTableRow(attraction);
        attractionsTable.appendChild(el);
     });
     return attractionsTable;
 }
 
 attractions.forEach(addMarkers);
-document.getElementById("things-to-do").appendChild(generateTexts(attractions));
+document.getElementById("attractions").appendChild(generateAttractionsTable(attractions));
 
 </script>
  
