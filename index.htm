@@ -31,6 +31,34 @@ var attractions = [
     {name: "Bob Hope Theatre", coords: [0.049947, 51.450701], desc: "Community theatre owned and run by the members of Eltham Little Theatre Company, running approximately 11 shows each year." },
     {name: "Eltham Centre", coords: [0.057588, 51.451554], desc: "Offers pool, gym and various sports activity courses. Participate in lessons like Group Cycle, Yoga and Power Pump." },
     {name: "Eltham Park South", coords: [0.067033, 51.454722], desc: "Large, grassy area, good for informal ball games with splendid tree-lined avenues, a children's playground and a picnic area." },
+    {name: "Severndroog Castle", coords: [0.060037, 51.466584], desc: "An 18th century folly with a café and occasional events." },
+    {name: "Tudor Barn", coords: [0.048965, 51.457047], desc: "A restaurant in a 16th century barn." },
+];
+
+var jan = 0;
+var feb = 1;
+var mar = 2;
+var apr = 3;
+var may = 4;
+var jun = 5;
+var jul = 6;
+var aug = 7;
+var sep = 8;
+var oct = 9;
+var nov = 10;
+var dec = 11;
+
+var events = [
+    {poi: "Severndroog Castle", date: new Date(2019, jun, 21), timeSpecified: 0, title: "A Night of Vintage Jazz"},
+    {poi: "Severndroog Castle", date: new Date(2019, jul, 12), timeSpecified: 0, title: "A Theatrical Opera Night"},
+    {poi: "Severndroog Castle", date: new Date(2019, jul, 18), timeSpecified: 0, title: "Production of Nell Gwyn"},
+    {poi: "Severndroog Castle", date: new Date(2019, aug, 11), timeSpecified: 0, title: "A Selection of Shakespeare Plays"},
+    {poi: "Severndroog Castle", date: new Date(2019, sep, 13), timeSpecified: 0, title: "A Screening of Hitchcock"},
+
+    {poi: "Tudor Barn", date: new Date(2019, may, 31, 19), timeSpecified: 1, title: "Wine and Dine"},
+    {poi: "Tudor Barn", date: new Date(2019, jun, 02, 10), timeSpecified: 1, title: "Family Fun Day"},
+    {poi: "Tudor Barn", date: new Date(2019, jun, 16, 12), timeSpecified: 0, title: "Father's Day"},
+    {poi: "Tudor Barn", date: new Date(2019, jul, 22, 11), timeSpecified: 0, title: "Wedding Fair"},
 ];
 
 var map = new mapboxgl.Map({
@@ -90,16 +118,30 @@ function generateAttractionsTable(attractions) {
     return attractionsTable;
 }
 
-function generateWhatsOnTableRow(attraction) {
+function generateWhatsOnTableRow(event, attraction) {
     var nameDiv = document.createElement("div");
-    nameDiv.innerHTML = "Knitting at " + attraction.name;
+    nameDiv.innerHTML = event.title;
     nameDiv.className = "attraction-name";
+
+    var locationDiv = document.createElement("div");
+    locationDiv.innerHTML = attraction.name;
+    locationDiv.className = "attraction-name";
+
+    var days = [ "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+    var months = [ "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    var dateString = days[event.date.getDay()] + " " +event.date.getDate() + " " + months[event.date.getMonth()];
+
+    var dateDiv = document.createElement("div");
+    dateDiv.innerHTML = dateString;
+    dateDiv.className = "attraction-name";
 
     var descDiv = document.createElement("div");
     descDiv.innerHTML = attraction.desc;
 
     var el = document.createElement('div');
     el.appendChild(nameDiv);
+    el.appendChild(locationDiv);
+    el.appendChild(dateDiv);
     el.appendChild(descDiv);
     el.onclick = function() {clicked(attraction.coords)};
 
@@ -109,15 +151,22 @@ function generateWhatsOnTableRow(attraction) {
     return outerTr;
 }
 
-function generateWhatsOnTable(attractions) {
-    var attractionsTable = document.createElement("table");
-    attractionsTable.id = "attractionsTable";
+function generateWhatsOnTable(events) {
+    var whatsOnTable = document.createElement("table");
+    whatsOnTable.id = "attractionsTable";
 
-    attractions.forEach(function(attraction) {
-       var el = generateWhatsOnTableRow(attraction);
-       attractionsTable.appendChild(el);
+
+
+    var sortedEvents = events.slice();
+    sortedEvents.sort(function(a,b){return a.date - b.date;});
+
+
+    sortedEvents.forEach(function(event) {
+       var poi = attractions.find(function(attraction) {return event.poi == attraction.name});
+       var el = generateWhatsOnTableRow(event, poi);
+       whatsOnTable.appendChild(el);
     });
-    return attractionsTable;
+    return whatsOnTable;
 }
 
 
@@ -135,7 +184,7 @@ function whatsOnSectionButtonClicked() {
 attractions.forEach(addMarkers);
 document.getElementById("attractions").appendChild(generateAttractionsTable(attractions));
 document.getElementById("whats-on").style.display = "none";
-document.getElementById("whats-on").appendChild(generateWhatsOnTable(attractions));
+document.getElementById("whats-on").appendChild(generateWhatsOnTable(events));
 
 
 </script>
