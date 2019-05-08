@@ -101,9 +101,14 @@ function generateAttractionsTableRow(attraction) {
     el.appendChild(descDiv);
     el.onclick = function() {clicked(attraction.coords)};
 
+
+
+    var td = document.createElement("td");
+    td.className = "attraction";
+    td.appendChild(el);
+
     var outerTr = document.createElement("tr");
-    outerTr.className = "attraction";
-    outerTr.appendChild(el);
+    outerTr.appendChild(td);
     return outerTr;
 }
 
@@ -145,15 +150,18 @@ function generateWhatsOnTableRow(event, attraction) {
     el.appendChild(descDiv);
     el.onclick = function() {clicked(attraction.coords)};
 
+    var td = document.createElement("td");
+    td.className = "attraction";
+    td.appendChild(el);
+
     var outerTr = document.createElement("tr");
-    outerTr.className = "attraction";
-    outerTr.appendChild(el);
+    outerTr.appendChild(td);
     return outerTr;
 }
 
 function generateWhatsOnTable(events) {
     var whatsOnTable = document.createElement("table");
-    whatsOnTable.id = "attractionsTable";
+    whatsOnTable.id = "eventsTable";
 
 
 
