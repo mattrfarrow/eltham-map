@@ -12,13 +12,13 @@
 <body>
 
 <div id="top-bar">
-    <span class="section-header">Attractions</span>
-    <span class="section-header">What's on?</span>
+    <span id="attractions-section-button" class="section-header" onclick="attractionsSectionButtonClicked()" >Attractions</span>
+    <span id="whats-on-section-button" class="section-header" onclick="whatsOnSectionButtonClicked()">What's on?</span>
 </div>
 
  <div id="side-panel">
-     <div id="attractions">
-         </div>
+     <div id="attractions"></div>
+     <div id="whats-on" onclick="whatsOnSectionButtonClicked()"></div>
  </div>
 <div id='map'></div>
  
@@ -90,19 +90,53 @@ function generateAttractionsTable(attractions) {
     return attractionsTable;
 }
 
-function generateAttractionsTable(attractions) {
+function generateWhatsOnTableRow(attraction) {
+    var nameDiv = document.createElement("div");
+    nameDiv.innerHTML = "Knitting at " + attraction.name;
+    nameDiv.className = "attraction-name";
+
+    var descDiv = document.createElement("div");
+    descDiv.innerHTML = attraction.desc;
+
+    var el = document.createElement('div');
+    el.appendChild(nameDiv);
+    el.appendChild(descDiv);
+    el.onclick = function() {clicked(attraction.coords)};
+
+    var outerTr = document.createElement("tr");
+    outerTr.className = "attraction";
+    outerTr.appendChild(el);
+    return outerTr;
+}
+
+function generateWhatsOnTable(attractions) {
     var attractionsTable = document.createElement("table");
     attractionsTable.id = "attractionsTable";
 
     attractions.forEach(function(attraction) {
-       var el = generateAttractionsTableRow(attraction);
+       var el = generateWhatsOnTableRow(attraction);
        attractionsTable.appendChild(el);
     });
     return attractionsTable;
 }
 
+
+function attractionsSectionButtonClicked() {
+    console.log("attractionsButtonClicked()");
+    document.getElementById("attractions").style.display = "block";
+    document.getElementById("whats-on").style.display = "none";
+}
+
+function whatsOnSectionButtonClicked() {
+    document.getElementById("attractions").style.display = "none";
+    document.getElementById("whats-on").style.display = "block";
+}
+
 attractions.forEach(addMarkers);
 document.getElementById("attractions").appendChild(generateAttractionsTable(attractions));
+document.getElementById("whats-on").style.display = "none";
+document.getElementById("whats-on").appendChild(generateWhatsOnTable(attractions));
+
 
 </script>
  
