@@ -42,8 +42,8 @@ font-family:apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,C
     overflow-y: auto;
 }
 
-#eventsTable tr:nth-child(odd) {background: #dcfbe4}
-#eventsTable tr:nth-child(even) {background: #FFF}
+#eventsTable .whatsOnRow {background: #dcfbe4}
+#eventsTable .dateRow    {background: #cac0c0}
 
 #eventsTable td {
   padding-bottom: 10;

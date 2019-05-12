@@ -56,6 +56,7 @@ var events = [
     {poi: "Severndroog Castle", date: new Date(2019, sep, 13), timeSpecified: 0, title: "A Screening of Hitchcock"},
 
     {poi: "Tudor Barn", date: new Date(2019, may, 31, 19), timeSpecified: 1, title: "Wine and Dine"},
+    {poi: "Tudor Barn", date: new Date(2019, may, 31, 19), timeSpecified: 1, title: "Pretend event"},
     {poi: "Tudor Barn", date: new Date(2019, jun, 02, 10), timeSpecified: 1, title: "Family Fun Day"},
     {poi: "Tudor Barn", date: new Date(2019, jun, 16, 12), timeSpecified: 0, title: "Father's Day"},
     {poi: "Tudor Barn", date: new Date(2019, jul, 22, 11), timeSpecified: 0, title: "Wedding Fair"},
@@ -146,6 +147,7 @@ function generateWhatsOnTableRow(event, attraction) {
     td.appendChild(el);
 
     var outerTr = document.createElement("tr");
+    outerTr.className = "whatsOnRow";
     outerTr.appendChild(td);
     return outerTr;
 }
@@ -160,6 +162,7 @@ function generateDateRow(date) {
     dateTd.className = "attraction-name";
 
     var dateTr = document.createElement("tr");
+    dateTr.className = "dateRow";
     dateTr.appendChild(dateTd);
 
     return dateTr;
@@ -176,7 +179,7 @@ function generateWhatsOnTable(events) {
 
     sortedEvents.forEach(function(event) {
 
-       if(!lastEventDate || lastEventDate != event.date) {
+       if(!lastEventDate || lastEventDate.getTime() !== event.date.getTime()) {
          whatsOnTable.appendChild(generateDateRow(event.date));
        }
        var poi = attractions.find(function(attraction) {return event.poi == attraction.name});
