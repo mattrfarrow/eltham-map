@@ -55,11 +55,10 @@ var events = [
     {poi: "Severndroog Castle", date: new Date(2019, aug, 11), timeSpecified: 0, title: "A Selection of Shakespeare Plays"},
     {poi: "Severndroog Castle", date: new Date(2019, sep, 13), timeSpecified: 0, title: "A Screening of Hitchcock"},
 
-    {poi: "Tudor Barn", date: new Date(2019, may, 31, 19), timeSpecified: 1, title: "Wine and Dine"},
-    {poi: "Tudor Barn", date: new Date(2019, may, 31, 19), timeSpecified: 1, title: "Pretend event"},
-    {poi: "Tudor Barn", date: new Date(2019, jun, 02, 10), timeSpecified: 1, title: "Family Fun Day"},
-    {poi: "Tudor Barn", date: new Date(2019, jun, 16, 12), timeSpecified: 0, title: "Father's Day"},
-    {poi: "Tudor Barn", date: new Date(2019, jul, 22, 11), timeSpecified: 0, title: "Wedding Fair"},
+        {poi: "Tudor Barn", date: new Date(2019, may, 31, 19), timeSpecified: 1, title: "Wine and Dine", shortDesc: "Try wines from around the world"},
+    {poi: "Tudor Barn", date: new Date(2019, jun, 02, 10), timeSpecified: 1, title: "Family Fun Day", shortDesc: "June family fun day"},
+    {poi: "Tudor Barn", date: new Date(2019, jun, 16, 12), timeSpecified: 1, title: "Father's Day"},
+    {poi: "Tudor Barn", date: new Date(2019, jul, 22, 11), timeSpecified: 1, title: "Wedding Fair"},
 ];
 
 var map = new mapboxgl.Map({
@@ -102,8 +101,6 @@ function generateAttractionsTableRow(attraction) {
     el.appendChild(descDiv);
     el.onclick = function() {clicked(attraction.coords)};
 
-
-
     var td = document.createElement("td");
     td.className = "attraction";
     td.appendChild(el);
@@ -124,17 +121,24 @@ function generateAttractionsTable(attractions) {
     return attractionsTable;
 }
 
+
 function generateWhatsOnTableRow(event, attraction) {
     var nameDiv = document.createElement("div");
     nameDiv.innerHTML = event.title;
     nameDiv.className = "attraction-name";
 
     var locationDiv = document.createElement("div");
-    locationDiv.innerHTML = attraction.name;
+    var timeAndPlace = "At " + attraction.name;
+    if(event.timeSpecified) {
+        timeAndPlace += " @"+getTimeAsString(event.date);
+    }
+    locationDiv.innerHTML = timeAndPlace;
     locationDiv.className = "attraction-name";
 
     var descDiv = document.createElement("div");
-    descDiv.innerHTML = attraction.desc;
+    if(event.shortDesc) {
+        descDiv.innerHTML = event.shortDesc;
+    }
 
     var el = document.createElement('div');
     el.appendChild(nameDiv);
@@ -150,6 +154,16 @@ function generateWhatsOnTableRow(event, attraction) {
     outerTr.className = "whatsOnRow";
     outerTr.appendChild(td);
     return outerTr;
+}
+
+function getTimeAsString(date) {
+    if(date.getHours()>12) {
+        return (date.getHours()-12) + "pm";
+    } else if (date.getHours() == 12) {
+        return date.getHours() + "pm";
+    } else {
+        return date.getHours() + "am";
+    }
 }
 
 function generateDateRow(date) {
