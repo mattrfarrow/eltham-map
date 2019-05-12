@@ -132,21 +132,12 @@ function generateWhatsOnTableRow(event, attraction) {
     locationDiv.innerHTML = attraction.name;
     locationDiv.className = "attraction-name";
 
-    var days = [ "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
-    var months = [ "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-    var dateString = days[event.date.getDay()] + " " +event.date.getDate() + " " + months[event.date.getMonth()];
-
-    var dateDiv = document.createElement("div");
-    dateDiv.innerHTML = dateString;
-    dateDiv.className = "attraction-name";
-
     var descDiv = document.createElement("div");
     descDiv.innerHTML = attraction.desc;
 
     var el = document.createElement('div');
     el.appendChild(nameDiv);
     el.appendChild(locationDiv);
-    el.appendChild(dateDiv);
     el.appendChild(descDiv);
     el.onclick = function() {clicked(attraction.coords)};
 
@@ -159,20 +150,39 @@ function generateWhatsOnTableRow(event, attraction) {
     return outerTr;
 }
 
+function generateDateRow(date) {
+    var days = [ "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+    var months = [ "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    var dateString = days[date.getDay()] + " " +date.getDate() + " " + months[date.getMonth()];
+
+    var dateTd = document.createElement("td");
+    dateTd.innerHTML = dateString;
+    dateTd.className = "attraction-name";
+
+    var dateTr = document.createElement("tr");
+    dateTr.appendChild(dateTd);
+
+    return dateTr;
+}
+
 function generateWhatsOnTable(events) {
     var whatsOnTable = document.createElement("table");
     whatsOnTable.id = "eventsTable";
 
-
-
     var sortedEvents = events.slice();
     sortedEvents.sort(function(a,b){return a.date - b.date;});
 
+    var lastEventDate;
 
     sortedEvents.forEach(function(event) {
+
+       if(!lastEventDate || lastEventDate != event.date) {
+         whatsOnTable.appendChild(generateDateRow(event.date));
+       }
        var poi = attractions.find(function(attraction) {return event.poi == attraction.name});
-       var el = generateWhatsOnTableRow(event, poi);
-       whatsOnTable.appendChild(el);
+
+       whatsOnTable.appendChild(generateWhatsOnTableRow(event, poi));
+       lastEventDate = event.date;
     });
     return whatsOnTable;
 }
