@@ -123,12 +123,16 @@ function generateWhatsOnTableRow(event, attraction) {
 }
 
 function getTimeAsString(date) {
+    var minutes = date.getMinutes() !== 0
+    ? ":" + date.getMinutes()
+    : "";
+
     if(date.getHours()>12) {
-        return (date.getHours()-12) + "pm";
+        return (date.getHours()-12) + minutes + "pm";
     } else if (date.getHours() == 12) {
-        return date.getHours() + "pm";
+        return date.getHours() + minutes + "pm";
     } else {
-        return date.getHours() + "am";
+        return date.getHours() + minutes + "am";
     }
 }
 
