@@ -18,8 +18,8 @@
 </div>
 
  <div id="side-panel">
-     <div id="attractions"></div>
      <div id="whats-on" onclick="whatsOnSectionButtonClicked()"></div>
+     <div id="attractions"></div>
  </div>
 <div id='map'></div>
  
@@ -40,8 +40,29 @@ clicked = function(coords) {
 }
 
 function addMarkers(attraction) {
+    var popupContent = document.createElement("div");
+
+    var popupTitle = document.createElement("h2");
+    popupTitle.innerText = attraction.name;
+    popupContent.appendChild(popupTitle);
+
+    if(attraction.desc) {
+        var popupDesc = document.createElement("div");
+        popupDesc.innerText = attraction.desc;
+        popupContent.appendChild(popupDesc);
+    }
+
+    if(attraction.website) {
+        var popupUrl = document.createElement("a");
+        popupUrl.href = attraction.website;
+        popupUrl.innerText = "Website";
+        popupUrl.target="_blank";
+        popupContent.appendChild(popupUrl);
+    }
+
+
     var popup = new mapboxgl.Popup({ offset: 25 })
-    .setText(attraction.name);
+    .setDOMContent(popupContent);
 
     // create DOM element for the marker
     var el = document.createElement('div');
