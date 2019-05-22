@@ -13,12 +13,12 @@
 <body>
 
 <div id="top-bar">
-    <span id="attractions-section-button" class="section-header" onclick="attractionsSectionButtonClicked()" >Attractions</span>
-    <span id="whats-on-section-button" class="section-header" onclick="whatsOnSectionButtonClicked()">What's on?</span>
+    <span id="attractions-section-button" class="section-header" onclick="attractionsSectionButtonClicked();" >Attractions</span>
+    <span id="whats-on-section-button" class="section-header" onclick="whatsOnSectionButtonClicked();" >Whats on?</span>
 </div>
 
  <div id="side-panel">
-     <div id="whats-on" class="sidepanel" onclick="whatsOnSectionButtonClicked()"></div>
+     <div id="whats-on" class="sidepanel""></div>
      <div id="attractions" class="sidepanel" ></div>
  </div>
 <div id = 'map-container'>
@@ -32,60 +32,58 @@ String.prototype.replaceAll = function(search, replacement) {
     return target.split(search).join(replacement);
 };
 
+function hide(el){
+    el.style.display="none";
+}
+
+function show(el){
+    el.style.display="block";
+}
+
+zoomMapToCoords = function(poi) {
+    console.log("ZOOOOM");
+    map.panTo(poi.coords);
+    if(mobile) {
+        const url = location.protocol + '//' + location.host + location.pathname + '?poi='+poi.name.replaceAll(" ", "_");
+        history.pushState({}, "Eltham Map", url);
+        show(mapContainer);
+        hide(sidepanel);
+    }
+};
+
 mapboxgl.accessToken = 'pk.eyJ1IjoibWF0dHJmYXJyb3ciLCJhIjoiS0gtNnVKUSJ9.9n4like7mmNyB4aDm27uXw';
 
 var mobile = !window.matchMedia("only screen and (min-width: 401px)").matches;
 
 var attractionToShowId = getUrlVars()["poi"];
 if(attractionToShowId) {
-    var attractionToShow = attractions.find(function (attraction) {
+    var attractionToShowOnMap = attractions.find(function (attraction) {
         return attractionToShowId.replaceAll("_", " ") === attraction.name
     });
 }
+var mapContainer = document.getElementById("map-container");
+var sidepanel = document.getElementById("side-panel");
 
-if(!mobile || attractionToShow) {
-    var map = new mapboxgl.Map({
-        container: 'map',
-        style: 'mapbox://styles/mapbox/streets-v11',
-        center: [0.0573, 51.452],
-        zoom: 15
-    });
+var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/streets-v11',
+    center: [0.0573, 51.452],
+    zoom: 15
+});
 
-    attractions.forEach(addMarkers);
-}
-
-zoomMapToCoords = function(poi) {
-    console.log(poi);
-    if(!mobile) {
-        map.panTo(poi.coords);
-    } else {
-        window.location.href = location.protocol + '//' + location.host + location.pathname + '?poi='+poi.name.replaceAll(" ", "_");
-    }
-};
-
-console.log("device pixel ratio: " + window.devicePixelRatio);
-
+attractions.forEach(addMarkers);
 
 document.getElementById("attractions").appendChild(generateAttractionsTable(attractions));
 document.getElementById("attractions").style.display = "none";
 document.getElementById("whats-on").appendChild(generateWhatsOnTable(events));
 
 if(mobile) {
-    if(attractionToShow) {
-        console.log("showing attraction:");
-        console.log(attractionToShow);
-        var sidepanel = document.getElementById("side-panel");
-
-        if(attractionToShow) {
-            map.style.display = "block";
-
-            console.log("Wahhh");
-        } else {
-            map.style.display = "none";
-            sidepanel.style.display="block";
-        }
+    if(attractionToShowOnMap) {
+        show(mapContainer);
+        hide(sidepanel);
     } else {
-        document.getElementById("map").style.display = "none";
+        show(sidepanel);
+        hide(mapContainer);
     }
 }
 
@@ -247,7 +245,8 @@ function generateWhatsOnTable(events) {
 
 function attractionsSectionButtonClicked() {
     if(mobile && map){
-        document.getElementById("map-container").style.display="none"
+        show(sidepanel);
+        hide(mapContainer);
     }
     document.getElementById("attractions").style.display = "block";
     document.getElementById("whats-on").style.display = "none";
@@ -255,7 +254,8 @@ function attractionsSectionButtonClicked() {
 
 function whatsOnSectionButtonClicked() {
     if(mobile && map){
-        document.getElementById("map-container").style.display="none"
+        show(sidepanel);
+        hide(mapContainer);
     }
     document.getElementById("attractions").style.display = "none";
     document.getElementById("whats-on").style.display = "block";
