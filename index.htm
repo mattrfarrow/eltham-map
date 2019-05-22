@@ -37,7 +37,7 @@ zoom: 15
 clicked = function(coords) {
   console.log(coords);
   map.panTo(coords);
-}
+};
 
 console.log("device pixel ratio: " + window.devicePixelRatio);
 
@@ -157,7 +157,7 @@ function getTimeAsString(date) {
 
     if(date.getHours()>12) {
         return (date.getHours()-12) + minutes + "pm";
-    } else if (date.getHours() == 12) {
+    } else if (date.getHours() === 12) {
         return date.getHours() + minutes + "pm";
     } else {
         return date.getHours() + minutes + "am";
@@ -194,7 +194,7 @@ function generateWhatsOnTable(events) {
        if(!lastEventDate || lastEventDate.getTime() !== event.date.getTime()) {
          whatsOnTable.appendChild(generateDateRow(event.date));
        }
-       var poi = attractions.find(function(attraction) {return event.poi == attraction.name});
+       var poi = attractions.find(function(attraction) {return event.poi === attraction.name});
 
        whatsOnTable.appendChild(generateWhatsOnTableRow(event, poi));
        lastEventDate = event.date;
