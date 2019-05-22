@@ -250,6 +250,9 @@ function attractionsSectionButtonClicked() {
     }
     document.getElementById("attractions").style.display = "block";
     document.getElementById("whats-on").style.display = "none";
+
+    const url = location.protocol + '//' + location.host + location.pathname;
+    history.pushState({}, "Eltham Map", url);
 }
 
 function whatsOnSectionButtonClicked() {
@@ -259,6 +262,9 @@ function whatsOnSectionButtonClicked() {
     }
     document.getElementById("attractions").style.display = "none";
     document.getElementById("whats-on").style.display = "block";
+
+    const url = location.protocol + '//' + location.host + location.pathname;
+    history.pushState({}, "Eltham Map", url);
 }
 
 function getUrlVars() {
