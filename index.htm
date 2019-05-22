@@ -1,13 +1,13 @@
 <html>
 
 <head>
-  <meta charset='utf-8' />
-  <title>Eltham Map</title>
-  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-  <script src='https://static-assets.mapbox.com/gl-pricing/dist/mapbox-gl.js'></script>
-  <script src='events-and-attractions.js'></script    >
-  <link href='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
-  <link rel="stylesheet" type="text/css" href='style.css'/>
+    <meta charset='utf-8' />
+    <title>Eltham Map</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://static-assets.mapbox.com/gl-pricing/dist/mapbox-gl.js'></script>
+    <script src='events-and-attractions.js'></script    >
+    <link href='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" type="text/css" href='style.css'/><meta name="apple-mobile-web-app-capable" content="yes" />
 </head>
 
 <body>
@@ -38,6 +38,13 @@ clicked = function(coords) {
   console.log(coords);
   map.panTo(coords);
 }
+
+console.log("device pixel ratio: " + window.devicePixelRatio);
+
+attractions.forEach(addMarkers);
+document.getElementById("attractions").appendChild(generateAttractionsTable(attractions));
+document.getElementById("attractions").style.display = "none";
+document.getElementById("whats-on").appendChild(generateWhatsOnTable(events));
 
 function addMarkers(attraction) {
     var popupContent = document.createElement("div");
@@ -206,11 +213,6 @@ function whatsOnSectionButtonClicked() {
     document.getElementById("attractions").style.display = "none";
     document.getElementById("whats-on").style.display = "block";
 }
-
-attractions.forEach(addMarkers);
-document.getElementById("attractions").appendChild(generateAttractionsTable(attractions));
-document.getElementById("attractions").style.display = "none";
-document.getElementById("whats-on").appendChild(generateWhatsOnTable(events));
 
 
 </script>
