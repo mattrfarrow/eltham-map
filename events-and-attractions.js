@@ -7,7 +7,7 @@ var attractions = [
     {name: "Tudor Barn", coords: [0.048965, 51.457047], desc: "A restaurant in a 16th century barn." },
     {name: "Shrewsbury House", coords: [0.072817, 51.473214], desc: "A community centre on Shooters Hill.", website: "https://shrewsburyhouse.org" },
     {name: "Gerald Moore Gallery", coords: [0.039818, 51.438416], desc: "A young centre for modern and contemporary art.", website: "https://geraldmooregallery.org" },
-    {name: "The Rusty Bucket Pub", coords: [0.052095, 51.450422], desc: "The best craft beer in town.", website: "https://geraldmooregallery.org" },
+    {name: "The Rusty Bucket Pub", coords: [0.052095, 51.450422], desc: "The best craft beer in town." },
     {name: "The Long Pond", coords: [0.059565, 51.456884], desc: "A micropub in the Kent tradition." },
 
 ];
