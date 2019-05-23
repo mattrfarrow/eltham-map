@@ -1,4 +1,4 @@
-var attractions = [
+const attractions = [
     {name: "Eltham Palace", coords: [0.048400, 51.446989], desc: "Fuses 1930s design with original medieval architecture, set in 19 acres of award-winning gardens." },
     {name: "Bob Hope Theatre", coords: [0.049947, 51.450701], desc: "Community theatre owned and run by the members of Eltham Little Theatre Company, running approximately 11 shows each year." },
     {name: "Eltham Centre", coords: [0.057588, 51.451554], desc: "Offers pool, gym and various sports activity courses. Participate in lessons like Group Cycle, Yoga and Power Pump." },
@@ -12,20 +12,20 @@ var attractions = [
 
 ];
 
-var jan = 0;
-var feb = 1;
-var mar = 2;
-var apr = 3;
-var may = 4;
-var jun = 5;
-var jul = 6;
-var aug = 7;
-var sep = 8;
-var oct = 9;
-var nov = 10;
-var dec = 11;
+const jan = 0;
+const feb = 1;
+const mar = 2;
+const apr = 3;
+const may = 4;
+const jun = 5;
+const jul = 6;
+const aug = 7;
+const sep = 8;
+const oct = 9;
+const nov = 10;
+const dec = 11;
 
-var events = [
+const events = [
     {poi: "Severndroog Castle", date: new Date(2019, jun, 21), timeSpecified: 0, title: "A Night of Vintage Jazz"},
     {poi: "Severndroog Castle", date: new Date(2019, jul, 12), timeSpecified: 0, title: "A Theatrical Opera Night"},
     {poi: "Severndroog Castle", date: new Date(2019, jul, 18), timeSpecified: 0, title: "Production of Nell Gwyn"},
