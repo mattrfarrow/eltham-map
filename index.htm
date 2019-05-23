@@ -23,6 +23,7 @@
  </div>
 <div id = 'map-container'>
     <div id='map'></div>
+    <div id="poi-details-box"></div>
 </div>
 
 <script>
@@ -41,7 +42,6 @@ function show(el){
 }
 
 zoomMapToCoords = function(poi) {
-    console.log("ZOOOOM");
     map.panTo(poi.coords);
     if(mobile) {
         const url = location.protocol + '//' + location.host + location.pathname + '?poi='+poi.name.replaceAll(" ", "_");
@@ -79,6 +79,8 @@ document.getElementById("whats-on").appendChild(generateWhatsOnTable(events));
 
 if(mobile) {
     if(attractionToShowOnMap) {
+        zoomMapToCoords(attractionToShowOnMap);
+        showDetailsOfPoiAndEvent(attractionToShowOnMap);
         show(mapContainer);
         hide(sidepanel);
     } else {
@@ -123,6 +125,36 @@ function addMarkers(attraction) {
     .addTo(map);
 }
 
+function showDetailsOfPoiAndEvent(attraction, event) {
+
+    const poiDetailsBox = document.getElementById("poi-details-box");
+    poiDetailsBox.innerHTML = "";
+    if(event) {
+        var eventTitleDiv = document.createElement("div");
+        eventTitleDiv.id = "poidetails-eventTitleDiv";
+        eventTitleDiv.innerHTML = event.title;
+
+        poiDetailsBox.appendChild(eventTitleDiv);
+    }
+
+    var nameDiv = document.createElement("div");
+    nameDiv.id = "poidetails-name";
+    nameDiv.innerHTML = attraction.name;
+    poiDetailsBox.appendChild(nameDiv);
+
+    var descDiv = document.createElement("div");
+    descDiv.id = "poidetails-desc";
+    descDiv.innerHTML = attraction.desc;
+    poiDetailsBox.appendChild(descDiv);
+
+    if(attraction.website) {
+        var websiteDiv = document.createElement("div");
+        websiteDiv.id = "poidetails-website";
+        websiteDiv.innerHTML = attraction.website;
+        poiDetailsBox.appendChild(websiteDiv);
+    }
+}
+
 function generateAttractionsTableRow(attraction) {
     var nameDiv = document.createElement("div");
     nameDiv.innerHTML = attraction.name;
@@ -134,7 +166,10 @@ function generateAttractionsTableRow(attraction) {
     var el = document.createElement('div');
     el.appendChild(nameDiv);
     el.appendChild(descDiv);
-    el.onclick = function() {zoomMapToCoords(attraction)};
+    el.onclick = function() {
+        showDetailsOfPoiAndEvent(attraction);
+        zoomMapToCoords(attraction)
+    };
 
     var td = document.createElement("td");
     td.className = "attraction";
@@ -178,7 +213,10 @@ function generateWhatsOnTableRow(event, attraction) {
     el.appendChild(nameDiv);
     el.appendChild(locationDiv);
     el.appendChild(descDiv);
-    el.onclick = function() {zoomMapToCoords(attraction)};
+    el.onclick = function() {
+        showDetailsOfPoiAndEvent(attraction, event);
+        zoomMapToCoords(attraction)
+    };
 
     var td = document.createElement("td");
     td.className = "attraction";
