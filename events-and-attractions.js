@@ -1,6 +1,6 @@
 const attractions = [
-    {name: "Eltham Palace", coords: [0.048400, 51.446989], desc: "Fuses 1930s design with original medieval architecture, set in 19 acres of award-winning gardens." },
-    {name: "Bob Hope Theatre", coords: [0.049947, 51.450701], desc: "Community theatre owned and run by the members of Eltham Little Theatre Company, running approximately 11 shows each year." },
+    {name: "Eltham Palace", coords: [0.048400, 51.446989], desc: "Fuses 1930s design with original medieval architecture, set in 19 acres of award-winning gardens.", website: "https://www.english-heritage.org.uk/visit/places/eltham-palace-and-gardens/", address: "Court Yard, Eltham, Greenwich, SE9 5QE" },
+    {name: "Bob Hope Theatre", coords: [0.049947, 51.450701], desc: "Community theatre owned and run by the members of Eltham Little Theatre Company, running approximately 11 shows each year.", website: "http://www.bobhopetheatre.co.uk/" },
     {name: "Eltham Centre", coords: [0.057588, 51.451554], desc: "Offers pool, gym and various sports activity courses. Participate in lessons like Group Cycle, Yoga and Power Pump." },
     {name: "Severndroog Castle", coords: [0.060037, 51.466584], desc: "An 18th century folly with a café and occasional events." },
     {name: "Eltham Park South", coords: [0.067033, 51.454722], desc: "Large, grassy area, good for informal ball games with splendid tree-lined avenues, a children's playground and a picnic area." },

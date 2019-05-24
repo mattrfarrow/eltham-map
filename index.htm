@@ -13,8 +13,8 @@
 <body>
 
 <div id="top-bar">
+    <span id="whats-on-section-button" class="section-header" onclick="whatsOnSectionButtonClicked();">What's on?</span>
     <span id="attractions-section-button" class="section-header" onclick="attractionsSectionButtonClicked();" >Attractions</span>
-    <span id="whats-on-section-button" class="section-header" onclick="whatsOnSectionButtonClicked();" >Whats on?</span>
 </div>
 
  <div id="side-panel">
@@ -132,26 +132,48 @@ function showDetailsOfPoiAndEvent(attraction, event) {
     if(event) {
         var eventTitleDiv = document.createElement("div");
         eventTitleDiv.id = "poidetails-eventTitleDiv";
+        eventTitleDiv.className = "poidetails-title";
         eventTitleDiv.innerHTML = event.title;
 
         poiDetailsBox.appendChild(eventTitleDiv);
+
+        if(event.shortDesc) {
+            var eventDescDiv = document.createElement("div");
+            eventDescDiv.id = "poidetails-eventDescDiv";
+            eventDescDiv.className = "poidetails-desc";
+            eventDescDiv.innerHTML = event.shortDesc;
+            poiDetailsBox.appendChild(eventDescDiv);
+        }
     }
 
+
     var nameDiv = document.createElement("div");
-    nameDiv.id = "poidetails-name";
+    nameDiv.id = "poidetails-poiNameDiv";
+    if(!event) {
+        nameDiv.className = "poidetails-title";
+    } else {
+        nameDiv.className = "poidetails-subtitle";
+    }
     nameDiv.innerHTML = attraction.name;
+    if(event && event.date) {
+        nameDiv.innerHTML += " @"+getTimeAsString(event.date);
+    }
     poiDetailsBox.appendChild(nameDiv);
 
-    var descDiv = document.createElement("div");
-    descDiv.id = "poidetails-desc";
-    descDiv.innerHTML = attraction.desc;
-    poiDetailsBox.appendChild(descDiv);
+    if(!event) {
+        var poiDescDiv = document.createElement("div");
+        poiDescDiv.id = "poidetails-desc";
+        poiDescDiv.innerHTML = attraction.desc;
+        poiDetailsBox.appendChild(poiDescDiv);
+    }
 
     if(attraction.website) {
-        var websiteDiv = document.createElement("div");
-        websiteDiv.id = "poidetails-website";
-        websiteDiv.innerHTML = attraction.website;
-        poiDetailsBox.appendChild(websiteDiv);
+        var websiteLink = document.createElement("a");
+        websiteLink.id = "poidetails-website";
+        websiteLink.innerHTML = attraction.name + " Website";
+        websiteLink.href = attraction.website;
+        websiteLink.target="_blank";
+        poiDetailsBox.appendChild(websiteLink);
     }
 }
 
