@@ -51,7 +51,7 @@ zoomMapToCoords = function(poi) {
 
 pushUrlForPoi = function(poi) {
     const url = location.protocol + '//' + location.host + location.pathname + '?poi='+poi.name.replaceAll(" ", "_");
-    history.pushState({}, "Eltham Map", url);
+    history.pushState({}, "Eltham Map", location.protocol + '//' + location.host + location.pathname + '?poi=eeek');
 };
 
 pushUrlForEvent = function(event) {
@@ -187,11 +187,10 @@ function showDetailsOfPoiAndEvent(attraction, event) {
             var eventLinkDiv = document.createElement("div");
             eventLinkDiv.className = "poidetails-eventUrlDiv";
             eventLinkDiv.appendChild(eventLink);
-            eventDiv.appendChild(eventLinkDiv);
+            poiDetailsBox.appendChild(eventLinkDiv);
         }
+        poiDetailsBox.appendChild(eventDiv);
     }
-
-    poiDetailsBox.appendChild(eventDiv);
 
     var nameDiv = document.createElement("div");
     nameDiv.id = "poidetails-poiNameDiv";
