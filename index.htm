@@ -44,18 +44,38 @@ function show(el){
 zoomMapToCoords = function(poi) {
     map.panTo(poi.coords);
     if(mobile) {
-        const url = location.protocol + '//' + location.host + location.pathname + '?poi='+poi.name.replaceAll(" ", "_");
-        history.pushState({}, "Eltham Map", url);
         show(mapContainer);
         hide(sidepanel);
     }
+};
+
+pushUrlForPoi = function(poi) {
+    const url = location.protocol + '//' + location.host + location.pathname + '?poi='+poi.name.replaceAll(" ", "_");
+    history.pushState({}, "Eltham Map", url);
+};
+
+pushUrlForEvent = function(event) {
+    const url = location.protocol + '//' + location.host + location.pathname + '?event='+event.id;
+    history.pushState({}, "Eltham Map", url);
 };
 
 mapboxgl.accessToken = 'pk.eyJ1IjoibWF0dHJmYXJyb3ciLCJhIjoiS0gtNnVKUSJ9.9n4like7mmNyB4aDm27uXw';
 
 var mobile = !window.matchMedia("only screen and (min-width: 401px)").matches;
 
-var attractionToShowId = getUrlVars()["poi"];
+var attractionToShowId;
+
+var eventToShowId = getUrlVars()["event"];
+if(eventToShowId) {
+    var eventToShowOnMap = events.find(function (event) {
+        return eventToShowId === event.id
+    });
+    attractionToShowId = eventToShowOnMap.poi;
+}
+
+if(!attractionToShowId) {
+    attractionToShowId = getUrlVars()["poi"];
+}
 if(attractionToShowId) {
     var attractionToShowOnMap = attractions.find(function (attraction) {
         return attractionToShowId.replaceAll("_", " ") === attraction.name
@@ -79,8 +99,17 @@ document.getElementById("whats-on").appendChild(generateWhatsOnTable(events));
 
 if(mobile) {
     if(attractionToShowOnMap) {
-        zoomMapToCoords(attractionToShowOnMap);
-        showDetailsOfPoiAndEvent(attractionToShowOnMap);
+        if(attractionToShowOnMap) {
+            zoomMapToCoords(attractionToShowOnMap);
+        }
+
+        if(eventToShowOnMap) {
+            pushUrlForEvent(eventToShowOnMap)
+        } else {
+            pushUrlForPoi(attractionToShowOnMap)
+        }
+
+        showDetailsOfPoiAndEvent(attractionToShowOnMap, eventToShowOnMap);
         show(mapContainer);
         hide(sidepanel);
     } else {
@@ -130,22 +159,39 @@ function showDetailsOfPoiAndEvent(attraction, event) {
     const poiDetailsBox = document.getElementById("poi-details-box");
     poiDetailsBox.innerHTML = "";
     if(event) {
+        var eventDiv = document.createElement("div");
+        eventDiv.className = "poidetails-eventSection";
+
         var eventTitleDiv = document.createElement("div");
         eventTitleDiv.id = "poidetails-eventTitleDiv";
         eventTitleDiv.className = "poidetails-title";
         eventTitleDiv.innerHTML = event.title;
 
-        poiDetailsBox.appendChild(eventTitleDiv);
+        eventDiv.appendChild(eventTitleDiv);
 
         if(event.shortDesc) {
             var eventDescDiv = document.createElement("div");
             eventDescDiv.id = "poidetails-eventDescDiv";
             eventDescDiv.className = "poidetails-desc";
             eventDescDiv.innerHTML = event.shortDesc;
-            poiDetailsBox.appendChild(eventDescDiv);
+            eventDiv.appendChild(eventDescDiv);
+        }
+
+        if(event.url) {
+            var eventLink = document.createElement("a");
+            eventLink.className = "poidetails-eventUrl";
+            eventLink.innerHTML = "More info on the attractions's event page.";
+            eventLink.href = event.url;
+            eventLink.target="_blank";
+
+            var eventLinkDiv = document.createElement("div");
+            eventLinkDiv.className = "poidetails-eventUrlDiv";
+            eventLinkDiv.appendChild(eventLink);
+            eventDiv.appendChild(eventLinkDiv);
         }
     }
 
+    poiDetailsBox.appendChild(eventDiv);
 
     var nameDiv = document.createElement("div");
     nameDiv.id = "poidetails-poiNameDiv";
@@ -154,9 +200,9 @@ function showDetailsOfPoiAndEvent(attraction, event) {
     } else {
         nameDiv.className = "poidetails-subtitle";
     }
-    nameDiv.innerHTML = attraction.name;
-    if(event && event.date) {
-        nameDiv.innerHTML += " @"+getTimeAsString(event.date);
+    nameDiv.innerHTML = "At " + attraction.name;
+    if(event && event.date && event.timeSpecified) {
+        nameDiv.innerHTML += " at "+getTimeAsString(event.date);
     }
     poiDetailsBox.appendChild(nameDiv);
 
@@ -190,7 +236,8 @@ function generateAttractionsTableRow(attraction) {
     el.appendChild(descDiv);
     el.onclick = function() {
         showDetailsOfPoiAndEvent(attraction);
-        zoomMapToCoords(attraction)
+        zoomMapToCoords(attraction);
+        pushUrlForPoi(attraction);
     };
 
     var td = document.createElement("td");
@@ -237,7 +284,8 @@ function generateWhatsOnTableRow(event, attraction) {
     el.appendChild(descDiv);
     el.onclick = function() {
         showDetailsOfPoiAndEvent(attraction, event);
-        zoomMapToCoords(attraction)
+        zoomMapToCoords(attraction);
+        pushUrlForEvent(event);
     };
 
     var td = document.createElement("td");
