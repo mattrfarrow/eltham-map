@@ -1,6 +1,13 @@
+Before Launch
+-------------
+Put the site name somewhere so it's recognisable
+Show event end time as well as the start time
 Don't show events in the past
+Add schedule of the millions of regular kids' events
+
+Whenever
+--------
 don't show other POIs when you're looking at a POI
 make the info pane at the bottom look much better
-Put the site name somewhere so it's recognisable?
 Show event end time as well as the start time
 Events spanning multiple days?
