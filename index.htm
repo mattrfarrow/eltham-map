@@ -68,10 +68,10 @@ mapboxgl.accessToken = 'pk.eyJ1IjoibWF0dHJmYXJyb3ciLCJhIjoiS0gtNnVKUSJ9.9n4like7
 const mobile = !window.matchMedia("only screen and (min-width: 401px)").matches;
 
 var attractionToShowId;
-
+var eventToShowOnMap;
 const eventToShowId = getUrlVars()["event"];
 if(eventToShowId) {
-    const eventToShowOnMap = events.find(function (event) {
+    eventToShowOnMap = events.find(function (event) {
         return eventToShowId === event.id
     });
     attractionToShowId = eventToShowOnMap.poi;
