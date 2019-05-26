@@ -1,0 +1,25 @@
+    // Eltham Library
+    // **************
+
+    // Mon 10-11 Messy Mornings
+    // Tue 10-10:30 Baby Rhyme Time
+    /*
+        Songs, rhyme, rhythm and fun at your local library
+Babies and children who love books and have the pleasure of hearing stories and rhymes have a flying start when it comes to learning to read by themselves.
+
+Sessions incorporate a mix of songs, rhymes, rhythm and movement as well as providing the opportunity to share games, novelty books and toys.
+
+Children are never too young to join the library, it is free and lots of fun!
+     */
+    // Tue 11-12 Coffee mornings
+    //     A morning coffee group with a varied programme of interesting talks. All welcome Refreshments Provided. Please contact the library for more information.
+    // Tue 14:00-15:30 Knit & Natter   A group for knitting and crochet advice, inspiration and a chat! Beginners are welcome.
+    // Wed 10:00-10:30 Baby Rhyme Time
+    // Wed 11:00-11:30 Baby Rhyme Time
+    // Wed 15:45-16:45 Craft club
+    // Thu 10:00-10:20  Story Time
+    // Fri 10:00-10:30 Baby Rhyme Time
+    // Fri 11:00-11:30 Baby Rhyme Time
+    // Fri 14:00-15:30 Adult Craft Group
+    // Sat 09:30-10:30 // Learn My Way UK Online Course  - This is the place to take your first steps online. You can find out all about the mouse, the keyboard, and the internet, and get ready to chat to friends with your own email account. From here, the world is your oyster!
+    // Sat 14:00-15:00  Inspect Your Gadget - Free IT assistance
