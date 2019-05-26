@@ -33,7 +33,7 @@
 <script>
 
 String.prototype.replaceAll = function(search, replacement) {
-    var target = this;
+    const target = this;
     return target.split(search).join(replacement);
 };
 
@@ -65,13 +65,13 @@ pushUrlForEvent = function(event) {
 
 mapboxgl.accessToken = 'pk.eyJ1IjoibWF0dHJmYXJyb3ciLCJhIjoiS0gtNnVKUSJ9.9n4like7mmNyB4aDm27uXw';
 
-var mobile = !window.matchMedia("only screen and (min-width: 401px)").matches;
+const mobile = !window.matchMedia("only screen and (min-width: 401px)").matches;
 
 var attractionToShowId;
 
-var eventToShowId = getUrlVars()["event"];
+const eventToShowId = getUrlVars()["event"];
 if(eventToShowId) {
-    var eventToShowOnMap = events.find(function (event) {
+    const eventToShowOnMap = events.find(function (event) {
         return eventToShowId === event.id
     });
     attractionToShowId = eventToShowOnMap.poi;
