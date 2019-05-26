@@ -55,7 +55,7 @@ zoomMapToCoords = function(poi) {
 
 pushUrlForPoi = function(poi) {
     const url = location.protocol + '//' + location.host + location.pathname + '?poi='+poi.name.replaceAll(" ", "_");
-    history.pushState({}, "Eltham Map", location.protocol + '//' + location.host + location.pathname + '?poi=eeek');
+    history.pushState({}, "Eltham Map", url);
 };
 
 pushUrlForEvent = function(event) {
