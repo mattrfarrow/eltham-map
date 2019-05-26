@@ -200,10 +200,14 @@ function showDetailsOfPoiAndEvent(attraction, event) {
     nameDiv.id = "poidetails-poiNameDiv";
     if(!event) {
         nameDiv.className = "poidetails-title";
+        nameDiv.innerHTML = attraction.name;
+
     } else {
         nameDiv.className = "poidetails-subtitle";
+        nameDiv.innerHTML = "At " + attraction.name;
     }
-    nameDiv.innerHTML = "At " + attraction.name;
+
+
     if(event && event.date && event.timeSpecified) {
         nameDiv.innerHTML += " at "+getTimeAsString(event.date);
     }
@@ -335,7 +339,11 @@ function generateWhatsOnTable(events) {
     var whatsOnTable = document.createElement("table");
     whatsOnTable.id = "eventsTable";
 
-    var sortedEvents = events.slice();
+    const now = new Date();
+    var sortedEvents = events
+        .slice()
+        .filter(attraction => attraction.date >= now )
+    ;
     sortedEvents.sort(function(a,b){return a.date - b.date;});
 
     var lastEventDate;
