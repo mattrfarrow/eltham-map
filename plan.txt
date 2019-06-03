@@ -1,9 +1,8 @@
 Before Launch
 -------------
-Put the site name somewhere so it's recognisable
 Show event end time as well as the start time
-Don't show events in the past
-Add schedule of the millions of regular kids' events
+
+Add schedule of the (actually not) millions of regular kids' events?
 
 Whenever
 --------
