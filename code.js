@@ -70,6 +70,7 @@ document.getElementById("whats-on").appendChild(generateWhatsOnTable(events));
 if(attractionToShowOnMap) {
     if (attractionToShowOnMap) {
         zoomMapToCoords(attractionToShowOnMap);
+        showDetailsOfPoiAndEvent(attractionToShowOnMap, eventToShowOnMap);
     }
 }
 
@@ -81,7 +82,6 @@ if(mobile) {
             pushUrlForPoi(attractionToShowOnMap)
         }
 
-        showDetailsOfPoiAndEvent(attractionToShowOnMap, eventToShowOnMap);
         show(mapContainer);
         hide(sidepanel);
     } else {
