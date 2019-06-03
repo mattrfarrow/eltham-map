@@ -82,11 +82,8 @@ if(mobile) {
             pushUrlForPoi(attractionToShowOnMap)
         }
 
-        show(mapContainer);
         hide(sidepanel);
-    } else {
-        show(sidepanel);
-        hide(mapContainer);
+        show(mapContainer);
     }
 }
 
