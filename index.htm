@@ -101,12 +101,14 @@ document.getElementById("attractions").appendChild(generateAttractionsTable(attr
 document.getElementById("attractions").style.display = "none";
 document.getElementById("whats-on").appendChild(generateWhatsOnTable(events));
 
+if(attractionToShowOnMap) {
+    if (attractionToShowOnMap) {
+        zoomMapToCoords(attractionToShowOnMap);
+    }
+}
+
 if(mobile) {
     if(attractionToShowOnMap) {
-        if(attractionToShowOnMap) {
-            zoomMapToCoords(attractionToShowOnMap);
-        }
-
         if(eventToShowOnMap) {
             pushUrlForEvent(eventToShowOnMap)
         } else {
