@@ -9,8 +9,11 @@ const attractions = [
     {name: "Gerald Moore Gallery", coords: [0.039818, 51.438416], desc: "A young centre for modern and contemporary art.", website: "https://geraldmooregallery.org" },
     {name: "The Rusty Bucket Pub", coords: [0.052095, 51.450422], desc: "The best craft beer in town.", website: "https://www.therustybucket.pub/" },
     {name: "The Long Pond", coords: [0.059565, 51.456884], desc: "A micropub in the Kent tradition." },
+    {name: "Oxleas Wood Café", coords: [0.06974, 51.4666], desc: "A café with stunning views and good value food and drink." },
 
 ];
+
+// https://www.freshgroundeltham.co.uk/ ?
 
 const jan = 0;
 const feb = 1;
@@ -51,5 +54,12 @@ const events = [
 
     {"id": "rb-01", poi: "The Rusty Bucket Pub", date: new Date(2019, may, 19), timeSpecified: 0, title: "Steve Boltz – Live Music (Rock)"},
     {"id": "rb-02", poi: "The Rusty Bucket Pub", date: new Date(2019, may, 26), timeSpecified: 0, title: "The Mason Dixon Brothers – Live Music (Country/Western)"},
+
+    {"id": "owc-01", poi: "Oxleas Wood Café", date: new Date(2019, aug, 4, 15), timeSpecified: 1, title: "Live Music - Gambler"},
+    {"id": "owc-02", poi: "Oxleas Wood Café", date: new Date(2019, aug, 11, 15), timeSpecified: 1, title: "Live Music - Gordon Webber & Steve Mac", shortDesc: "Harmony vocals and acoustic guitars."},
+    {"id": "owc-03", poi: "Oxleas Wood Café", date: new Date(2019, aug, 25, 15), timeSpecified: 1, title: "Oxlea Hill Carnival: Marie Dawn & JJBand", shortDesc: "Classic reggae.  BBQ jerk chicken.  Beers, ales and gins."},
+    {"id": "owc-04", poi: "Oxleas Wood Café", date: new Date(2019, aug, 26, 15), timeSpecified: 1, title: "Oxlea Hill Carnival: Al Keval", shortDesc: "Ska and reggae band.  BBQ jerk chicken.  Beers, ales and gins."},
+    {"id": "owc-05", poi: "Oxleas Wood Café", date: new Date(2019, sep, 1, 15), timeSpecified: 1, title: "Live Music - Shawthing"},
+    {"id": "owc-06", poi: "Oxleas Wood Café", date: new Date(2019, sep, 8, 15), timeSpecified: 1, title: "Live Music - Marilyn Gentle Trio", shortDesc: "Acoustic soul, jazz, latin and pop... re-imagined."},
 
 ];
