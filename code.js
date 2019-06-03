@@ -216,7 +216,7 @@ function generateAttractionsTableRow(attraction) {
     };
 
     var td = document.createElement("td");
-    td.className = "attraction";
+    td.className = "attraction clickable";
     td.appendChild(el);
 
     var outerTr = document.createElement("tr");
@@ -264,7 +264,7 @@ function generateWhatsOnTableRow(event, attraction) {
     };
 
     var td = document.createElement("td");
-    td.className = "attraction";
+    td.className = "attraction clickable";
     td.appendChild(el);
 
     var outerTr = document.createElement("tr");
