@@ -315,7 +315,7 @@ function generateWhatsOnTable(events) {
 
     sortedEvents.forEach(function(event) {
 
-        if(!lastEventDate || lastEventDate.getTime() !== event.date.getTime()) {
+        if(!lastEventDate || withoutTime(lastEventDate).getTime() !== withoutTime(event.date).getTime()) {
             whatsOnTable.appendChild(generateDateRow(event.date));
         }
         var poi = attractions.find(function(attraction) {return event.poi === attraction.name});
@@ -326,6 +326,11 @@ function generateWhatsOnTable(events) {
     return whatsOnTable;
 }
 
+function withoutTime(date) {
+    var date2 = new Date(date.getTime());
+    date2.setHours(0,0,0,0);
+    return date2;
+}
 
 function attractionsSectionButtonClicked() {
     if(mobile && map){
