@@ -29,7 +29,7 @@ font-family:apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,C
     overflow-y: auto;
 }
 
-#attractionsTable tr:nth-child(odd) {background: #dcfbe4}
+#attractionsTable tr:nth-child(odd)  {background: #dcfbe4}
 #attractionsTable tr:nth-child(even) {background: #FFF}
 
 .sidepanel {
@@ -41,7 +41,7 @@ font-family:apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,C
     cursor:pointer;
 }
 
-#eventsTable .whatsOnRow {background: #dcfbe4}
+#eventsTable .whatsOnRow {background: #def7e2}
 #eventsTable .dateRow    {background: #cac0c0}
 
 #eventsTable td {
