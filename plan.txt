@@ -1,7 +1,11 @@
 Before Launch
 -------------
-Show event end time as well as the start time
+Add contact details of places
+Add some icons to make the buttons more obviously buttons?
 
+
+Maybe
+-------------
 Add schedule of the (actually not) millions of regular kids' events?
 
 Whenever
