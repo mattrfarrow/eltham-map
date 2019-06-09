@@ -95,9 +95,10 @@ font-family:apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,C
     font-weight: 600;
 }
 
-.poidetails-desc {
+#poidetails-desc {
     font-size: 16px;
     font-weight: 400;
+    margin-bottom: 8px;
 }
 
 .poidetails-eventUrlDiv {
