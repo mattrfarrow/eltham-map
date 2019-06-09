@@ -4,6 +4,23 @@ font-family:apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,C
 #site-title {
     text-decoration-line: none;
 }
+
+#top-bar {
+    padding-top: 3px;
+}
+
+#site-title-bar {
+    background: #1288af;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+#site-title {
+    color: white;
+    font-weight: 600;
+    margin-left: 2px;
+}
+
 #side-panel { position:absolute; top:52px; bottom:0; left: 0;}
 
 .marker {
@@ -66,24 +83,7 @@ font-family:apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,C
     margin-left: 2px;
 }
 
-#top-bar {
-    padding-top: 3px;
-}
-
-#site-title-bar {
-    background: #1288af;
-    padding-top: 3px;
-    padding-bottom: 3px;
-}
-
-#site-title {
-    color: white;
-    font-weight: 600;
-    margin-left: 2px;
-}
-
 #map-container {position:absolute;}
-
 
 .poidetails-title {
     font-size: 28px;
@@ -114,6 +114,7 @@ font-family:apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,C
     background: white;
     overflow-y: auto;
 }
+
 #this-is-inse9 {
     font-weight: 600;
     padding-top: 8px;
