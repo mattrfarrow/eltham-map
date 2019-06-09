@@ -17,7 +17,7 @@ const attractions = [
         website: "http://www.bobhopetheatre.co.uk/" },
 
     // vue cinema
-
+    // eltham escape rooms
 
     {name: "Eltham Park South", coords: [0.067033, 51.454722],
         desc: "Large, grassy area, good for informal ball games with splendid tree-lined avenues, a children's playground and a picnic area." },
@@ -32,7 +32,8 @@ const attractions = [
     {name: "The Rusty Bucket Pub", coords: [0.052095, 51.450422],
         desc: "The best craft beer in town.", website: "https://www.therustybucket.pub/" },
     {name: "The Long Pond", coords: [0.059565, 51.456884],
-        desc: "A micropub in the Kent tradition." },
+        desc: "A micropub in the Kent tradition.",
+        address: "110 Westmount Road, SE9 1UT"},
     {name: "Oxleas Wood Cafe", coords: [0.06974, 51.4666],
         desc: "A café with stunning views and good value food and drink." },
 
@@ -76,16 +77,16 @@ const events = [
 
     {"id": "bht-04", poi: "Bob Hope Theatre", date: new Date(2019, may, 28, 11, 0), timeSpecified: 1, title: "John Hegley: Morning Wordship", shortDesc: "Cross-generational guffaws, comedy word play and song with the legendary performance poet.", url: "http://www.bobhopetheatre.co.uk/hegley.html"},
 
-    {"id": "rb-02", poi: "The Rusty Bucket Pub", date: new Date(2019, may, 26, 18), timeSpecified: 1, title: "The Mason Dixon Brothers – Live Music (Country/Western)"},
-    {"id": "rb-03", poi: "The Rusty Bucket Pub", date: new Date(2019, jun, 2, 18), timeSpecified: 1, title: "Stephen leonard - acoustic rock"},
-    {"id": "rb-04", poi: "The Rusty Bucket Pub", date: new Date(2019, jun, 9, 18), timeSpecified: 1, title: "JD Springfield - live acoustic blues."},
-    {"id": "rb-05", poi: "The Rusty Bucket Pub", date: new Date(2019, jun, 16, 18), timeSpecified: 1, title: "Marco Buono project - dirty southern blues"},
+    {"id": "rb-02", poi: "The Rusty Bucket Pub", date: new Date(2019, may, 26, 18), timeSpecified: 1, title: "Live Music: The Mason Dixon Brothers (country/eestern)"},
+    {"id": "rb-03", poi: "The Rusty Bucket Pub", date: new Date(2019, jun, 2, 18), timeSpecified: 1, title: "Live Music: Stephen leonard - acoustic rock"},
+    {"id": "rb-04", poi: "The Rusty Bucket Pub", date: new Date(2019, jun, 9, 18), timeSpecified: 1, title: "Live Music: JD Springfield", shortDesc: "Live acoustic blues."},
+    {"id": "rb-05", poi: "The Rusty Bucket Pub", date: new Date(2019, jun, 16, 18), timeSpecified: 1, title: "Live Music: Marco Buono project - dirty southern blues"},
     {"id": "rb-06", poi: "The Rusty Bucket Pub", date: new Date(2019, jun, 23, 18), timeSpecified: 1, title: "Little Talks"},
     {"id": "rb-07", poi: "The Rusty Bucket Pub", date: new Date(2019, jun, 30, 18), timeSpecified: 1, title: "Live Music: Harvey Montague", shortDesc: "Local lad Harvey plays classic 70, 80 & 90 acoustic indie & rock."},
-    {"id": "rb-08", poi: "The Rusty Bucket Pub", date: new Date(2019, jul, 7, 18), timeSpecified: 1, title: "Eva & Nine"},
-    {"id": "rb-09", poi: "The Rusty Bucket Pub", date: new Date(2019, jul, 14, 18), timeSpecified: 1, title: "Sound Refuge"},
-    {"id": "rb-11", poi: "The Rusty Bucket Pub", date: new Date(2019, jul, 21, 18), timeSpecified: 1, title: "Marcopiccioni Trio - blues, jazz & Rock"},
-    {"id": "rb-12", poi: "The Rusty Bucket Pub", date: new Date(2019, jul, 28, 18), timeSpecified: 1, title: "Dom & James - local band - 90's acoustic indie rock"},
+    {"id": "rb-08", poi: "The Rusty Bucket Pub", date: new Date(2019, jul, 7, 18), timeSpecified: 1, title: "Live Music: Eva & Nine"},
+    {"id": "rb-09", poi: "The Rusty Bucket Pub", date: new Date(2019, jul, 14, 18), timeSpecified: 1, title: "Live Music: Sound Refuge"},
+    {"id": "rb-11", poi: "The Rusty Bucket Pub", date: new Date(2019, jul, 21, 18), timeSpecified: 1, title: "Live Music: Marcopiccioni Trio - blues, jazz & Rock"},
+    {"id": "rb-12", poi: "The Rusty Bucket Pub", date: new Date(2019, jul, 28, 18), timeSpecified: 1, title: "Live Music: Dom & James - local band - 90's acoustic indie rock"},
 
     {"id": "owc-01", poi: "Oxleas Wood Cafe", date: new Date(2019, aug, 4, 15), timeSpecified: 1, title: "Live Music - Gambler"},
     {"id": "owc-02", poi: "Oxleas Wood Cafe", date: new Date(2019, aug, 11, 15), timeSpecified: 1, title: "Live Music - Gordon Webber & Steve Mac", shortDesc: "Harmony vocals and acoustic guitars."},

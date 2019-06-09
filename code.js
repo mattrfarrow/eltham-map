@@ -185,6 +185,13 @@ function showDetailsOfPoiAndEvent(attraction, event) {
         poiDetailsBox.appendChild(poiDescDiv);
     }
 
+    if(attraction.address) {
+        var poiAddressDiv = document.createElement("div");
+        poiAddressDiv.id = "poidetails-address";
+        poiAddressDiv.innerHTML = attraction.address;
+        poiDetailsBox.appendChild(poiAddressDiv);
+    }
+
     if(attraction.website) {
         var websiteLink = document.createElement("a");
         websiteLink.id = "poidetails-website";
