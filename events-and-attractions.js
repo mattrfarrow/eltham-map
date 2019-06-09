@@ -16,6 +16,11 @@ const attractions = [
         desc: "Community theatre owned and run by the members of Eltham Little Theatre Company, running approximately 11 shows each year.",
         website: "http://www.bobhopetheatre.co.uk/" },
 
+    {name: "Well Hall Pleasaunce", coords: [0.048810, 51.456089],
+        desc: "A haven of formal gardens, ponds and woodland.",
+        website: "http://www.wellhall.org.uk/",
+    address: "Well Hall Road, SE9 6SN"},
+
     // vue cinema
     // eltham escape rooms
 
@@ -101,5 +106,18 @@ const events = [
     {"id": "ep-03", poi: "Eltham Palace", date: new Date(2019, jul, 7, 12), timeSpecified: 1, title: "Lazy Jazz Sunday", shortDesc: "Join us for a lazy Sunday and enjoy jazz music in the stunning surroundings of Eltham Palace and Gardens.  Performances at 12pm, 1pm, 2pm & 3pm", url: "https://www.english-heritage.org.uk/visit/whats-on/eltham-queer-walls-21-june-2019/"},
     {"id": "ep-04", poi: "Eltham Palace", date: new Date(2019, jul, 14, 12), timeSpecified: 1, title: "Lazy Jazz Sunday", shortDesc: "Join us for a lazy Sunday and enjoy jazz music in the stunning surroundings of Eltham Palace and Gardens.  Performances at 12pm, 1pm, 2pm & 3pm", url: "https://www.english-heritage.org.uk/visit/whats-on/eltham-queer-walls-21-june-2019/"},
     {"id": "ep-05", poi: "Eltham Palace", date: new Date(2019, jul, 21, 12), timeSpecified: 1, title: "Lazy Jazz Sunday", shortDesc: "Join us for a lazy Sunday and enjoy jazz music in the stunning surroundings of Eltham Palace and Gardens.  Performances at 12pm, 1pm, 2pm & 3pm", url: "https://www.english-heritage.org.uk/visit/whats-on/eltham-queer-walls-21-june-2019/"},
+
+    {"id": "whp-01", poi: "Well Hall Pleasaunce", date: new Date(2019, jun, 9, 15), timeSpecified: 1, title: "Summer Sunday Music", url: "http://parksfest.org/calendar.html"},
+    {"id": "whp-02", poi: "Well Hall Pleasaunce", date: new Date(2019, jun, 16, 15), timeSpecified: 1, title: "Summer Sunday Music", url: "http://parksfest.org/calendar.html"},
+    {"id": "whp-03", poi: "Well Hall Pleasaunce", date: new Date(2019, jun, 23, 15), timeSpecified: 1, title: "Summer Sunday Music", url: "http://parksfest.org/calendar.html"},
+    {"id": "whp-04", poi: "Well Hall Pleasaunce", date: new Date(2019, jun, 30, 15), timeSpecified: 1, title: "Summer Sunday Music", url: "http://parksfest.org/calendar.html"},
+    {"id": "whp-05", poi: "Well Hall Pleasaunce", date: new Date(2019, jul, 7, 15), timeSpecified: 1, title: "Summer Sunday Music", url: "http://parksfest.org/calendar.html"},
+    {"id": "whp-06", poi: "Well Hall Pleasaunce", date: new Date(2019, jul, 14, 15), timeSpecified: 1, title: "Summer Sunday Music", url: "http://parksfest.org/calendar.html"},
+    {"id": "whp-07", poi: "Well Hall Pleasaunce", date: new Date(2019, jul, 21, 15), timeSpecified: 1, title: "Summer Sunday Music", url: "http://parksfest.org/calendar.html"},
+    {"id": "whp-08", poi: "Well Hall Pleasaunce", date: new Date(2019, jul, 28, 15), timeSpecified: 1, title: "Summer Sunday Music", url: "http://parksfest.org/calendar.html"},
+
+    {"id": "eps-01", poi: "Eltham Park South", date: new Date(2019, jun, 30, 15), timeSpecified: 1, title: "Concert in the Park", url: "http://parksfest.org/calendar.html"},
+    {"id": "eps-02", poi: "Eltham Park South", date: new Date(2019, jul, 7, 15), timeSpecified: 1, title: "Concert in the Park", url: "http://parksfest.org/calendar.html"},
+    {"id": "eps-02", poi: "Eltham Park South", date: new Date(2019, jul, 21, 15), timeSpecified: 1, title: "Concert in the Park", url: "http://parksfest.org/calendar.html"},
 
 ];
