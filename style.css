@@ -84,6 +84,9 @@ body {
     width: 200px;
     margin-right: 10px;
     margin-left: 2px;
+    text-decoration: underline;
+    text-decoration-color: blue;
+    color: blue;
 }
 
 #map-container {position:absolute;}
