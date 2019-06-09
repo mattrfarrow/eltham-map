@@ -292,7 +292,7 @@ function getTimeAsString(date) {
 }
 
 function generateDateRow(date) {
-    var days = [  "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+    var days = [  "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
     var months = [ "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
     var dateString = days[date.getDay()] + " " +date.getDate() + " " + months[date.getMonth()];
 
