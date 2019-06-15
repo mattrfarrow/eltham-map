@@ -174,7 +174,7 @@ function showDetailsOfPoiAndEvent(attraction, event) {
 
 
     if(event && event.date && event.timeSpecified) {
-        nameDiv.innerHTML += " at "+getTimeAsString(event.date);
+        nameDiv.innerHTML += " at "+getTimeAsString(event.date) + " on " + dateToString(event.date);
     }
     poiDetailsBox.appendChild(nameDiv);
 
@@ -291,10 +291,14 @@ function getTimeAsString(date) {
     }
 }
 
-function generateDateRow(date) {
+function dateToString(date) {
     var days = [  "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
     var months = [ "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-    var dateString = days[date.getDay()] + " " +date.getDate() + " " + months[date.getMonth()];
+    return days[date.getDay()] + " " +date.getDate() + " " + months[date.getMonth()];
+}
+
+function generateDateRow(date) {
+    var dateString = dateToString(date);
 
     var dateTd = document.createElement("td");
     dateTd.innerHTML = dateString;
