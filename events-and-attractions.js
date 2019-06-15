@@ -85,7 +85,7 @@ const events = [
     {"id": "rb-02", poi: "The Rusty Bucket Pub", date: new Date(2019, may, 26, 18), timeSpecified: 1, title: "Live Music: The Mason Dixon Brothers (country/eestern)"},
     {"id": "rb-03", poi: "The Rusty Bucket Pub", date: new Date(2019, jun, 2, 18), timeSpecified: 1, title: "Live Music: Stephen leonard - acoustic rock"},
     {"id": "rb-04", poi: "The Rusty Bucket Pub", date: new Date(2019, jun, 9, 18), timeSpecified: 1, title: "Live Music: JD Springfield", shortDesc: "Live acoustic blues."},
-    {"id": "rb-05", poi: "The Rusty Bucket Pub", date: new Date(2019, jun, 16, 18), timeSpecified: 1, title: "Live Music: Marco Buono project - dirty southern blues"},
+    {"id": "rb-05", poi: "The Rusty Bucket Pub", date: new Date(2019, jun, 16, 18), timeSpecified: 1, title: "Live Music: Marco Buono project - dirty southern blues", shortDesc: "Featuring a Delta/Chicago style, this an acoustic duo, but inviting guests into the blues circle at every gig."},
     {"id": "rb-06", poi: "The Rusty Bucket Pub", date: new Date(2019, jun, 23, 18), timeSpecified: 1, title: "Little Talks"},
     {"id": "rb-07", poi: "The Rusty Bucket Pub", date: new Date(2019, jun, 30, 18), timeSpecified: 1, title: "Live Music: Harvey Montague", shortDesc: "Local lad Harvey plays classic 70, 80 & 90 acoustic indie & rock."},
     {"id": "rb-08", poi: "The Rusty Bucket Pub", date: new Date(2019, jul, 7, 18), timeSpecified: 1, title: "Live Music: Eva & Nine"},
