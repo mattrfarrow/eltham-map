@@ -42,6 +42,10 @@ const attractions = [
     {name: "Oxleas Wood Cafe", coords: [0.06974, 51.4666],
         desc: "A café with stunning views and good value food and drink." },
 
+    {name: "All Saints Church", coords: [0.072072, 51.436021],
+        desc: "A church in the heart of New Eltham.",
+        address: "Bercta Road, Bishops Close, London, SE9 3UT"},
+
 ];
 
 // https://www.freshgroundeltham.co.uk/ ?
@@ -60,6 +64,9 @@ const nov = 10;
 const dec = 11;
 
 const events = [
+    {"id": "asc-01", poi: "All Saints Church", date: new Date(2019, jul, 6, 11), timeSpecified: 1, title: "Family Fun Day",
+        shortDesc: "Fun for all the family: Games, bouncy castle, craft and cake stalls, face painting, children’s colouring competition. Admission is free, all are welcome. ", url: "https://www.facebook.com/events/382254675719310/"},
+
     {"id": "sc-01", poi: "Severndroog Castle", date: new Date(2019, jun, 21), timeSpecified: 0, title: "A Night of Vintage Jazz", shortDesc: "Explore and enjoy the Castle after hours, listening to the soulful tones of vintage jazz singer Jess DeGiudici at one of our summer late night openings.", url: "https://www.severndroogcastle.org.uk/VintageJazzLatesEvent.html"},
     {"id": "sc-02", poi: "Severndroog Castle", date: new Date(2019, jul, 12), timeSpecified: 0, title: "A Theatrical Opera Night", shortDesc: "Explore and enjoy the Castle after hours whist listening to enticing Opera arias at one of our summer late night openings.", url: "https://www.severndroogcastle.org.uk/OperaLate.html"},
     {"id": "sc-03", poi: "Severndroog Castle", date: new Date(2019, jul, 18), timeSpecified: 0, title: "Production of Nell Gwyn"},
