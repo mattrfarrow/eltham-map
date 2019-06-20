@@ -44,7 +44,29 @@ const attractions = [
 
     {name: "All Saints Church", coords: [0.072072, 51.436021],
         desc: "A church in the heart of New Eltham.",
-        address: "Bercta Road, Bishops Close, London, SE9 3UT"},
+        address: "Bercta Road, Bishops Close, London, SE9 3UT",
+        website: "http://allsaintsneweltham.org.uk/"},
+
+    {name: "New Eltham Methodist Church", coords: [0.073827, 51.436354],
+        desc: "A church in the heart of New Eltham.",
+        address: "435-439 Footscray Road, London, SE9 3UL",
+        website: "http://www.newelthammethodist.org.uk/"},
+
+    {name: "Blackheath Rugby Club", coords: [0.046937, 51.458125],
+        desc: "It's a rugby club.",
+        address: "Kidbrooke Lane, Eltham\, London, SE9 6TE"},
+
+    {name: "Passey Place", coords: [0.054124, 51.450431],
+        desc: "A square in the centre of Eltham that hosts markets and events.",
+        address: "Passey Place, Eltham",
+        website: "https://www.facebook.com/elthampm/"},
+
+    {name: "Harris Academy", coords: [0.039424, 51.451899],
+        desc: "A secondary school and sixth form.",
+        address: "Middle Park Avenue, Eltham, SE9 5EQ\n",
+        website: "https://www.harrisfederation.org.uk/175/our-academies/academy/18/harris-academy-greenwich"},
+
+
 
 ];
 
@@ -64,10 +86,17 @@ const nov = 10;
 const dec = 11;
 
 const events = [
+
+    // http://www.necp.org.uk/next-event-1/4590253811
+
     {"id": "asc-01", poi: "All Saints Church", date: new Date(2019, jul, 6, 11), timeSpecified: 1, title: "Family Fun Day",
         shortDesc: "Fun for all the family: Games, bouncy castle, craft and cake stalls, face painting, children’s colouring competition. Admission is free, all are welcome. ", url: "https://www.facebook.com/events/382254675719310/"},
 
-    {"id": "sc-01", poi: "Severndroog Castle", date: new Date(2019, jun, 21), timeSpecified: 0, title: "A Night of Vintage Jazz", shortDesc: "Explore and enjoy the Castle after hours, listening to the soulful tones of vintage jazz singer Jess DeGiudici at one of our summer late night openings.", url: "https://www.severndroogcastle.org.uk/VintageJazzLatesEvent.html"},
+    //Every Wednesday
+    {"id": "brc-01", poi: "Blackheath Rugby Club", date: new Date(2019, jun, 19, 20), timeSpecified: 1, title: "Folk Mob Open-Mic Night", shortDesc: "An open-mic night with the Folk Mob - come and play or just watch and listen.", url: "https://sites.google.com/site/folkmobonline/folkmob-calendar-1?authuser=0"},
+    {"id": "brc-02", poi: "Blackheath Rugby Club", date: new Date(2019, jun, 26, 20), timeSpecified: 1, title: "Folk Mob Open-Mic Night", shortDesc: "An open-mic night with the Folk Mob - come and play or just watch and listen.", url: "https://sites.google.com/site/folkmobonline/folkmob-calendar-1?authuser=0"},
+
+    {"id": "sc-01", poi: "Severndroog Castle", date: new Date(2019, jun, 21), timeSpecified: 0, title: "A Night of Vintage Jazz", shortDesc: "Explore and enjoy the Castle after hours, listening to the soulful tones of vintage jazz singer Jess DeGiudici at one of our summer late night openings.  Be sure to book ahead.", url: "https://www.severndroogcastle.org.uk/VintageJazzLatesEvent.html"},
     {"id": "sc-02", poi: "Severndroog Castle", date: new Date(2019, jul, 12), timeSpecified: 0, title: "A Theatrical Opera Night", shortDesc: "Explore and enjoy the Castle after hours whist listening to enticing Opera arias at one of our summer late night openings.", url: "https://www.severndroogcastle.org.uk/OperaLate.html"},
     {"id": "sc-03", poi: "Severndroog Castle", date: new Date(2019, jul, 18), timeSpecified: 0, title: "Production of Nell Gwyn"},
     {"id": "sc-04", poi: "Severndroog Castle", date: new Date(2019, aug, 11), timeSpecified: 0, title: "A Selection of Shakespeare Plays"},
@@ -86,6 +115,7 @@ const events = [
 
     {"id": "gmg-01", poi: "Gerald Moore Gallery", date: new Date(2019, may, 23, 18,30), timeSpecified: 1, title: "Introduction to Casting", shortDesc: "Learn some simple casting techniques inspired by our exhibition 'The Oval Window'.", url: "https://bookwhen.com/geraldmooregallery#focus=ev-s34j-20190523183000"},
     {"id": "gmg-02", poi: "Gerald Moore Gallery", date: new Date(2019, jun, 5, 10,  0), timeSpecified: 1, title: "Introduction to Drawing", shortDesc: "Come learn to draw in a friendly warm environment.  Held at Eltham College.", url: "https://bookwhen.com/geraldmooregallery%20#focus=ev-sg9c-20190501100000"},
+    {"id": "gmg-02", poi: "Gerald Moore Gallery", date: new Date(2019, jul, 10, 9,  30), timeSpecified: 1, title: "Kids Summer Art Day: Paint!", shortDesc: "Explore the world of paint in this jam packed day of colours. For ages 6-10. £50 for the whole day.", url: "https://bookwhen.com/geraldmooregallery%20#focus=ev-socb-20190710093000"},
 
     {"id": "bht-04", poi: "Bob Hope Theatre", date: new Date(2019, may, 28, 11, 0), timeSpecified: 1, title: "John Hegley: Morning Wordship", shortDesc: "Cross-generational guffaws, comedy word play and song with the legendary performance poet.", url: "http://www.bobhopetheatre.co.uk/hegley.html"},
 
@@ -125,6 +155,13 @@ const events = [
 
     {"id": "eps-01", poi: "Eltham Park South", date: new Date(2019, jun, 30, 15), timeSpecified: 1, title: "Concert in the Park", url: "http://parksfest.org/calendar.html"},
     {"id": "eps-02", poi: "Eltham Park South", date: new Date(2019, jul, 7, 15), timeSpecified: 1, title: "Concert in the Park", url: "http://parksfest.org/calendar.html"},
-    {"id": "eps-02", poi: "Eltham Park South", date: new Date(2019, jul, 21, 15), timeSpecified: 1, title: "Concert in the Park", url: "http://parksfest.org/calendar.html"},
+    {"id": "eps-03", poi: "Eltham Park South", date: new Date(2019, jul, 21, 15), timeSpecified: 1, title: "Concert in the Park", url: "http://parksfest.org/calendar.html"},
+
+    {"id": "nem-01", poi: "New Eltham Methodist Church", date: new Date(2019, jun, 22, 19, 30), timeSpecified: 1, title: "\"Strictly Come Dancing\" Evening", shortDesc: "Come along and our champion dance teachers Hilary and Ann will teach you a variety of latin and ballroom dances step by step.", url: "http://www.necp.org.uk/next-event-1/4590253811"},
+
+    // 4th Sunday of the month
+    {"id": "pp-01", poi: "Passey Place", date: new Date(2019, jun, 23, 10), timeSpecified: 1, title: "Eltham Producers Market", shortDesc: "We have fruit and veg, honey, bread and cakes, olives, personalised gifts, craft beers and chilli sauces, chutneys, jams and marmalades, fruit infused liqueurs and The Brothers will be busking."},
+
+    {"id": "ha-01", poi: "Harris Academy", date: new Date(2019, jun, 24, 19, 30), timeSpecified: 1, title: "Ceroc Dance Class", shortDesc: "every Monday at Harris Academy, Middle Park Avenue. No experience or partner needed.", url: "https://www.facebook.com/ceroceltham/"},
 
 ];
