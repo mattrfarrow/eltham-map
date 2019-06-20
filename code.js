@@ -33,8 +33,8 @@ mapboxgl.accessToken = 'pk.eyJ1IjoibWF0dHJmYXJyb3ciLCJhIjoiS0gtNnVKUSJ9.9n4like7
 
 const mobile = !window.matchMedia("only screen and (min-width: 401px)").matches;
 
-var attractionToShowId;
-var eventToShowOnMap;
+let attractionToShowId;
+let eventToShowOnMap;
 const eventToShowId = getUrlVars()["event"];
 if(eventToShowId) {
     eventToShowOnMap = events.find(function (event) {
@@ -88,20 +88,20 @@ if(mobile) {
 }
 
 function addMarkers(attraction) {
-    var popupContent = document.createElement("div");
+    const popupContent = document.createElement("div");
 
-    var popupTitle = document.createElement("h2");
+    const popupTitle = document.createElement("h2");
     popupTitle.innerText = attraction.name;
     popupContent.appendChild(popupTitle);
 
     if(attraction.desc) {
-        var popupDesc = document.createElement("div");
+        const popupDesc = document.createElement("div");
         popupDesc.innerText = attraction.desc;
         popupContent.appendChild(popupDesc);
     }
 
     if(attraction.website) {
-        var popupUrl = document.createElement("a");
+        const popupUrl = document.createElement("a");
         popupUrl.href = attraction.website;
         popupUrl.innerText = "Website";
         popupUrl.target="_blank";
@@ -109,11 +109,11 @@ function addMarkers(attraction) {
     }
 
 
-    var popup = new mapboxgl.Popup({ offset: 25 })
+    const popup = new mapboxgl.Popup({offset: 25})
         .setDOMContent(popupContent);
 
     // create DOM element for the marker
-    var el = document.createElement('div');
+    const el = document.createElement('div');
     el.className = 'marker';
 
     // create the marker
@@ -128,10 +128,10 @@ function showDetailsOfPoiAndEvent(attraction, event) {
     const poiDetailsBox = document.getElementById("poi-details-box");
     poiDetailsBox.innerHTML = "";
     if(event) {
-        var eventDiv = document.createElement("div");
+        const eventDiv = document.createElement("div");
         eventDiv.className = "poidetails-eventSection";
 
-        var eventTitleDiv = document.createElement("div");
+        const eventTitleDiv = document.createElement("div");
         eventTitleDiv.id = "poidetails-eventTitleDiv";
         eventTitleDiv.className = "poidetails-title";
         eventTitleDiv.innerHTML = event.title;
@@ -139,7 +139,7 @@ function showDetailsOfPoiAndEvent(attraction, event) {
         eventDiv.appendChild(eventTitleDiv);
 
         if(event.shortDesc) {
-            var eventDescDiv = document.createElement("div");
+            const eventDescDiv = document.createElement("div");
             eventDescDiv.id = "poidetails-eventDescDiv";
             eventDescDiv.className = "poidetails-desc";
             eventDescDiv.innerHTML = event.shortDesc;
@@ -147,13 +147,13 @@ function showDetailsOfPoiAndEvent(attraction, event) {
         }
 
         if(event.url) {
-            var eventLink = document.createElement("a");
+            const eventLink = document.createElement("a");
             eventLink.className = "poidetails-eventUrl";
             eventLink.innerHTML = "More info on the attractions's event page.";
             eventLink.href = event.url;
             eventLink.target="_blank";
 
-            var eventLinkDiv = document.createElement("div");
+            const eventLinkDiv = document.createElement("div");
             eventLinkDiv.className = "poidetails-eventUrlDiv";
             eventLinkDiv.appendChild(eventLink);
             eventDiv.appendChild(eventLinkDiv);
@@ -161,7 +161,7 @@ function showDetailsOfPoiAndEvent(attraction, event) {
         poiDetailsBox.appendChild(eventDiv);
     }
 
-    var nameDiv = document.createElement("div");
+    const nameDiv = document.createElement("div");
     nameDiv.id = "poidetails-poiNameDiv";
     if(!event) {
         nameDiv.className = "poidetails-title";
@@ -179,21 +179,21 @@ function showDetailsOfPoiAndEvent(attraction, event) {
     poiDetailsBox.appendChild(nameDiv);
 
     if(!event) {
-        var poiDescDiv = document.createElement("div");
+        const poiDescDiv = document.createElement("div");
         poiDescDiv.id = "poidetails-desc";
         poiDescDiv.innerHTML = attraction.desc;
         poiDetailsBox.appendChild(poiDescDiv);
     }
 
     if(attraction.address) {
-        var poiAddressDiv = document.createElement("div");
+        const poiAddressDiv = document.createElement("div");
         poiAddressDiv.id = "poidetails-address";
         poiAddressDiv.innerHTML = attraction.address;
         poiDetailsBox.appendChild(poiAddressDiv);
     }
 
     if(attraction.website) {
-        var websiteLink = document.createElement("a");
+        const websiteLink = document.createElement("a");
         websiteLink.id = "poidetails-website";
         websiteLink.innerHTML = attraction.name + " Website";
         websiteLink.href = attraction.website;
@@ -203,14 +203,14 @@ function showDetailsOfPoiAndEvent(attraction, event) {
 }
 
 function generateAttractionsTableRow(attraction) {
-    var nameDiv = document.createElement("div");
+    const nameDiv = document.createElement("div");
     nameDiv.innerHTML = attraction.name;
     nameDiv.className = "attraction-name";
 
-    var descDiv = document.createElement("div");
+    const descDiv = document.createElement("div");
     descDiv.innerHTML = attraction.desc;
 
-    var el = document.createElement('div');
+    const el = document.createElement('div');
     el.appendChild(nameDiv);
     el.appendChild(descDiv);
     el.onclick = function() {
@@ -219,45 +219,45 @@ function generateAttractionsTableRow(attraction) {
         pushUrlForPoi(attraction);
     };
 
-    var td = document.createElement("td");
+    const td = document.createElement("td");
     td.className = "attraction clickable";
     td.appendChild(el);
 
-    var outerTr = document.createElement("tr");
+    const outerTr = document.createElement("tr");
     outerTr.appendChild(td);
     return outerTr;
 }
 
 function generateAttractionsTable(attractions) {
-    var attractionsTable = document.createElement("table");
+    const attractionsTable = document.createElement("table");
     attractionsTable.id = "attractionsTable";
 
     attractions.forEach(function(attraction) {
-        var el = generateAttractionsTableRow(attraction);
+        const el = generateAttractionsTableRow(attraction);
         attractionsTable.appendChild(el);
     });
     return attractionsTable;
 }
 
 function generateWhatsOnTableRow(event, attraction) {
-    var nameDiv = document.createElement("div");
+    const nameDiv = document.createElement("div");
     nameDiv.innerHTML = event.title;
     nameDiv.className = "attraction-name";
 
-    var locationDiv = document.createElement("div");
-    var timeAndPlace = "At " + attraction.name;
+    const locationDiv = document.createElement("div");
+    let timeAndPlace = "At " + attraction.name;
     if(event.timeSpecified) {
         timeAndPlace += " @"+getTimeAsString(event.date);
     }
     locationDiv.innerHTML = timeAndPlace;
     locationDiv.className = "attraction-name";
 
-    var descDiv = document.createElement("div");
+    const descDiv = document.createElement("div");
     if(event.shortDesc) {
         descDiv.innerHTML = event.shortDesc;
     }
 
-    var el = document.createElement('div');
+    const el = document.createElement('div');
     el.appendChild(nameDiv);
     el.appendChild(locationDiv);
     el.appendChild(descDiv);
@@ -267,18 +267,18 @@ function generateWhatsOnTableRow(event, attraction) {
         pushUrlForEvent(event);
     };
 
-    var td = document.createElement("td");
+    const td = document.createElement("td");
     td.className = "attraction clickable";
     td.appendChild(el);
 
-    var outerTr = document.createElement("tr");
+    const outerTr = document.createElement("tr");
     outerTr.className = "whatsOnRow";
     outerTr.appendChild(td);
     return outerTr;
 }
 
 function getTimeAsString(date) {
-    var minutes = date.getMinutes() !== 0
+    const minutes = date.getMinutes() !== 0
         ? ":" + date.getMinutes()
         : "";
 
@@ -292,19 +292,19 @@ function getTimeAsString(date) {
 }
 
 function dateToString(date) {
-    var days = [  "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-    var months = [ "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
     return days[date.getDay()] + " " +date.getDate() + " " + months[date.getMonth()];
 }
 
 function generateDateRow(date) {
-    var dateString = dateToString(date);
+    const dateString = dateToString(date);
 
-    var dateTd = document.createElement("td");
+    const dateTd = document.createElement("td");
     dateTd.innerHTML = dateString;
     dateTd.className = "attraction-name";
 
-    var dateTr = document.createElement("tr");
+    const dateTr = document.createElement("tr");
     dateTr.className = "dateRow";
     dateTr.appendChild(dateTd);
 
@@ -312,24 +312,26 @@ function generateDateRow(date) {
 }
 
 function generateWhatsOnTable(events) {
-    var whatsOnTable = document.createElement("table");
+    const whatsOnTable = document.createElement("table");
     whatsOnTable.id = "eventsTable";
 
     const now = new Date();
-    var sortedEvents = events
+    let sortedEvents = events
         .slice()
         .filter(attraction => attraction.date >= now )
     ;
     sortedEvents.sort(function(a,b){return a.date - b.date;});
 
-    var lastEventDate;
+    let lastEventDate;
 
     sortedEvents.forEach(function(event) {
 
         if(!lastEventDate || withoutTime(lastEventDate).getTime() !== withoutTime(event.date).getTime()) {
             whatsOnTable.appendChild(generateDateRow(event.date));
         }
-        var poi = attractions.find(function(attraction) {return event.poi === attraction.name});
+        const poi = attractions.find(function (attraction) {
+            return event.poi === attraction.name
+        });
 
         whatsOnTable.appendChild(generateWhatsOnTableRow(event, poi));
         lastEventDate = event.date;
@@ -338,7 +340,7 @@ function generateWhatsOnTable(events) {
 }
 
 function withoutTime(date) {
-    var date2 = new Date(date.getTime());
+    const date2 = new Date(date.getTime());
     date2.setHours(0,0,0,0);
     return date2;
 }
@@ -368,8 +370,8 @@ function whatsOnSectionButtonClicked() {
 }
 
 function getUrlVars() {
-    var vars = {};
-    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+    const vars = {};
+    const parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
         vars[key] = value;
     });
     return vars;
