@@ -47,14 +47,14 @@ if(!attractionToShowId) {
     attractionToShowId = getUrlVars()["poi"];
 }
 if(attractionToShowId) {
-    var attractionToShowOnMap = attractions.find(function (attraction) {
+    const attractionToShowOnMap = attractions.find(function (attraction) {
         return attractionToShowId.replaceAll("_", " ") === attraction.name
     });
 }
-var mapContainer = document.getElementById("map-container");
-var sidepanel = document.getElementById("side-panel");
+const mapContainer = document.getElementById("map-container");
+const sidepanel = document.getElementById("side-panel");
 
-var map = new mapboxgl.Map({
+const map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/mapbox/streets-v11',
     center: [0.0573, 51.452],
