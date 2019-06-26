@@ -21,6 +21,11 @@ const attractions = [
         website: "http://www.wellhall.org.uk/",
     address: "Well Hall Road, SE9 6SN"},
 
+    {name: "Woodlands Farm", coords: [0.079343, 51.467514],
+        desc: "A city farm run as a conservation and education project.",
+        website: "https://www.thewoodlandsfarmtrust.org/",
+        address: "331 Shooters Hill, DA16 3RP"},
+
     // vue cinema
     // eltham escape rooms
 
@@ -52,9 +57,13 @@ const attractions = [
         address: "435-439 Footscray Road, London, SE9 3UL",
         website: "http://www.newelthammethodist.org.uk/"},
 
+    {name: "Christchurch Community Centre", coords: [0.060726, 51.451046],
+        desc: "A community centre in Eltham.",
+        address: "229 Eltham High Street, London, SE9 1TX"},
+
     {name: "Blackheath Rugby Club", coords: [0.046937, 51.458125],
         desc: "It's a rugby club.",
-        address: "Kidbrooke Lane, Eltham\, London, SE9 6TE"},
+        address: "Kidbrooke Lane, Eltham, London, SE9 6TE"},
 
     {name: "Passey Place", coords: [0.054124, 51.450431],
         desc: "A square in the centre of Eltham that hosts markets and events.",
@@ -87,8 +96,6 @@ const dec = 11;
 
 const events = [
 
-    // http://www.necp.org.uk/next-event-1/4590253811
-
     {"id": "asc-01", poi: "All Saints Church", date: new Date(2019, jul, 6, 11), timeSpecified: 1, title: "Family Fun Day",
         shortDesc: "Fun for all the family: Games, bouncy castle, craft and cake stalls, face painting, children’s colouring competition. Admission is free, all are welcome. ", url: "https://www.facebook.com/events/382254675719310/"},
 
@@ -96,14 +103,13 @@ const events = [
     {"id": "brc-01", poi: "Blackheath Rugby Club", date: new Date(2019, jun, 19, 20), timeSpecified: 1, title: "Folk Mob Open-Mic Night", shortDesc: "An open-mic night with the Folk Mob - come and play or just watch and listen.", url: "https://sites.google.com/site/folkmobonline/folkmob-calendar-1?authuser=0"},
     {"id": "brc-02", poi: "Blackheath Rugby Club", date: new Date(2019, jun, 26, 20), timeSpecified: 1, title: "Folk Mob Open-Mic Night", shortDesc: "An open-mic night with the Folk Mob - come and play or just watch and listen.", url: "https://sites.google.com/site/folkmobonline/folkmob-calendar-1?authuser=0"},
 
-    {"id": "sc-01", poi: "Severndroog Castle", date: new Date(2019, jun, 21), timeSpecified: 0, title: "A Night of Vintage Jazz", shortDesc: "Explore and enjoy the Castle after hours, listening to the soulful tones of vintage jazz singer Jess DeGiudici at one of our summer late night openings.  Be sure to book ahead.", url: "https://www.severndroogcastle.org.uk/VintageJazzLatesEvent.html"},
+    {"id": "sc-01", poi: "Severndroog Castle", date: new Date(2019, jun, 21, 18, 30), timeSpecified: 1, title: "A Night of Vintage Jazz", shortDesc: "Explore and enjoy the Castle after hours, listening to the soulful tones of vintage jazz singer Jess DeGiudici at one of our summer late night openings.  Be sure to book ahead.", url: "https://www.severndroogcastle.org.uk/VintageJazzLatesEvent.html"},
     {"id": "sc-02", poi: "Severndroog Castle", date: new Date(2019, jul, 12), timeSpecified: 0, title: "A Theatrical Opera Night", shortDesc: "Explore and enjoy the Castle after hours whist listening to enticing Opera arias at one of our summer late night openings.", url: "https://www.severndroogcastle.org.uk/OperaLate.html"},
     {"id": "sc-03", poi: "Severndroog Castle", date: new Date(2019, jul, 18), timeSpecified: 0, title: "Production of Nell Gwyn"},
     {"id": "sc-04", poi: "Severndroog Castle", date: new Date(2019, aug, 11), timeSpecified: 0, title: "A Selection of Shakespeare Plays"},
     {"id": "sc-05", poi: "Severndroog Castle", date: new Date(2019, sep, 13), timeSpecified: 0, title: "A Screening of Hitchcock"},
 
     {"id": "tb-02", poi: "Tudor Barn", date: new Date(2019, jun,  2, 10), timeSpecified: 1, title: "Family Fun Day", shortDesc: "June family fun day"},
-    // {"id": "tb-03", poi: "Tudor Barn", date: new Date(2019, jun, 16, 12), timeSpecified: 1, title: "Father's Day"},
     {"id": "tb-04", poi: "Tudor Barn", date: new Date(2019, jul, 22, 11), timeSpecified: 1, title: "Wedding Fair", shortDesc: "Over 30 suppliers of err... wedding stuff.", url: "http://www.tudorbarneltham.com/event/10009"},
 
     {"id": "sh-03", poi: "Shrewsbury House", date: new Date(2019, may, 31, 19), timeSpecified: 1, title: "Murder Mystery dinner party", shortDesc: "Whodunnit? Can you solve the Mystery? Join us for a fabulous 1930's themed Murder Mystery Dinner party.", url: "https://shrewsburyhouse.org/events/events/kids-crafternoon/"},
@@ -158,10 +164,18 @@ const events = [
     {"id": "eps-03", poi: "Eltham Park South", date: new Date(2019, jul, 21, 15), timeSpecified: 1, title: "Concert in the Park", url: "http://parksfest.org/calendar.html"},
 
     {"id": "nem-01", poi: "New Eltham Methodist Church", date: new Date(2019, jun, 22, 19, 30), timeSpecified: 1, title: "\"Strictly Come Dancing\" Evening", shortDesc: "Come along and our champion dance teachers Hilary and Ann will teach you a variety of latin and ballroom dances step by step.", url: "http://www.necp.org.uk/next-event-1/4590253811"},
+    {"id": "nem-02", poi: "New Eltham Methodist Church", date: new Date(2019, jul, 6, 19, 30), timeSpecified: 1, title: "Barn Dance", shortDesc: "Price: £10 for adults, £2.50 for kids - including a ploughman's lunch!", url: "http://www.necp.org.uk/next-event-1/4590253811"},
 
     // 4th Sunday of the month
     {"id": "pp-01", poi: "Passey Place", date: new Date(2019, jun, 23, 10), timeSpecified: 1, title: "Eltham Producers Market", shortDesc: "We have fruit and veg, honey, bread and cakes, olives, personalised gifts, craft beers and chilli sauces, chutneys, jams and marmalades, fruit infused liqueurs and The Brothers will be busking."},
 
-    {"id": "ha-01", poi: "Harris Academy", date: new Date(2019, jun, 24, 19, 30), timeSpecified: 1, title: "Ceroc Dance Class", shortDesc: "every Monday at Harris Academy, Middle Park Avenue. No experience or partner needed.", url: "https://www.facebook.com/ceroceltham/"},
+    // Every Monday
+    {"id": "ha-01", poi: "Harris Academy", date: new Date(2019, jul, 1, 19, 30), timeSpecified: 1, title: "Ceroc Dance Class", shortDesc: "Every Monday at Harris Academy, Middle Park Avenue. No experience or partner needed.", url: "https://www.facebook.com/ceroceltham/"},
+
+    {"id": "wf-01", poi: "Woodlands Farm", date: new Date(2019, jun, 29, 11), timeSpecified: 1, title: "South East London Wool and Textile Festival", shortDesc: "Featuring Emily Tull internationally recognised embroiderer and contestant on Sky Portrait Artist of the Year.  Also workshops in Textile crafts , kids art tables, upcycling, makers market.", url: "https://tockify.com/woodlands.farm/detail/127/1561802400000"},
+
+    // Every Thursday
+    {"id": "ccc-01", poi: "Christchurch Community Centre", date: new Date(2019, jun, 27), timeSpecified: 0, title: "Hartbeeps South London", shortDesc: "Magical multi-sensory adventures for babies and toddlers.  Different times for different ages - check the website.", url: "https://www-251b.bookeo.com/bookeo/b_hartbeepssouthlondon_start.html?ctlsrc2=bYZONUX%2B3ct5r3T366BBfNcBa8R5MmX%2FIl3O1eLVSvU%3D&src=03n"},
+    {"id": "ccc-02", poi: "Christchurch Community Centre", date: new Date(2019, jul, 4), timeSpecified: 0, title: "Hartbeeps South London", shortDesc: "Magical multi-sensory adventures for babies and toddlers.  Different times for different ages - check the website.", url: "https://www-251b.bookeo.com/bookeo/b_hartbeepssouthlondon_start.html?ctlsrc2=bYZONUX%2B3ct5r3T366BBfNcBa8R5MmX%2FIl3O1eLVSvU%3D&src=03n"},
 
 ];
