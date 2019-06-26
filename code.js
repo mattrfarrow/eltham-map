@@ -47,7 +47,7 @@ if(!attractionToShowId) {
     attractionToShowId = getUrlVars()["poi"];
 }
 if(attractionToShowId) {
-    const attractionToShowOnMap = attractions.find(function (attraction) {
+    var attractionToShowOnMap = attractions.find(function (attraction) {
         return attractionToShowId.replaceAll("_", " ") === attraction.name
     });
 }
@@ -149,7 +149,7 @@ function showDetailsOfPoiAndEvent(attraction, event) {
         if(event.url) {
             const eventLink = document.createElement("a");
             eventLink.className = "poidetails-eventUrl";
-            eventLink.innerHTML = "More info on the attractions's event page.";
+            eventLink.innerHTML = "More info on the attraction's event page.";
             eventLink.href = event.url;
             eventLink.target="_blank";
 
