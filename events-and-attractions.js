@@ -174,7 +174,7 @@ const events = [
 
     {"id": "wf-01", poi: "Woodlands Farm", date: new Date(2019, jun, 29, 11), timeSpecified: 1, title: "South East London Wool and Textile Festival", shortDesc: "Featuring Emily Tull internationally recognised embroiderer and contestant on Sky Portrait Artist of the Year.  Also workshops in Textile crafts , kids art tables, upcycling, makers market.", url: "https://tockify.com/woodlands.farm/detail/127/1561802400000"},
 
-    // Every Thursday
+    // Every Thursday until July 18
     {"id": "ccc-01", poi: "Christchurch Community Centre", date: new Date(2019, jun, 27), timeSpecified: 0, title: "Hartbeeps South London", shortDesc: "Magical multi-sensory adventures for babies and toddlers.  Different times for different ages - check the website.", url: "https://www-251b.bookeo.com/bookeo/b_hartbeepssouthlondon_start.html?ctlsrc2=bYZONUX%2B3ct5r3T366BBfNcBa8R5MmX%2FIl3O1eLVSvU%3D&src=03n"},
     {"id": "ccc-02", poi: "Christchurch Community Centre", date: new Date(2019, jul, 4), timeSpecified: 0, title: "Hartbeeps South London", shortDesc: "Magical multi-sensory adventures for babies and toddlers.  Different times for different ages - check the website.", url: "https://www-251b.bookeo.com/bookeo/b_hartbeepssouthlondon_start.html?ctlsrc2=bYZONUX%2B3ct5r3T366BBfNcBa8R5MmX%2FIl3O1eLVSvU%3D&src=03n"},
 
