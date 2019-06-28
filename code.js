@@ -173,8 +173,8 @@ function showDetailsOfPoiAndEvent(attraction, event) {
     }
 
 
-    if(event && event.date && event.timeSpecified) {
-        nameDiv.innerHTML += " at "+getTimeAsString(event.date) + " on " + dateToString(event.date);
+    if(event && event.when && event.timeSpecified) {
+        nameDiv.innerHTML += " at "+getTimeAsString(event.when) + " on " + dateToString(event.when);
     }
     poiDetailsBox.appendChild(nameDiv);
 
@@ -247,7 +247,7 @@ function generateWhatsOnTableRow(event, attraction) {
     const locationDiv = document.createElement("div");
     let timeAndPlace = "At " + attraction.name;
     if(event.timeSpecified) {
-        timeAndPlace += " @"+getTimeAsString(event.date);
+        timeAndPlace += " @"+getTimeAsString(event.when);
     }
     locationDiv.innerHTML = timeAndPlace;
     locationDiv.className = "attraction-name";
@@ -318,23 +318,23 @@ function generateWhatsOnTable(events) {
     const now = new Date();
     let sortedEvents = events
         .slice()
-        .filter(attraction => attraction.date >= now )
+        .filter(attraction => attraction.when >= now )
     ;
-    sortedEvents.sort(function(a,b){return a.date - b.date;});
+    sortedEvents.sort(function(a,b){return a.when - b.when;});
 
     let lastEventDate;
 
     sortedEvents.forEach(function(event) {
 
-        if(!lastEventDate || withoutTime(lastEventDate).getTime() !== withoutTime(event.date).getTime()) {
-            whatsOnTable.appendChild(generateDateRow(event.date));
+        if(!lastEventDate || withoutTime(lastEventDate).getTime() !== withoutTime(event.when).getTime()) {
+            whatsOnTable.appendChild(generateDateRow(event.when));
         }
         const poi = attractions.find(function (attraction) {
             return event.poi === attraction.name
         });
 
         whatsOnTable.appendChild(generateWhatsOnTableRow(event, poi));
-        lastEventDate = event.date;
+        lastEventDate = event.when;
     });
     return whatsOnTable;
 }
