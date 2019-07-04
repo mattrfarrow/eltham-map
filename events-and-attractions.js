@@ -75,6 +75,10 @@ const attractions = [
         address: "Middle Park Avenue, Eltham, SE9 5EQ\n",
         website: "https://www.harrisfederation.org.uk/175/our-academies/academy/18/harris-academy-greenwich"},
 
+    {name: "Capital Art Gallery", coords: [0.050933, 51.456538],
+        desc: "An art gallery with regularly changing pieces of art from both local and international artists.",
+        address: "13 Well Hall Parade, Well Hall Road, London, SE9 6SP",
+        website: "https://www.capitalartgallery.co.uk/our_story"},
 
 
 ];
@@ -191,5 +195,8 @@ const events = [
     {"id": "ccc-02", poi: "Christchurch Community Centre", when: new Date(2019, jul, 4), timeSpecified: 0, title: "Hartbeeps South London", shortDesc: "Magical multi-sensory adventures for babies and toddlers.  Different times for different ages - check the website.", url: "https://www-251b.bookeo.com/bookeo/b_hartbeepssouthlondon_start.html?ctlsrc2=bYZONUX%2B3ct5r3T366BBfNcBa8R5MmX%2FIl3O1eLVSvU%3D&src=03n"},
     // 1st Saturday of the month
     {"id": "ccc-03", poi: "Christchurch Community Centre", when: new Date(2019, jul, 6, 10), timeSpecified: 1, title: "Eltham Producers Market", shortDesc: "Stalls offering a wide range of fresh produce from the South East.", url: "https://www.royalgreenwich.gov.uk/directory_record/2682/eltham_producers_market"},
+
+
+    {"id": "cag-01", poi: "Capital Art Gallery", when: new Date(2019, jul, 6, 12), timeSpecified: 1, title: "Summer Open Art Exhibition", shortDesc: "A 2-day event showcasing local and international artists.  Hundreds of pieces of art available to purchase.", url: "https://www.capitalartgallery.co.uk/upcoming-events"},
 
 ];
