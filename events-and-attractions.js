@@ -131,10 +131,17 @@ const events = [
     {"id": "rb-05", poi: "The Rusty Bucket Pub", when: new Date(2019, jun, 16, 18), timeSpecified: 1, title: "Live Music: Marco Buono project - dirty southern blues", shortDesc: "Featuring a Delta/Chicago style, this an acoustic duo, but inviting guests into the blues circle at every gig."},
     {"id": "rb-06", poi: "The Rusty Bucket Pub", when: new Date(2019, jun, 23, 18), timeSpecified: 1, title: "Little Talks"},
     {"id": "rb-07", poi: "The Rusty Bucket Pub", when: new Date(2019, jun, 30, 18), timeSpecified: 1, title: "Live Music: Harvey Montague", shortDesc: "Local lad Harvey plays classic 70, 80 & 90 acoustic indie & rock."},
-    {"id": "rb-08", poi: "The Rusty Bucket Pub", when: new Date(2019, jul, 7, 18), timeSpecified: 1, title: "Live Music: Eva & Nine"},
+    {"id": "rb-08", poi: "The Rusty Bucket Pub", when: new Date(2019, jul, 7, 18), timeSpecified: 1, title: "Live Music: Eva & Nino"},
     {"id": "rb-09", poi: "The Rusty Bucket Pub", when: new Date(2019, jul, 14, 18), timeSpecified: 1, title: "Live Music: Sound Refuge"},
     {"id": "rb-11", poi: "The Rusty Bucket Pub", when: new Date(2019, jul, 21, 18), timeSpecified: 1, title: "Live Music: Marcopiccioni Trio - blues, jazz & Rock"},
     {"id": "rb-12", poi: "The Rusty Bucket Pub", when: new Date(2019, jul, 28, 18), timeSpecified: 1, title: "Live Music: Dom & James - local band - 90's acoustic indie rock"},
+
+    {"id": "rb-13", poi: "The Rusty Bucket Pub", when: new Date(2019, jul, 16), timeSpecified: 0, title: "Bottleshare Night"},
+    {"id": "rb-14", poi: "The Rusty Bucket Pub", when: new Date(2019, jul, 18, 10), timeSpecified: 1, title: "Instagram for Business Workshop.", shortDesc: "Hosted by Westmount Social. £25 per ticket."},
+    {"id": "rb-15", poi: "The Rusty Bucket Pub", when: new Date(2019, jul, 23, 20), timeSpecified: 1, title: "General Knowledge Quiz", shortDesc: " £2 per person."},
+    {"id": "rb-16", poi: "The Rusty Bucket Pub", when: new Date(2019, jul, 30), timeSpecified: 0, title: "Boardgame Night"},
+    {"id": "rb-17", poi: "The Rusty Bucket Pub", when: new Date(2019, aug, 4), timeSpecified: 0, title: "Live Music - Missouri Gutts (band). Free entry."},
+    {"id": "rb-18", poi: "The Rusty Bucket Pub", when: new Date(2019, aug, 6, 20), timeSpecified: 1, title: "Music Quiz.", shortDesc: "£2 entry per person."},
 
     {"id": "owc-01", poi: "Oxleas Wood Cafe", when: new Date(2019, aug, 4, 15), timeSpecified: 1, title: "Live Music - Gambler"},
     {"id": "owc-02", poi: "Oxleas Wood Cafe", when: new Date(2019, aug, 11, 15), timeSpecified: 1, title: "Live Music - Gordon Webber & Steve Mac", shortDesc: "Harmony vocals and acoustic guitars."},
@@ -142,6 +149,10 @@ const events = [
     {"id": "owc-04", poi: "Oxleas Wood Cafe", when: new Date(2019, aug, 26, 15), timeSpecified: 1, title: "Oxlea Hill Carnival: Al Keval", shortDesc: "Ska and reggae band.  BBQ jerk chicken.  Beers, ales and gins."},
     {"id": "owc-05", poi: "Oxleas Wood Cafe", when: new Date(2019, sep, 1, 15), timeSpecified: 1, title: "Live Music - Shawthing"},
     {"id": "owc-06", poi: "Oxleas Wood Cafe", when: new Date(2019, sep, 8, 15), timeSpecified: 1, title: "Live Music - Marilyn Gentle Trio", shortDesc: "Acoustic soul, jazz, latin and pop... re-imagined."},
+    {"id": "owc-07", poi: "Oxleas Wood Cafe", when: new Date(2019, jul, 7, 15), timeSpecified: 1, title: "Live Music - Marco Meloni - acoustic guitar"},
+    {"id": "owc-08", poi: "Oxleas Wood Cafe", when: new Date(2019, jul, 14, 15), timeSpecified: 1, title: "Live Music - Gambler", shortDesc: "A highly recommended rock and soul band of first-class musicians."},
+    {"id": "owc-09", poi: "Oxleas Wood Cafe", when: new Date(2019, jul, 21, 15), timeSpecified: 1, title: "Live Music - American \"Hot Rod\" - Detonators Rockabilly Band"},
+    {"id": "owc-10", poi: "Oxleas Wood Cafe", when: new Date(2019, jul, 28, 15), timeSpecified: 1, title: "Live Music - Be Sharp", shortDesc: "A steaming guitar-based trio.  And a BBQ!"},
 
     {"id": "ep-01", poi: "Eltham Palace", when: new Date(2019, jun, 15, 11), timeSpecified: 1, title: "Blooming Gardens Weekend", shortDesc: "Explore Eltham Palace's beautiful historic gardens at their blooming best with tours, demonstrations and stalls.", url: "https://www.english-heritage.org.uk/visit/whats-on/eltham-palace-blooming-gardens-15-16-jun-2019/"},
     {"id": "ep-01a", poi: "Eltham Palace", when: new Date(2019, jun, 16, 11), timeSpecified: 1, title: "Blooming Gardens Weekend", shortDesc: "Explore Eltham Palace's beautiful historic gardens at their blooming best with tours, demonstrations and stalls.", url: "https://www.english-heritage.org.uk/visit/whats-on/eltham-palace-blooming-gardens-15-16-jun-2019/"},
@@ -168,6 +179,7 @@ const events = [
 
     // 4th Sunday of the month
     {"id": "pp-01", poi: "Passey Place", when: new Date(2019, jun, 23, 10), timeSpecified: 1, title: "Eltham Producers Market", shortDesc: "We have fruit and veg, honey, bread and cakes, olives, personalised gifts, craft beers and chilli sauces, chutneys, jams and marmalades, fruit infused liqueurs and The Brothers will be busking."},
+    {"id": "pp-01", poi: "Passey Place", when: new Date(2019, jul, 27, 10), timeSpecified: 1, title: "Eltham Producers Market", shortDesc: "We have fruit and veg, honey, bread and cakes, olives, personalised gifts, craft beers and chilli sauces, chutneys, jams and marmalades, fruit infused liqueurs and The Brothers will be busking."},
 
     // Every Monday
     {"id": "ha-01", poi: "Harris Academy", when: new Date(2019, jul, 1, 19, 30), timeSpecified: 1, title: "Ceroc Dance Class", shortDesc: "Every Monday at Harris Academy, Middle Park Avenue. No experience or partner needed.", url: "https://www.facebook.com/ceroceltham/"},
@@ -177,5 +189,7 @@ const events = [
     // Every Thursday until July 18
     {"id": "ccc-01", poi: "Christchurch Community Centre", when: new Date(2019, jun, 27), timeSpecified: 0, title: "Hartbeeps South London", shortDesc: "Magical multi-sensory adventures for babies and toddlers.  Different times for different ages - check the website.", url: "https://www-251b.bookeo.com/bookeo/b_hartbeepssouthlondon_start.html?ctlsrc2=bYZONUX%2B3ct5r3T366BBfNcBa8R5MmX%2FIl3O1eLVSvU%3D&src=03n"},
     {"id": "ccc-02", poi: "Christchurch Community Centre", when: new Date(2019, jul, 4), timeSpecified: 0, title: "Hartbeeps South London", shortDesc: "Magical multi-sensory adventures for babies and toddlers.  Different times for different ages - check the website.", url: "https://www-251b.bookeo.com/bookeo/b_hartbeepssouthlondon_start.html?ctlsrc2=bYZONUX%2B3ct5r3T366BBfNcBa8R5MmX%2FIl3O1eLVSvU%3D&src=03n"},
+    // 1st Saturday of the month
+    {"id": "ccc-03", poi: "Christchurch Community Centre", when: new Date(2019, jul, 6, 10), timeSpecified: 1, title: "Eltham Producers Market", shortDesc: "Stalls offering a wide range of fresh produce from the South East.", url: "https://www.royalgreenwich.gov.uk/directory_record/2682/eltham_producers_market"},
 
 ];
