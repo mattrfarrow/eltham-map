@@ -250,7 +250,7 @@ function generateWhatsOnTableRow(event, attraction) {
         timeAndPlace += " @"+getTimeAsString(event.when);
     }
     locationDiv.innerHTML = timeAndPlace;
-    locationDiv.className = "attraction-name";
+    locationDiv.className = "attraction-location";
 
     const descDiv = document.createElement("div");
     if(event.shortDesc) {
@@ -259,8 +259,8 @@ function generateWhatsOnTableRow(event, attraction) {
 
     const el = document.createElement('div');
     el.appendChild(nameDiv);
-    el.appendChild(locationDiv);
     el.appendChild(descDiv);
+    el.appendChild(locationDiv);
     el.onclick = function() {
         showDetailsOfPoiAndEvent(attraction, event);
         zoomMapToCoords(attraction);

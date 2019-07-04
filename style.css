@@ -78,6 +78,11 @@ body {
     font-weight: 600;
 }
 
+.attraction-location{
+    font-style: italic;
+    font-weight: 300;
+}
+
 .section-header {
     font-weight: 600;
     font-size: 21px;
