@@ -113,7 +113,7 @@ const events = [
         url: "https://sites.google.com/site/folkmobonline/folkmob-calendar-1?authuser=0", price: "Free entry"},
 
     {"id": "sc-01", poi: "Severndroog Castle", when: new Date(2019, jun, 21, 18, 30), timeSpecified: 1, title: "A Night of Vintage Jazz", shortDesc: "Explore and enjoy the Castle after hours, listening to the soulful tones of vintage jazz singer Jess DeGiudici at one of our summer late night openings.  Be sure to book ahead.", url: "https://www.severndroogcastle.org.uk/VintageJazzLatesEvent.html"},
-    {"id": "sc-02", poi: "Severndroog Castle", when: new Date(2019, jul, 12), timeSpecified: 0, title: "A Theatrical Opera Night",
+    {"id": "sc-02", poi: "Severndroog Castle", when: new Date(2019, jul, 12, 18, 30), timeSpecified: 1, title: "A Theatrical Opera Night",
         shortDesc: "Explore and enjoy the Castle after hours whist listening to enticing Opera arias at one of our summer late night openings.  Book ahead.",
         url: "https://www.severndroogcastle.org.uk/OperaLate.html", price: "From £6.50 + booking fee"},
     {"id": "sc-03", poi: "Severndroog Castle", when: new Date(2019, jul, 18), timeSpecified: 0, title: "Production of Nell Gwyn.  Book ahead.",
