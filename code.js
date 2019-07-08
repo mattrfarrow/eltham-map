@@ -261,6 +261,15 @@ function generateWhatsOnTableRow(event, attraction) {
     el.appendChild(nameDiv);
     el.appendChild(descDiv);
     el.appendChild(locationDiv);
+
+    if(event.price) {
+        const priceDiv = document.createElement("div");
+        priceDiv.innerHTML = event.price;
+        priceDiv.className = "price";
+        el.appendChild(priceDiv);
+    }
+
+
     el.onclick = function() {
         showDetailsOfPoiAndEvent(attraction, event);
         zoomMapToCoords(attraction);

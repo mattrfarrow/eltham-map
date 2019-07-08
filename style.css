@@ -131,6 +131,15 @@ body {
     padding-top: 8px;
 }
 
+.price {
+    padding: 1px;
+    background-color: white;
+    display:inline-block;
+    border: black;
+    border-width: 1px;
+    border-style: dashed;
+}
+
 /* MOBILE Styles */
 @media only screen and (max-width: 500px) {
     #map-container {
