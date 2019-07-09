@@ -118,8 +118,8 @@ const events = [
         title: "A Theatrical Opera Night",
         shortDesc: "Explore and enjoy the Castle after hours whist listening to enticing Opera arias at one of our summer late night openings.  Book ahead.",
         url: "https://www.severndroogcastle.org.uk/OperaLate.html", price: "From £6.50 + booking fee"},
-    {"id": "sc-03", poi: "Severndroog Castle", when: new Date(2019, jul, 18), timeSpecified: 0, title: "Production of Nell Gwyn.  Book ahead.",
-        url: "https://www.severndroogcastle.org.uk/NellGwynn.html", price: "£25"},
+    {"id": "sc-03", poi: "Severndroog Castle", when: new Date(2019, jul, 18), timeSpecified: 0, title: "Production of Nell Gwyn.",
+        url: "https://www.severndroogcastle.org.uk/NellGwynn.html", price: "£25. Book ahead."},
     {"id": "sc-04", poi: "Severndroog Castle", when: new Date(2019, aug, 11), timeSpecified: 0, title: "A Selection of Shakespeare Plays"},
     {"id": "sc-05", poi: "Severndroog Castle", when: new Date(2019, sep, 13), timeSpecified: 0, title: "A Screening of Hitchcock"},
 
@@ -148,10 +148,10 @@ const events = [
     {"id": "rb-08", poi: "The Rusty Bucket Pub", when: new Date(2019, jul, 7, 18), timeSpecified: 1, title: "Live Music: Eva & Nino", price: "Free entry"},
     {"id": "rb-09", poi: "The Rusty Bucket Pub", when: new Date(2019, jul, 14, 18), timeSpecified: 1, title: "Live Music: Sound Refuge", price: "Free entry"},
     {"id": "rb-11", poi: "The Rusty Bucket Pub", when: new Date(2019, jul, 21, 18), timeSpecified: 1, title: "Live Music: Marcopiccioni Trio - blues, jazz & Rock", price: "Free entry"},
-    {"id": "rb-12", poi: "The Rusty Bucket Pub", when: new Date(2019, jul, 28, 18), timeSpecified: 1, title: "Live Music: Dom & James - local band - 90's acoustic indie rock", price: "Free entry"},
+    {"id": "rb-12", poi: "The Rusty Bucket Pub", when: new Date(2019, jul, 28, 18), timeSpecified: 1, title: "Live Music: Dom & James", shortDesc:"Local band playing 90's acoustic indie rock", price: "Free entry"},
 
     {"id": "rb-13", poi: "The Rusty Bucket Pub", when: new Date(2019, jul, 16), timeSpecified: 0, title: "Bottleshare Night",    price: "Free entry"},
-    {"id": "rb-14", poi: "The Rusty Bucket Pub", when: new Date(2019, jul, 18, 10), timeSpecified: 1, title: "Instagram for Business Workshop.", shortDesc: "Hosted by Westmount Social.", price: "£25 per ticket."},
+    {"id": "rb-14", poi: "The Rusty Bucket Pub", when: new Date(2019, jul, 18, 10), timeSpecified: 1, title: "Instagram for Business Workshop.", shortDesc: "Hosted by Westmount Social.", price: "£25"},
     {"id": "rb-15", poi: "The Rusty Bucket Pub", when: new Date(2019, jul, 23, 20), timeSpecified: 1, title: "General Knowledge Quiz", price: " £2 per person."},
     {"id": "rb-16", poi: "The Rusty Bucket Pub", when: new Date(2019, jul, 30), timeSpecified: 0, title: "Boardgame Night", price: "Free entry"},
     {"id": "rb-17", poi: "The Rusty Bucket Pub", when: new Date(2019, aug, 4), timeSpecified: 0, title: "Live Music - Missouri Gutts (band)", price: "Free entry"},

@@ -76,6 +76,7 @@ body {
 
 .attraction-name {
     font-weight: 600;
+    padding-bottom: 2px;
 }
 
 .attraction-location{
@@ -140,6 +141,17 @@ body {
     border-style: dashed;
 }
 
+
+.event-time {
+    float:right;
+    padding-right: 10px;
+    font-weight: 600;
+}
+
+.event-desc {
+    padding-right: 20px;
+    padding-bottom: 4px;
+}
 /* MOBILE Styles */
 @media only screen and (max-width: 500px) {
     #map-container {

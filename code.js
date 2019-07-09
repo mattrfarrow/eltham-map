@@ -247,22 +247,36 @@ function generateWhatsOnTableRow(event, attraction) {
     nameDiv.className = "attraction-name";
 
     const locationDiv = document.createElement("div");
-    let timeAndPlace = "At " + attraction.name;
-    if(event.timeSpecified) {
-        timeAndPlace += " @"+getTimeAsString(event.when);
-    }
-    locationDiv.innerHTML = timeAndPlace;
+
+    locationDiv.innerHTML = "At " + attraction.name;
     locationDiv.className = "attraction-location";
 
-    const descDiv = document.createElement("div");
+    let timeDiv;
+    if(event.timeSpecified) {
+        timeDiv = document.createElement("div");
+
+        timeDiv.innerHTML = getTimeAsString(event.when)
+        timeDiv.className = "event-time";
+    }
+
+    let descDiv;
     if(event.shortDesc) {
+        descDiv = document.createElement("div");
+        descDiv.className = "event-desc"
         descDiv.innerHTML = event.shortDesc;
     }
 
     const el = document.createElement('div');
+    if(timeDiv) {
+        el.appendChild(timeDiv);
+    }
     el.appendChild(nameDiv);
-    el.appendChild(descDiv);
+    if(descDiv) {
+        el.appendChild(descDiv);
+    }
     el.appendChild(locationDiv);
+
+
 
     if(event.price) {
         const priceDiv = document.createElement("div");
