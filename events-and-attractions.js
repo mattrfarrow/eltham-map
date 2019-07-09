@@ -100,7 +100,8 @@ const dec = 11;
 
 const events = [
 
-    {"id": "asc-01", poi: "All Saints Church", when: new Date(2019, jul, 6, 11), timeSpecified: 1, title: "Family Fun Day",
+    {"id": "asc-01", poi: "All Saints Church", when: new Date(2019, jul, 6, 11), timeSpecified: 1,
+        title: "Family Fun Day",
         shortDesc: "Fun for all the family: Games, bouncy castle, craft and cake stalls, face painting, children’s colouring competition. All are welcome. ",
         url: "https://www.facebook.com/events/382254675719310/", price: "Free entry"},
 
@@ -113,7 +114,8 @@ const events = [
         url: "https://sites.google.com/site/folkmobonline/folkmob-calendar-1?authuser=0", price: "Free entry"},
 
     {"id": "sc-01", poi: "Severndroog Castle", when: new Date(2019, jun, 21, 18, 30), timeSpecified: 1, title: "A Night of Vintage Jazz", shortDesc: "Explore and enjoy the Castle after hours, listening to the soulful tones of vintage jazz singer Jess DeGiudici at one of our summer late night openings.  Be sure to book ahead.", url: "https://www.severndroogcastle.org.uk/VintageJazzLatesEvent.html"},
-    {"id": "sc-02", poi: "Severndroog Castle", when: new Date(2019, jul, 12, 18, 30), timeSpecified: 1, title: "A Theatrical Opera Night",
+    {"id": "sc-02", poi: "Severndroog Castle", when: new Date(2019, jul, 12, 18, 30), timeSpecified: 1, until: {h: 22},
+        title: "A Theatrical Opera Night",
         shortDesc: "Explore and enjoy the Castle after hours whist listening to enticing Opera arias at one of our summer late night openings.  Book ahead.",
         url: "https://www.severndroogcastle.org.uk/OperaLate.html", price: "From £6.50 + booking fee"},
     {"id": "sc-03", poi: "Severndroog Castle", when: new Date(2019, jul, 18), timeSpecified: 0, title: "Production of Nell Gwyn.  Book ahead.",
@@ -196,6 +198,8 @@ const events = [
 
     // Every Monday
     {"id": "ha-01", poi: "Harris Academy", when: new Date(2019, jul, 1, 19, 30), timeSpecified: 1, title: "Ceroc Dance Class", shortDesc: "Every Monday at Harris Academy, Middle Park Avenue. No experience or partner needed.", url: "https://www.facebook.com/ceroceltham/"},
+    {"id": "ha-01b", poi: "Harris Academy", when: new Date(2019, jul, 8, 19, 30), timeSpecified: 1, title: "Ceroc Dance Class", shortDesc: "Every Monday at Harris Academy, Middle Park Avenue. No experience or partner needed.", url: "https://www.facebook.com/ceroceltham/"},
+    {"id": "ha-01c", poi: "Harris Academy", when: new Date(2019, jul, 15, 19, 30), timeSpecified: 1, title: "Ceroc Dance Class", shortDesc: "Every Monday at Harris Academy, Middle Park Avenue. No experience or partner needed.", url: "https://www.facebook.com/ceroceltham/"},
 
     {"id": "wf-01", poi: "Woodlands Farm", when: new Date(2019, jun, 29, 11), timeSpecified: 1, title: "South East London Wool and Textile Festival", shortDesc: "Featuring Emily Tull internationally recognised embroiderer and contestant on Sky Portrait Artist of the Year.  Also workshops in Textile crafts , kids art tables, upcycling, makers market.", url: "https://tockify.com/woodlands.farm/detail/127/1561802400000"},
 

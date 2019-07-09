@@ -1,3 +1,5 @@
+
+
 String.prototype.replaceAll = function(search, replacement) {
     const target = this;
     return target.split(search).join(replacement);
@@ -284,20 +286,6 @@ function generateWhatsOnTableRow(event, attraction) {
     outerTr.className = "whatsOnRow";
     outerTr.appendChild(td);
     return outerTr;
-}
-
-function getTimeAsString(date) {
-    const minutes = date.getMinutes() !== 0
-        ? ":" + date.getMinutes()
-        : "";
-
-    if(date.getHours()>12) {
-        return (date.getHours()-12) + minutes + "pm";
-    } else if (date.getHours() === 12) {
-        return date.getHours() + minutes + "pm";
-    } else {
-        return date.getHours() + minutes + "am";
-    }
 }
 
 function dateToString(date) {
