@@ -157,6 +157,25 @@ const events = [
     {"id": "rb-17", poi: "The Rusty Bucket Pub", when: new Date(2019, aug, 4), timeSpecified: 0, title: "Live Music - Missouri Gutts (band)", price: "Free entry"},
     {"id": "rb-18", poi: "The Rusty Bucket Pub", when: new Date(2019, aug, 6, 20), timeSpecified: 1, title: "Music Quiz.", price: "£2 entry per person."},
 
+
+    {"id": "rb-19", poi: "The Rusty Bucket Pub", when: new Date(2019, sep, 3, 20), timeSpecified: 1, title: "Music Quiz.", price: "£2 entry per person."},
+
+    {"id": "rb-20", poi: "The Rusty Bucket Pub", when: new Date(2019, sep, 8, 18), timeSpecified: 1, title: "Gillywood + Andrew the sound guy (Folk)", price: "Free"},
+
+    {"id": "rb-21", poi: "The Rusty Bucket Pub", when: new Date(2019, sep, 10), timeSpecified: 0, title: "Anspach & Hobday Tutored Beer Tasting", price: "£20"},
+
+    {"id": "rb-22", poi: "The Rusty Bucket Pub", when: new Date(2019, sep, 15, 18), timeSpecified: 1, title: "JD Singfield ( Blues)", price: "Free"},
+
+    {"id": "rb-23", poi: "The Rusty Bucket Pub", when: new Date(2019, sep, 17, 20), timeSpecified: 1, title: "General Knowledge Quiz.", price: "£2 entry per person."},
+
+    {"id": "rb-24", poi: "The Rusty Bucket Pub", when: new Date(2019, sep, 22, 18), timeSpecified: 1, title: "Jamie Strange & The off Beats (Covers in their own style)", price: "Free"},
+
+    {"id": "rb-25", poi: "The Rusty Bucket Pub", when: new Date(2019, sep, 24, 20), timeSpecified: 1, title: "Open Mic Night", price: "Free"},
+
+    {"id": "rb-26", poi: "The Rusty Bucket Pub", when: new Date(2019, sep, 29, 18), timeSpecified: 1, title: "Rockoustic (Covers)", price: "Free"},
+
+    {"id": "rb-27", poi: "The Rusty Bucket Pub", when: new Date(2019, oct, 6, 18), timeSpecified: 1, title: "Carrandines Cockney sing-a-long", price: "Free"},
+
     {"id": "owc-01", poi: "Oxleas Wood Cafe", when: new Date(2019, aug, 4, 15), timeSpecified: 1, title: "Live Music - Gambler", price: "Free entry"},
     {"id": "owc-02", poi: "Oxleas Wood Cafe", when: new Date(2019, aug, 11, 15), timeSpecified: 1, title: "Live Music - Gordon Webber & Steve Mac", shortDesc: "Harmony vocals and acoustic guitars.", price: "Free entry"},
     {"id": "owc-03", poi: "Oxleas Wood Cafe", when: new Date(2019, aug, 25, 15), timeSpecified: 1, title: "Oxlea Hill Carnival: Marie Dawn & JJBand", shortDesc: "Classic reggae.  BBQ jerk chicken.  Beers, ales and gins.", price: "Free entry"},
