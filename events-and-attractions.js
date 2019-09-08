@@ -121,7 +121,10 @@ const events = [
     {"id": "sc-03", poi: "Severndroog Castle", when: new Date(2019, jul, 18), timeSpecified: 0, title: "Production of Nell Gwyn.",
         url: "https://www.severndroogcastle.org.uk/NellGwynn.html", price: "£25. Book ahead."},
     {"id": "sc-04", poi: "Severndroog Castle", when: new Date(2019, aug, 11), timeSpecified: 0, title: "A Selection of Shakespeare Plays"},
-    {"id": "sc-05", poi: "Severndroog Castle", when: new Date(2019, sep, 13), timeSpecified: 0, title: "A Screening of Hitchcock"},
+    {"id": "sc-05", poi: "Severndroog Castle", when: new Date(2019, sep, 13, 18, 30), timeSpecified: 1, title: "A Screening of Hitchcock's Vertigo", url: "https://www.severndroogcastle.org.uk/blog-post-6.html", price: "Free", shortDesc: "An outdoor screening of Hitchcock's classic film Vertigo, as part of Charlton & Woolwich Free Film Festival"},
+    {"id": "sc-06", poi: "Severndroog Castle", when: new Date(2019, sep, 22, 11), timeSpecified: 1, until: {h: 16}, title: "Autumn Fayre", url: "https://www.severndroogcastle.org.uk/blog-post-10.html", price: "Free", shortDesc: "A day of free entertainment, kids' activities, live music performances & community group activities, plus lots of goodies for sale from local small businesses as well as artisan burgers, sausages, craft beers and a gin bar."},
+    {"id": "sc-07", poi: "Severndroog Castle", when: new Date(2019, sep, 15, 17), timeSpecified: 1, until: {h: 19}, title: "Autum Equinox Yoga and Sound Sanctuary", url: "https://www.severndroogcastle.org.uk/AutumnEquinoxYoga.html", price: "£20 - book ahead.", shortDesc: "Join us to welcome the Autumn Equinox with a Yoga and Gong session at Severndroog Castle. With the guidance of yoga teacher and sound healing therapist, Kallie Schut, we will help restore your energies."},
+
 
     {"id": "tb-02", poi: "Tudor Barn", when: new Date(2019, jun,  2, 10), timeSpecified: 1, title: "Family Fun Day", shortDesc: "June family fun day"},
     {"id": "tb-04", poi: "Tudor Barn", when: new Date(2019, jul, 22, 11), timeSpecified: 1, title: "Wedding Fair", shortDesc: "Over 30 suppliers of err... wedding stuff.", url: "http://www.tudorbarneltham.com/event/10009", price: "Free - book ahead"},

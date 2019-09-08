@@ -1,7 +1,6 @@
 rusty bucket - 20190904
 eltham palace - 20190907
-oxleas woods
-severdroog castle
+severndroog castle - 20190908
 eltham centre
 bob hope theatre
 well hall pleasauance
@@ -19,3 +18,4 @@ christchurch community centre
 blackheath rugby club
 passey place
 capital art gallery
+oxleas woods
