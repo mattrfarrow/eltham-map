@@ -170,10 +170,10 @@ body {
 /* Tablet and Desktop Styles */
 @media only screen and (min-width: 501px)  {
     #map-container {
-        top:52px; bottom:0; left:320px; right: 0;
+        top:52px; bottom:0; left:360px; right: 0;
     }
     .sidepanel{
-        max-width: 320px;
+        max-width: 360px;
     }
 
     #map {
