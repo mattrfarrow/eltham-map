@@ -61,6 +61,11 @@ const attractions = [
         desc: "A community centre in Eltham.",
         address: "229 Eltham High Street, London, SE9 1TX"},
 
+    {name: "Eltham United Reformed Church", coords: [0.051864, 51.449235],
+        desc: "A church.",
+        address: "1 Court Road, London, SE9 5AD",
+        website: "https://www.elthamurc.org/"},
+
     {name: "Blackheath Rugby Club", coords: [0.046937, 51.458125],
         desc: "It's a rugby club.",
         address: "Kidbrooke Lane, Eltham, London, SE9 6TE"},
@@ -247,5 +252,8 @@ const events = [
     {"id": "cag-01", poi: "Capital Art Gallery", when: new Date(2019, jul, 6, 12), timeSpecified: 1, title: "Summer Open Art Exhibition", shortDesc: "A 2-day event showcasing local and international artists.  Hundreds of pieces of art available to purchase.", url: "https://www.capitalartgallery.co.uk/upcoming-events"},
 
     {"id": "tlp-01", poi: "The Long Pond", when: new Date(2019, oct, 21, 19), timeSpecified: 0, title: "Wine Tasting", shortDesc: "A 2-day event showcasing local and international artists.  Hundreds of pieces of art available to purchase.", url: "https://www.capitalartgallery.co.uk/upcoming-events", price: "£10. Book in person in advance. Limited spaces."},
+
+    {"id": "eurc-01", poi: "Eltham United Reformed Church", when: new Date(2019, oct, 26, 10, 30), timeSpecified: 0, until: {h: 16, m: 30}, title: "Meccano Show 2019", shortDesc: "London’s most popular Meccano Show returns to Eltham for its 41st year!",
+     url: "https://selmec.org.uk/events/meccano-show-2019", price: "£5.  Accompanied children free."},
 
 ];
