@@ -164,6 +164,8 @@ const events = [
     {"id": "rb-16", poi: "The Rusty Bucket Pub", when: new Date(2019, jul, 30), timeSpecified: 0, title: "Boardgame Night", price: "Free entry"},
     {"id": "rb-17", poi: "The Rusty Bucket Pub", when: new Date(2019, aug, 4), timeSpecified: 0, title: "Live Music - Missouri Gutts (band)", price: "Free entry", shortDsc: "A folk trio - read more at http://www.missourigutts.co.uk/"},
     {"id": "rb-18", poi: "The Rusty Bucket Pub", when: new Date(2019, aug, 6, 20), timeSpecified: 1, title: "Music Quiz.", price: "£2 entry per person."},
+    {"id": "rb-19", poi: "The Rusty Bucket Pub", when: new Date(2019, oct, 27, 18), timeSpecified: 1, title: "Live Music - Doubleshot.", price: "Free"},
+    {"id": "rb-20", poi: "The Rusty Bucket Pub", when: new Date(2019, nov, 3, 18), timeSpecified: 1, title: "Live Music - Frances McKevitt  ", shortDesc: "London-based singer-songwriter. See http://francesmckevitt.com", price: "Free"},
 
 
     {"id": "rb-19", poi: "The Rusty Bucket Pub", when: new Date(2019, sep, 3, 20), timeSpecified: 1, title: "Music Quiz.", price: "£2 entry per person."},
