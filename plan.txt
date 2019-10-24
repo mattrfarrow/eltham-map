@@ -3,6 +3,7 @@ Before Launch
 End times
 Events on/spanning multiple days?
 https://momentjs.com/
+immutablejs
 
 Add price info to events - and how to buy tickets
 Test things ... Pingdom equivalent or browser tests
