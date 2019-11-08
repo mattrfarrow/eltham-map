@@ -75,6 +75,11 @@ const attractions = [
         address: "Passey Place, Eltham",
         website: "https://www.facebook.com/elthampm/"},
 
+    {name: "Eltham GPO", coords: [0.054124, 51.450431],
+        desc: "A pub in the old post office with regular live music and quizzes.",
+        address: "4 Passey Pl, Eltham, London SE9 5DQ",
+        website: "https://elthamgpo.com/"},
+
     {name: "Harris Academy", coords: [0.039424, 51.451899],
         desc: "A secondary school and sixth form.",
         address: "Middle Park Avenue, Eltham, SE9 5EQ\n",
@@ -178,8 +183,9 @@ const events = [
     {"id": "rb-25", poi: "The Rusty Bucket Pub", when: new Date(2019, sep, 24, 20), timeSpecified: 1, title: "Open Mic Night", price: "Free"},
     {"id": "rb-26", poi: "The Rusty Bucket Pub", when: new Date(2019, sep, 29, 18), timeSpecified: 1, title: "Rockoustic (Covers)", price: "Free"},
     {"id": "rb-27", poi: "The Rusty Bucket Pub", when: new Date(2019, oct, 6, 18), timeSpecified: 1, title: "Carrandines Cockney sing-a-long", price: "Free"},
-
     {"id": "rb-28", poi: "The Rusty Bucket Pub", when: new Date(2019, nov, 12), timeSpecified: 0, title: "Beer tasting with The Kernel Brewery 😃"},
+
+    {"id": "gpo-01", poi: "Eltham GPO", when: new Date(2019, nov, 30), timeSpecified: 0, title: "HIT 'N' MIX - popular cover band.", website: "https://www.facebook.com/events/hit-n-mix/party-time-live-band-hit-n-mix-at-eltham-gpo/646337795871474/"},
 
     {"id": "owc-01", poi: "Oxleas Wood Cafe", when: new Date(2019, aug, 4, 15), timeSpecified: 1, title: "Live Music - Gambler", price: "Free entry"},
     {"id": "owc-02", poi: "Oxleas Wood Cafe", when: new Date(2019, aug, 11, 15), timeSpecified: 1, title: "Live Music - Gordon Webber & Steve Mac", shortDesc: "Harmony vocals and acoustic guitars.", price: "Free entry"},
