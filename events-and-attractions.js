@@ -153,7 +153,8 @@ const events = [
 
     {"id": "gmg-01", poi: "Gerald Moore Gallery", when: new Date(2019, may, 23, 18,30), timeSpecified: 1, title: "Introduction to Casting", shortDesc: "Learn some simple casting techniques inspired by our exhibition 'The Oval Window'.", url: "https://bookwhen.com/geraldmooregallery#focus=ev-s34j-20190523183000"},
     {"id": "gmg-02", poi: "Gerald Moore Gallery", when: new Date(2019, jun, 5, 10,  0), timeSpecified: 1, title: "Introduction to Drawing", shortDesc: "Come learn to draw in a friendly warm environment.  Held at Eltham College.", url: "https://bookwhen.com/geraldmooregallery%20#focus=ev-sg9c-20190501100000"},
-    {"id": "gmg-02", poi: "Gerald Moore Gallery", when: new Date(2019, jul, 10, 9,  30), timeSpecified: 1, title: "Kids Summer Art Day: Paint!", shortDesc: "Explore the world of paint in this jam packed day of colours. For ages 6-10. ", price: "£50 for the day.", url: "https://bookwhen.com/geraldmooregallery%20#focus=ev-socb-20190710093000"},
+    {"id": "gmg-03", poi: "Gerald Moore Gallery", when: new Date(2019, jul, 10, 9,  30), timeSpecified: 1, title: "Kids Summer Art Day: Paint!", shortDesc: "Explore the world of paint in this jam packed day of colours. For ages 6-10. ", price: "£50 for the day.", url: "https://bookwhen.com/geraldmooregallery%20#focus=ev-socb-20190710093000"},
+    {"id": "gmg-04", poi: "Gerald Moore Gallery", when: new Date(2019, nov, 13, 9,  30), timeSpecified: 1, until: {h: 11, m: 30}, title: "Painting from Beginning to End", shortDesc: "Explore the world of paint in this jam packed day of colours. For ages 6-10. ", price: "£25 for the day.", url: "https://geraldmooregallery.org/adults-art-classes/"},
 
     {"id": "bht-04", poi: "Bob Hope Theatre", when: new Date(2019, may, 28, 11, 0), timeSpecified: 1, title: "John Hegley: Morning Wordship", shortDesc: "Cross-generational guffaws, comedy word play and song with the legendary performance poet.", url: "http://www.bobhopetheatre.co.uk/hegley.html"},
 
@@ -189,7 +190,7 @@ const events = [
     {"id": "rb-25", poi: "The Rusty Bucket Pub", when: new Date(2019, sep, 24, 20), timeSpecified: 1, title: "Open Mic Night", price: "Free"},
     {"id": "rb-26", poi: "The Rusty Bucket Pub", when: new Date(2019, sep, 29, 18), timeSpecified: 1, title: "Rockoustic (Covers)", price: "Free"},
     {"id": "rb-27", poi: "The Rusty Bucket Pub", when: new Date(2019, oct, 6, 18), timeSpecified: 1, title: "Carrandines Cockney sing-a-long", price: "Free"},
-    {"id": "rb-28", poi: "The Rusty Bucket Pub", when: new Date(2019, nov, 12), timeSpecified: 0, title: "Beer tasting with The Kernel Brewery 😃"},
+    {"id": "rb-28", poi: "The Rusty Bucket Pub", when: new Date(2019, nov, 12), timeSpecified: 0, title: "Beer tasting with The Kernel Brewery 😃", price: "£20 inc. drinks", website: "https://www.facebook.com/events/the-rusty-bucket-pub/beer-tasting-with-the-kernel/561741501298793/"},
 
     {"id": "gpo-01", poi: "Eltham GPO", when: new Date(2019, nov, 30), timeSpecified: 0, title: "HIT 'N' MIX - popular cover band.", website: "https://www.facebook.com/events/hit-n-mix/party-time-live-band-hit-n-mix-at-eltham-gpo/646337795871474/"},
 
