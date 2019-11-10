@@ -110,10 +110,21 @@ const dec = 11;
 
 const events = [
 
-    {"id": "asc-01", poi: "All Saints Church", when: new Date(2019, jul, 6, 11), timeSpecified: 1, title: "Family Fun Day",
-        shortDesc: "Fun for all the family: Games, bouncy castle, craft and cake stalls, face painting, children’s colouring competition. All are welcome. ", url: "https://www.facebook.com/events/382254675719310/", price: "Free entry"},
-    {"id": "asc-02", poi: "All Saints Church", when: new Date(2019, nov, 2, 10), timeSpecified: 1, until: {h:14}, title: "NSPCC Craft Fair",
-        shortDesc: "Variety of craft stalls, plus NSPCC stalls, including Homemade Cakes & raffle.  Light lunches available.", price: "Free entry"},
+    // 4th Sunday of the month
+    {"id": "pp-01", poi: "Passey Place", when: new Date(2019, jun, 23, 10), timeSpecified: 1, title: "Eltham Producers Market", shortDesc: "We have fruit and veg, honey, bread and cakes, olives, personalised gifts, craft beers and chilli sauces, chutneys, jams and marmalades, fruit infused liqueurs and The Brothers will be busking.", price: "Free entry"},
+    {"id": "pp-01b", poi: "Passey Place", when: new Date(2019, jul, 27, 10), timeSpecified: 1, title: "Eltham Producers Market", shortDesc: "We have fruit and veg, honey, bread and cakes, olives, personalised gifts, craft beers and chilli sauces, chutneys, jams and marmalades, fruit infused liqueurs and The Brothers will be busking.", price: "Free entry"},
+    {"id": "pp-01c", poi: "Passey Place", when: new Date(2019, nov, 24, 10), timeSpecified: 1, title: "Eltham Producers Market", shortDesc: "A range of produce for sale.", price: "Free entry", website: "https://www.royalgreenwich.gov.uk/directory_record/2682/eltham_producers_market"},
+
+    // Every Monday
+    {"id": "ha-01", poi: "Harris Academy", when: new Date(2019, jul, 1, 19, 30), timeSpecified: 1, title: "Ceroc Dance Class", shortDesc: "Every Monday at Harris Academy, Middle Park Avenue. No experience or partner needed.", url: "https://www.facebook.com/ceroceltham/"},
+    {"id": "ha-01b", poi: "Harris Academy", when: new Date(2019, jul, 8, 19, 30), timeSpecified: 1, title: "Ceroc Dance Class", shortDesc: "Every Monday at Harris Academy, Middle Park Avenue. No experience or partner needed.", url: "https://www.facebook.com/ceroceltham/"},
+    {"id": "ha-01c", poi: "Harris Academy", when: new Date(2019, jul, 15, 19, 30), timeSpecified: 1, title: "Ceroc Dance Class", shortDesc: "Every Monday at Harris Academy, Middle Park Avenue. No experience or partner needed.", url: "https://www.facebook.com/ceroceltham/"},
+    {"id": "ha-01d", poi: "Harris Academy", when: new Date(2019, aug, 5, 19, 30), timeSpecified: 1, title: "Ceroc Dance Class", shortDesc: "Every Monday at Harris Academy, Middle Park Avenue. No experience or partner needed.", url: "https://www.facebook.com/ceroceltham/"},
+    {"id": "ha-01e", poi: "Harris Academy", when: new Date(2019, aug, 12, 19, 30), timeSpecified: 1, title: "Ceroc Dance Class", shortDesc: "Every Monday at Harris Academy, Middle Park Avenue. No experience or partner needed.", url: "https://www.facebook.com/ceroceltham/"},
+    {"id": "ha-01f", poi: "Harris Academy", when: new Date(2019, aug, 19, 19, 30), timeSpecified: 1, title: "Ceroc Dance Class", shortDesc: "Every Monday at Harris Academy, Middle Park Avenue. No experience or partner needed.", url: "https://www.facebook.com/ceroceltham/"},
+    {"id": "ha-01g", poi: "Harris Academy", when: new Date(2019, aug, 26, 19, 30), timeSpecified: 1, title: "Ceroc Dance Class", shortDesc: "Every Monday at Harris Academy, Middle Park Avenue. No experience or partner needed.", url: "https://www.facebook.com/ceroceltham/"},
+    {"id": "ha-01h", poi: "Harris Academy", when: new Date(2019, nov, 4, 19, 30), timeSpecified: 1, title: "Ceroc Dance Class", shortDesc: "Every Monday at Harris Academy, Middle Park Avenue. No experience or partner needed.", url: "https://www.facebook.com/ceroceltham/"},
+    {"id": "ha-01i", poi: "Harris Academy", when: new Date(2019, nov, 11, 19, 30), timeSpecified: 1, title: "Ceroc Dance Class", shortDesc: "Every Monday at Harris Academy, Middle Park Avenue. No experience or partner needed.", url: "https://www.facebook.com/ceroceltham/"},
 
     //Every Wednesday
     {"id": "brc-01", poi: "Blackheath Rugby Club", when: new Date(2019, jul, 10, 20), timeSpecified: 1,
@@ -128,6 +139,24 @@ const events = [
     {"id": "brc-04", poi: "Blackheath Rugby Club", when: new Date(2019, nov, 13, 20), timeSpecified: 1,
             title: "Folk Mob Open-Mic Night", shortDesc: "An open-mic night with the Folk Mob - come and play or just watch and listen.",
             url: "https://sites.google.com/site/folkmobonline/folkmob-calendar-1?authuser=0", price: "Free entry"},
+    {"id": "brc-04a", poi: "Blackheath Rugby Club", when: new Date(2019, nov, 20, 20), timeSpecified: 1,
+        title: "Folk Mob Open-Mic Night", shortDesc: "An open-mic night with the Folk Mob - come and play or just watch and listen.",
+        url: "https://sites.google.com/site/folkmobonline/folkmob-calendar-1?authuser=0", price: "Free entry"},
+    {"id": "brc-04b", poi: "Blackheath Rugby Club", when: new Date(2019, nov, 27, 20), timeSpecified: 1,
+        title: "Folk Mob Open-Mic Night", shortDesc: "An open-mic night with the Folk Mob - come and play or just watch and listen.",
+        url: "https://sites.google.com/site/folkmobonline/folkmob-calendar-1?authuser=0", price: "Free entry"},
+    {"id": "brc-04c", poi: "Blackheath Rugby Club", when: new Date(2019, dec, 4, 20), timeSpecified: 1,
+        title: "Folk Mob Open-Mic Night", shortDesc: "An open-mic night with the Folk Mob - come and play or just watch and listen.",
+        url: "https://sites.google.com/site/folkmobonline/folkmob-calendar-1?authuser=0", price: "Free entry"},
+    {"id": "brc-04c", poi: "Blackheath Rugby Club", when: new Date(2019, dec, 11, 20), timeSpecified: 1,
+        title: "Folk Mob Open-Mic Night", shortDesc: "An open-mic night with the Folk Mob - come and play or just watch and listen.",
+        url: "https://sites.google.com/site/folkmobonline/folkmob-calendar-1?authuser=0", price: "Free entry"},
+
+
+    {"id": "asc-01", poi: "All Saints Church", when: new Date(2019, jul, 6, 11), timeSpecified: 1, title: "Family Fun Day",
+        shortDesc: "Fun for all the family: Games, bouncy castle, craft and cake stalls, face painting, children’s colouring competition. All are welcome. ", url: "https://www.facebook.com/events/382254675719310/", price: "Free entry"},
+    {"id": "asc-02", poi: "All Saints Church", when: new Date(2019, nov, 2, 10), timeSpecified: 1, until: {h:14}, title: "NSPCC Craft Fair",
+        shortDesc: "Variety of craft stalls, plus NSPCC stalls, including Homemade Cakes & raffle.  Light lunches available.", price: "Free entry"},
 
     {"id": "sc-01", poi: "Severndroog Castle", when: new Date(2019, jun, 21, 18, 30), timeSpecified: 1, title: "A Night of Vintage Jazz", shortDesc: "Explore and enjoy the Castle after hours, listening to the soulful tones of vintage jazz singer Jess DeGiudici at one of our summer late night openings.  Be sure to book ahead.", url: "https://www.severndroogcastle.org.uk/VintageJazzLatesEvent.html"},
     {"id": "sc-02", poi: "Severndroog Castle", when: new Date(2019, jul, 12, 18, 30), timeSpecified: 1, until: {h: 22},
@@ -239,31 +268,14 @@ const events = [
     {"id": "nem-01", poi: "New Eltham Methodist Church", when: new Date(2019, jun, 22, 19, 30), timeSpecified: 1, title: "\"Strictly Come Dancing\" Evening", shortDesc: "Come along and our champion dance teachers Hilary and Ann will teach you a variety of latin and ballroom dances step by step.", url: "http://www.necp.org.uk/next-event-1/4590253811"},
     {"id": "nem-02", poi: "New Eltham Methodist Church", when: new Date(2019, jul, 6, 19, 30), timeSpecified: 1, title: "Barn Dance", price: "£10 for adults, £2.50 for kids - including a ploughman's lunch!", url: "http://www.necp.org.uk/next-event-1/4590253811"},
 
-    // 4th Sunday of the month
-    {"id": "pp-01", poi: "Passey Place", when: new Date(2019, jun, 23, 10), timeSpecified: 1, title: "Eltham Producers Market", shortDesc: "We have fruit and veg, honey, bread and cakes, olives, personalised gifts, craft beers and chilli sauces, chutneys, jams and marmalades, fruit infused liqueurs and The Brothers will be busking.", price: "Free entry"},
-    {"id": "pp-01b", poi: "Passey Place", when: new Date(2019, jul, 27, 10), timeSpecified: 1, title: "Eltham Producers Market", shortDesc: "We have fruit and veg, honey, bread and cakes, olives, personalised gifts, craft beers and chilli sauces, chutneys, jams and marmalades, fruit infused liqueurs and The Brothers will be busking.", price: "Free entry"},
-
-    // Every Monday
-    {"id": "ha-01", poi: "Harris Academy", when: new Date(2019, jul, 1, 19, 30), timeSpecified: 1, title: "Ceroc Dance Class", shortDesc: "Every Monday at Harris Academy, Middle Park Avenue. No experience or partner needed.", url: "https://www.facebook.com/ceroceltham/"},
-    {"id": "ha-01b", poi: "Harris Academy", when: new Date(2019, jul, 8, 19, 30), timeSpecified: 1, title: "Ceroc Dance Class", shortDesc: "Every Monday at Harris Academy, Middle Park Avenue. No experience or partner needed.", url: "https://www.facebook.com/ceroceltham/"},
-    {"id": "ha-01c", poi: "Harris Academy", when: new Date(2019, jul, 15, 19, 30), timeSpecified: 1, title: "Ceroc Dance Class", shortDesc: "Every Monday at Harris Academy, Middle Park Avenue. No experience or partner needed.", url: "https://www.facebook.com/ceroceltham/"},
-    {"id": "ha-01d", poi: "Harris Academy", when: new Date(2019, aug, 5, 19, 30), timeSpecified: 1, title: "Ceroc Dance Class", shortDesc: "Every Monday at Harris Academy, Middle Park Avenue. No experience or partner needed.", url: "https://www.facebook.com/ceroceltham/"},
-    {"id": "ha-01e", poi: "Harris Academy", when: new Date(2019, aug, 12, 19, 30), timeSpecified: 1, title: "Ceroc Dance Class", shortDesc: "Every Monday at Harris Academy, Middle Park Avenue. No experience or partner needed.", url: "https://www.facebook.com/ceroceltham/"},
-    {"id": "ha-01f", poi: "Harris Academy", when: new Date(2019, aug, 19, 19, 30), timeSpecified: 1, title: "Ceroc Dance Class", shortDesc: "Every Monday at Harris Academy, Middle Park Avenue. No experience or partner needed.", url: "https://www.facebook.com/ceroceltham/"},
-    {"id": "ha-01g", poi: "Harris Academy", when: new Date(2019, aug, 26, 19, 30), timeSpecified: 1, title: "Ceroc Dance Class", shortDesc: "Every Monday at Harris Academy, Middle Park Avenue. No experience or partner needed.", url: "https://www.facebook.com/ceroceltham/"},
-   {"id": "ha-01h", poi: "Harris Academy", when: new Date(2019, nov, 4, 19, 30), timeSpecified: 1, title: "Ceroc Dance Class", shortDesc: "Every Monday at Harris Academy, Middle Park Avenue. No experience or partner needed.", url: "https://www.facebook.com/ceroceltham/"},
-  {"id": "ha-01i", poi: "Harris Academy", when: new Date(2019, nov, 11, 19, 30), timeSpecified: 1, title: "Ceroc Dance Class", shortDesc: "Every Monday at Harris Academy, Middle Park Avenue. No experience or partner needed.", url: "https://www.facebook.com/ceroceltham/"},
 
     {"id": "wf-01", poi: "Woodlands Farm", when: new Date(2019, jun, 29, 11), timeSpecified: 1, title: "South East London Wool and Textile Festival", shortDesc: "Featuring Emily Tull internationally recognised embroiderer and contestant on Sky Portrait Artist of the Year.  Also workshops in Textile crafts , kids art tables, upcycling, makers market.", url: "https://tockify.com/woodlands.farm/detail/127/1561802400000"},
     {"id": "wf-02", poi: "Woodlands Farm", when: new Date(2019, sep, 14, 11), timeSpecified: 1, until: {h: 16}, title: "Hedgerow Liqueurs Course", shortDesc: "Forage around Woodlands Farm for sloes before making your own sloe gin to take home.", url: "https://tockify.com/woodlands.farm/detail/147/1568455200000", price: "£10/person, £6 for farm members"},
     {"id": "wf-03", poi: "Woodlands Farm", when: new Date(2019, sep, 21, 11), timeSpecified: 1, until: {h: 16}, title: "Hedgerow Liqueurs Course", shortDesc: "Forage around Woodlands Farm for sloes before making your own sloe gin to take home.", url: "https://tockify.com/woodlands.farm/detail/147/1568455200000", price: "£10/person, £6 for farm members"},
     {"id": "wf-04", poi: "Woodlands Farm", when: new Date(2019, sep, 28, 10), timeSpecified: 1, until: {h: 17}, title: "London Harvest Festival", shortDesc: "Celebrate London’s outdoor heritage at the 21st London Harvest Festival.", url: "https://tockify.com/woodlands.farm/detail/145/1569661200000", price: "£10/person, £6 for farm members"},
 
-
-    // Every Thursday until July 18
     {"id": "ccc-01", poi: "Christchurch Community Centre", when: new Date(2019, jun, 27), timeSpecified: 0, title: "Hartbeeps South London", shortDesc: "Magical multi-sensory adventures for babies and toddlers.  Different times for different ages - check the website.", url: "https://www-251b.bookeo.com/bookeo/b_hartbeepssouthlondon_start.html?ctlsrc2=bYZONUX%2B3ct5r3T366BBfNcBa8R5MmX%2FIl3O1eLVSvU%3D&src=03n"},
     {"id": "ccc-02", poi: "Christchurch Community Centre", when: new Date(2019, jul, 4), timeSpecified: 0, title: "Hartbeeps South London", shortDesc: "Magical multi-sensory adventures for babies and toddlers.  Different times for different ages - check the website.", url: "https://www-251b.bookeo.com/bookeo/b_hartbeepssouthlondon_start.html?ctlsrc2=bYZONUX%2B3ct5r3T366BBfNcBa8R5MmX%2FIl3O1eLVSvU%3D&src=03n"},
-    // 4th Sunday of the month
     {"id": "ccc-03", poi: "Christchurch Community Centre", when: new Date(2019, jul, 6, 10), timeSpecified: 1, title: "Eltham Producers Market", shortDesc: "Stalls offering a wide range of fresh produce from the South East.", url: "https://www.royalgreenwich.gov.uk/directory_record/2682/eltham_producers_market"},
 
 
