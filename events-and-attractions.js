@@ -125,6 +125,8 @@ const events = [
     {"id": "ha-01g", poi: "Harris Academy", when: new Date(2019, aug, 26, 19, 30), timeSpecified: 1, title: "Ceroc Dance Class", shortDesc: "Every Monday at Harris Academy, Middle Park Avenue. No experience or partner needed.", url: "https://www.facebook.com/ceroceltham/"},
     {"id": "ha-01h", poi: "Harris Academy", when: new Date(2019, nov, 4, 19, 30), timeSpecified: 1, title: "Ceroc Dance Class", shortDesc: "Every Monday at Harris Academy, Middle Park Avenue. No experience or partner needed.", url: "https://www.facebook.com/ceroceltham/"},
     {"id": "ha-01i", poi: "Harris Academy", when: new Date(2019, nov, 11, 19, 30), timeSpecified: 1, title: "Ceroc Dance Class", shortDesc: "Every Monday at Harris Academy, Middle Park Avenue. No experience or partner needed.", url: "https://www.facebook.com/ceroceltham/"},
+    {"id": "ha-01j", poi: "Harris Academy", when: new Date(2019, nov, 18, 19, 30), timeSpecified: 1, title: "Ceroc Dance Class", shortDesc: "Every Monday at Harris Academy, Middle Park Avenue. No experience or partner needed.", url: "https://www.facebook.com/ceroceltham/"},
+    {"id": "ha-01k", poi: "Harris Academy", when: new Date(2019, nov, 25, 19, 30), timeSpecified: 1, title: "Ceroc Dance Class", shortDesc: " Monday at Harris Academy, Middle Park Avenue. No experience or partner needed.", url: "https://www.facebook.com/ceroceltham/"},
 
     //Every Wednesday
     {"id": "brc-01", poi: "Blackheath Rugby Club", when: new Date(2019, jul, 10, 20), timeSpecified: 1,
@@ -172,6 +174,8 @@ const events = [
 
     {"id": "tb-02", poi: "Tudor Barn", when: new Date(2019, jun,  2, 10), timeSpecified: 1, title: "Family Fun Day", shortDesc: "June family fun day"},
     {"id": "tb-04", poi: "Tudor Barn", when: new Date(2019, jul, 22, 11), timeSpecified: 1, title: "Wedding Fair", shortDesc: "Over 30 suppliers of err... wedding stuff.", url: "http://www.tudorbarneltham.com/event/10009", price: "Free - book ahead"},
+    {"id": "tb-05", poi: "Tudor Barn", when: new Date(2019, dec, 8, 11), until: {h: 13}, timeSpecified: 1, title: "Kids Christmas Disco with Santa", shortDesc: "A kids Christmas party for your little ones! The kids will be able to dance away whilst being entertained by the very popular Funky Chicks.", url: "https://www.robovoucher.com/buy/view/dn1lnlmeuh/", price: "£8"},
+    {"id": "tb-06", poi: "Tudor Barn", when: new Date(2019, dec, 31, 20), timeSpecified: 1, title: "New Years Eve - Dinner & Party Ticket", shortDesc: "Includes 3-course dinner, DJ, Casino Tables, LED Dancefloor, Photobooth & Midnight Snack.", url: "https://www.robovoucher.com/buy/view/txzdaw1fzu/", price: "£68.50"},
 
     {"id": "sh-03", poi: "Shrewsbury House", when: new Date(2019, may, 31, 19), timeSpecified: 1, title: "Murder Mystery dinner party", shortDesc: "Whodunnit? Can you solve the Mystery? Join us for a fabulous 1930's themed Murder Mystery Dinner party.", url: "https://shrewsburyhouse.org/events/events/kids-crafternoon/"},
     {"id": "sh-04", poi: "Shrewsbury House", when: new Date(2019, jun, 14, 18, 30), timeSpecified: 1, title: "The Travelling Shrewsburys Return", shortDesc: "Join Jim Radford, Keith Ferris and friends for some fabulous folk music and an evening of entertainment.", url: "https://shrewsburyhouse.org/events/events/the-travelling-shrewsburys-return/"},
