@@ -110,15 +110,12 @@ function addMarkers(attraction) {
         popupContent.appendChild(popupUrl);
     }
 
-
     const popup = new mapboxgl.Popup({offset: 25})
         .setDOMContent(popupContent);
 
-    // create DOM element for the marker
     const el = document.createElement('div');
     el.className = 'marker';
 
-    // create the marker
     new mapboxgl.Marker(el)
         .setLngLat(attraction.coords)
         .setPopup(popup) // sets a popup on this marker
@@ -126,7 +123,6 @@ function addMarkers(attraction) {
 }
 
 function showDetailsOfPoiAndEvent(attraction, event) {
-
     const poiDetailsBox = document.getElementById("poi-details-box");
     poiDetailsBox.innerHTML = "";
     if(event) {
@@ -173,7 +169,6 @@ function showDetailsOfPoiAndEvent(attraction, event) {
         nameDiv.className = "poidetails-subtitle";
         nameDiv.innerHTML = "At " + attraction.name;
     }
-
 
     if(event && event.when && event.timeSpecified) {
         nameDiv.innerHTML += " at "+getTimeAsString(event.when, event.until) + " on " + dateToString(event.when);
@@ -276,15 +271,12 @@ function generateWhatsOnTableRow(event, attraction) {
     }
     el.appendChild(locationDiv);
 
-
-
     if(event.price) {
         const priceDiv = document.createElement("div");
         priceDiv.innerHTML = event.price;
         priceDiv.className = "price";
         el.appendChild(priceDiv);
     }
-
 
     el.onclick = function() {
         showDetailsOfPoiAndEvent(attraction, event);
