@@ -24,10 +24,7 @@ const attractions = [
     {name: "Woodlands Farm", coords: [0.079343, 51.467514],
         desc: "A city farm run as a conservation and education project.",
         website: "https://www.thewoodlandsfarmtrust.org/",
-        address: "331 Shooters Hill, DA16 3RP"},
-
-    // vue cinema
-    // eltham escape rooms
+        address: "331 Shooters Hill, DA16 3RP"}
 
     {name: "Eltham Park South", coords: [0.067033, 51.454722],
         desc: "Large, grassy area, good for informal ball games with splendid tree-lined avenues, a children's playground and a picnic area." },
