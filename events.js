@@ -1,23 +1,4 @@
-const jan = 0;
-const feb = 1;
-const mar = 2;
-const apr = 3;
-const may = 4;
-const jun = 5;
-const jul = 6;
-const aug = 7;
-const sep = 8;
-const oct = 9;
-const nov = 10;
-const dec = 11;
 
-const mon = "mon"
-const tue = "tue"
-const wed = "wed"
-const thu = "thu"
-const fri = "fri"
-const sat = "sat"
-const sun = "sun"
 
 const events = [
 
@@ -27,17 +8,7 @@ const events = [
     {"id": "pp-01c", poi: "Passey Place", when: new Date(2019, nov, 24, 10), timeSpecified: 1, title: "Eltham Producers Market", shortDesc: "A range of produce for sale.", price: "Free entry", website: "https://www.royalgreenwich.gov.uk/directory_record/2682/eltham_producers_market"},
 
     // Every Monday
-    {"id": "ha-01", poi: "Harris Academy", when: new Date(2019, jul, 1, 19, 30), timeSpecified: 1, title: "Ceroc Dance Class", shortDesc: "Every Monday at Harris Academy, Middle Park Avenue. No experience or partner needed.", url: "https://www.facebook.com/ceroceltham/"},
-    {"id": "ha-01b", poi: "Harris Academy", when: new Date(2019, jul, 8, 19, 30), timeSpecified: 1, title: "Ceroc Dance Class", shortDesc: "Every Monday at Harris Academy, Middle Park Avenue. No experience or partner needed.", url: "https://www.facebook.com/ceroceltham/"},
-    {"id": "ha-01c", poi: "Harris Academy", when: new Date(2019, jul, 15, 19, 30), timeSpecified: 1, title: "Ceroc Dance Class", shortDesc: "Every Monday at Harris Academy, Middle Park Avenue. No experience or partner needed.", url: "https://www.facebook.com/ceroceltham/"},
-    {"id": "ha-01d", poi: "Harris Academy", when: new Date(2019, aug, 5, 19, 30), timeSpecified: 1, title: "Ceroc Dance Class", shortDesc: "Every Monday at Harris Academy, Middle Park Avenue. No experience or partner needed.", url: "https://www.facebook.com/ceroceltham/"},
-    {"id": "ha-01e", poi: "Harris Academy", when: new Date(2019, aug, 12, 19, 30), timeSpecified: 1, title: "Ceroc Dance Class", shortDesc: "Every Monday at Harris Academy, Middle Park Avenue. No experience or partner needed.", url: "https://www.facebook.com/ceroceltham/"},
-    {"id": "ha-01f", poi: "Harris Academy", when: new Date(2019, aug, 19, 19, 30), timeSpecified: 1, title: "Ceroc Dance Class", shortDesc: "Every Monday at Harris Academy, Middle Park Avenue. No experience or partner needed.", url: "https://www.facebook.com/ceroceltham/"},
-    {"id": "ha-01g", poi: "Harris Academy", when: new Date(2019, aug, 26, 19, 30), timeSpecified: 1, title: "Ceroc Dance Class", shortDesc: "Every Monday at Harris Academy, Middle Park Avenue. No experience or partner needed.", url: "https://www.facebook.com/ceroceltham/"},
-    {"id": "ha-01h", poi: "Harris Academy", when: new Date(2019, nov, 4, 19, 30), timeSpecified: 1, title: "Ceroc Dance Class", shortDesc: "Every Monday at Harris Academy, Middle Park Avenue. No experience or partner needed.", url: "https://www.facebook.com/ceroceltham/"},
-    {"id": "ha-01i", poi: "Harris Academy", when: new Date(2019, nov, 11, 19, 30), timeSpecified: 1, title: "Ceroc Dance Class", shortDesc: "Every Monday at Harris Academy, Middle Park Avenue. No experience or partner needed.", url: "https://www.facebook.com/ceroceltham/"},
-    {"id": "ha-01j", poi: "Harris Academy", when: new Date(2019, nov, 18, 19, 30), timeSpecified: 1, title: "Ceroc Dance Class", shortDesc: "Every Monday at Harris Academy, Middle Park Avenue. No experience or partner needed.", url: "https://www.facebook.com/ceroceltham/"},
-    {"id": "ha-01k", poi: "Harris Academy", when: new Date(2019, nov, 25, 19, 30), timeSpecified: 1, title: "Ceroc Dance Class", shortDesc: " Monday at Harris Academy, Middle Park Avenue. No experience or partner needed.", url: "https://www.facebook.com/ceroceltham/"},
+    {"id": "ha-01", poi: "Harris Academy", weekly: {day: monday, h: 19, m: 30}, timeSpecified: 1, title: "Ceroc Dance Class", shortDesc: "Every Monday at Harris Academy. No experience or partner needed.", url: "https://www.facebook.com/ceroceltham/"},
 
     //Every Wednesday
     {"id": "brc-01", poi: "Blackheath Rugby Club", when: new Date(2019, jul, 10, 20), timeSpecified: 1,

@@ -41,4 +41,31 @@ const getTimeAsString = (date, end) => {
     return ret;
 };
 
+const jan = 0;
+const feb = 1;
+const mar = 2;
+const apr = 3;
+const may = 4;
+const jun = 5;
+const jul = 6;
+const aug = 7;
+const sep = 8;
+const oct = 9;
+const nov = 10;
+const dec = 11;
+
+const sunday = 0
+const monday = 1
+const tuesday = 2
+const wednesday = 3
+const thursday = 4
+const friday = 5
+const saturday = 6
+
+function withoutTime(date) {
+    var date = new Date(date.getTime());
+    date.setHours(0,0,0,0);
+    return date;
+}
+
 //module.exports = getTimeAsString;

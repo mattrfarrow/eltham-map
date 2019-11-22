@@ -1,4 +1,5 @@
-
+const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
 String.prototype.replaceAll = function(search, replacement) {
     const target = this;
@@ -64,10 +65,11 @@ const map = new mapboxgl.Map({
 });
 
 attractions.forEach(addMarkers);
+processedEvents = processEvents(events)
 
 document.getElementById("attractions").appendChild(generateAttractionsTable(attractions));
 document.getElementById("attractions").style.display = "none";
-document.getElementById("whats-on").appendChild(generateWhatsOnTable(events));
+document.getElementById("whats-on").appendChild(generateWhatsOnTable(processedEvents));
 
 if(attractionToShowOnMap) {
     if (attractionToShowOnMap) {
@@ -266,8 +268,6 @@ function generateWhatsOnTableRow(event, attraction) {
 }
 
 function dateToString(date) {
-    const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-    const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
     return days[date.getDay()] + " " +date.getDate() + " " + months[date.getMonth()];
 }
 
@@ -308,12 +308,6 @@ function generateWhatsOnTable(events) {
         lastEventDate = event.when;
     });
     return whatsOnTable;
-}
-
-function withoutTime(date) {
-    var date = new Date(date.getTime());
-    date.setHours(0,0,0,0);
-    return date;
 }
 
 function attractionsSectionButtonClicked() {
