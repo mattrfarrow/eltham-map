@@ -272,10 +272,8 @@ function dateToString(date) {
 }
 
 function generateDateRow(date) {
-    const dateString = dateToString(date);
-
     const dateTd = document.createElement("td");
-    dateTd.innerHTML = dateString;
+    dateTd.innerHTML = dateToString(date);
     dateTd.className = "attraction-name";
 
     const dateTr = document.createElement("tr");
@@ -296,10 +294,9 @@ function generateWhatsOnTable(events) {
     ;
     sortedEvents.sort(function(a,b){return a.when - b.when;});
 
-    let lastEventDate;
+    var lastEventDate;
 
     sortedEvents.forEach(function(event) {
-
         if(!lastEventDate || withoutTime(lastEventDate).getTime() !== withoutTime(event.when).getTime()) {
             whatsOnTable.appendChild(generateDateRow(event.when));
         }
@@ -314,9 +311,9 @@ function generateWhatsOnTable(events) {
 }
 
 function withoutTime(date) {
-    const date2 = new Date(date.getTime());
-    date2.setHours(0,0,0,0);
-    return date2;
+    var date = new Date(date.getTime());
+    date.setHours(0,0,0,0);
+    return date;
 }
 
 function attractionsSectionButtonClicked() {
