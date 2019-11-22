@@ -11,6 +11,14 @@ const oct = 9;
 const nov = 10;
 const dec = 11;
 
+const mon = "mon"
+const tue = "tue"
+const wed = "wed"
+const thu = "thu"
+const fri = "fri"
+const sat = "sat"
+const sun = "sun"
+
 const events = [
 
     // 4th Sunday of the month
