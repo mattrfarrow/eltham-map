@@ -1,7 +1,3 @@
-
-
-// https://www.freshgroundeltham.co.uk/ ?
-
 const jan = 0;
 const feb = 1;
 const mar = 2;
