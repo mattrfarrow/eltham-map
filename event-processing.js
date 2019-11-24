@@ -19,6 +19,19 @@ function processEvent(event) {
             return eventCopy
         })
         return ret;
+    } else if(event.oncePerMonth){
+        var today = new Date()
+        var dateInMonth = getDateOfNextNthSpecificDayOfMonth(today.getYear() + 1900, today.getMonth(), event.oncePerMonth.day, event.oncePerMonth.nth)
+        if(event.oncePerMonth.h) {
+            dateInMonth.setHours(event.oncePerMonth.h)
+        }
+        if(event.oncePerMonth.m) {
+            dateInMonth.setMinutes(event.oncePerMonth.m)
+        }
+        var eventCopy = Object.assign({}, event)
+        eventCopy.when = dateInMonth
+        console.log(eventCopy)
+        return [eventCopy]
     } else {
         return [event]
     }

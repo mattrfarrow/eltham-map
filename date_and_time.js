@@ -69,15 +69,23 @@ function withoutTime(date) {
 }
 
 function getDateOfNextSpecificDayOfWeek(firstCandidateDate, dayOfWeek) {
+//    console.log("params: "+  firstCandidateDate + " and " +dayOfWeek)
     var copiedDate = new Date(firstCandidateDate.getTime());
-    copiedDate.setDate(firstCandidateDate.getDate() + dayOfWeek - firstCandidateDate.getDay());
+    var daysToOffset = dayOfWeek - firstCandidateDate.getDay()
+    if(daysToOffset<0){
+        daysToOffset = daysToOffset + 7
+    }
+
+    copiedDate.setDate(firstCandidateDate.getDate() + daysToOffset);
+    //console.log(firstCandidateDate + " + "+dayOfWeek + " - "+firstCandidateDate.getDay() + " = " + copiedDate)
     return copiedDate;
 }
 
 function getDateOfNextNthSpecificDayOfMonth(year, month, dayOfWeek, nthInMonth) {
     firstDayOfMonth = new Date(year, month, 1)
     firstDayWithDayOfWeek = getDateOfNextSpecificDayOfWeek(firstDayOfMonth, dayOfWeek)
-    return addDaysToDate(firstDayWithDayOfWeek, (nthInMonth-1)*7)
+    daysToAdd = (nthInMonth-1)*7
+    return addDaysToDate(firstDayWithDayOfWeek, daysToAdd)
 }
 
 function addDaysToDate(theDate, daysToAdd) {
@@ -93,5 +101,10 @@ module.exports = {
     getDateOfNextNthSpecificDayOfMonth,
     addDaysToDate,
     monday,
-    saturday
+    tuesday,
+    wednesday,
+    thursday,
+    friday,
+    saturday,
+    sunday
 }

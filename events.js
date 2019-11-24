@@ -1,11 +1,16 @@
 
+first = 1
+second = 2
+third = 3
+fourth = 4
 
 const events = [
 
     // 4th Sunday of the month
-    {"id": "pp-01", poi: "Passey Place", when: new Date(2019, jun, 23, 10), timeSpecified: 1, title: "Eltham Producers Market", shortDesc: "We have fruit and veg, honey, bread and cakes, olives, personalised gifts, craft beers and chilli sauces, chutneys, jams and marmalades, fruit infused liqueurs and The Brothers will be busking.", price: "Free entry"},
-    {"id": "pp-01b", poi: "Passey Place", when: new Date(2019, jul, 27, 10), timeSpecified: 1, title: "Eltham Producers Market", shortDesc: "We have fruit and veg, honey, bread and cakes, olives, personalised gifts, craft beers and chilli sauces, chutneys, jams and marmalades, fruit infused liqueurs and The Brothers will be busking.", price: "Free entry"},
-    {"id": "pp-01c", poi: "Passey Place", when: new Date(2019, nov, 24, 10), timeSpecified: 1, title: "Eltham Producers Market", shortDesc: "A range of produce for sale.", price: "Free entry", website: "https://www.royalgreenwich.gov.uk/directory_record/2682/eltham_producers_market"},
+//    {"id": "pp-01", poi: "Passey Place", when: new Date(2019, jun, 23, 10), timeSpecified: 1, title: "Eltham Producers Market", shortDesc: "We have fruit and veg, honey, bread and cakes, olives, personalised gifts, craft beers and chilli sauces, chutneys, jams and marmalades, fruit infused liqueurs and The Brothers will be busking.", price: "Free entry"},
+//    {"id": "pp-01b", poi: "Passey Place", when: new Date(2019, jul, 27, 10), timeSpecified: 1, title: "Eltham Producers Market", shortDesc: "We have fruit and veg, honey, bread and cakes, olives, personalised gifts, craft beers and chilli sauces, chutneys, jams and marmalades, fruit infused liqueurs and The Brothers will be busking.", price: "Free entry"},
+//    {"id": "pp-01c", poi: "Passey Place", when: new Date(2019, nov, 24, 10), timeSpecified: 1, title: "Eltham Producers Market", shortDesc: "A range of produce for sale.", price: "Free entry", website: "https://www.royalgreenwich.gov.uk/directory_record/2682/eltham_producers_market"},
+    {"id": "pp-01", poi: "Passey Place", oncePerMonth: {nth: fourth, day: sunday, h: 10}, timeSpecified: 1, title: "Eltham Producers Market", shortDesc: "A range of produce for sale.", price: "Free entry", website: "https://www.royalgreenwich.gov.uk/directory_record/2682/eltham_producers_market"},
 
     // Every Monday
     {"id": "ha-01", poi: "Harris Academy", weekly: {day: monday, h: 19, m: 30}, timeSpecified: 1, title: "Ceroc Dance Class", shortDesc: "Every Monday at Harris Academy. No experience or partner needed.", url: "https://www.facebook.com/ceroceltham/"},
