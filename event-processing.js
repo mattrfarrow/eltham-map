@@ -17,7 +17,7 @@ function processEvent(event) {
             return cloneEventWithDate(event, firstDateWithSpecificDay)
         })
     } else if(event.oncePerMonth){
-        a =  [firstDayOfThisMonth, firstDayOfNextMonth, firstDayOfMonthAfterNext].map(firstDayOfMonth => {
+        return  [firstDayOfThisMonth, firstDayOfNextMonth, firstDayOfMonthAfterNext].map(firstDayOfMonth => {
             var dateInMonth = getDateOfNextNthSpecificDayOfMonth(firstDayOfMonth.getYear() + 1900, firstDayOfMonth.getMonth(), event.oncePerMonth.day, event.oncePerMonth.nth)
             if(event.oncePerMonth.h) {
                 dateInMonth.setHours(event.oncePerMonth.h)
@@ -27,9 +27,6 @@ function processEvent(event) {
             }
             return cloneEventWithDate(event, dateInMonth)
         })
-        console.log(a)
-        return a
-
     } else {
         return [event]
     }
