@@ -27,6 +27,17 @@ function processEvent(event) {
             }
             return cloneEventWithDate(event, dateInMonth)
         })
+    } else if(event.dateRange) {
+        var todaysDate = withoutTime(new Date())
+        if(event.dateRange.endDate < todaysDate) {
+            return []
+        }
+        if(todaysDate > event.dateRange.startDate ) {
+            return [cloneEventWithDate(event, todaysDate)]
+        } else {
+            return [cloneEventWithDate(event, event.dateRange.startDate)]
+        }
+
     } else {
         return [event]
     }
