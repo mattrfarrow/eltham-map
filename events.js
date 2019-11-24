@@ -74,10 +74,8 @@ const events = [
     {"id": "rb-18", poi: "The Rusty Bucket Pub", when: new Date(2019, aug, 6, 20), timeSpecified: 1, title: "Music Quiz.", price: "£2 entry per person."},
     {"id": "rb-19", poi: "The Rusty Bucket Pub", when: new Date(2019, oct, 27, 18), timeSpecified: 1, title: "Live Music - Doubleshot.", price: "Free"},
     {"id": "rb-20", poi: "The Rusty Bucket Pub", when: new Date(2019, nov, 3, 18), timeSpecified: 1, title: "Live Music - Frances McKevitt  ", shortDesc: "London-based singer-songwriter. See http://francesmckevitt.com", price: "Free"},
-
-
-    {"id": "rb-19", poi: "The Rusty Bucket Pub", when: new Date(2019, sep, 3, 20), timeSpecified: 1, title: "Music Quiz.", price: "£2 entry per person."},
-    {"id": "rb-20", poi: "The Rusty Bucket Pub", when: new Date(2019, sep, 8, 18), timeSpecified: 1, title: "Gillywood + Andrew the sound guy (Folk)", price: "Free"},
+    {"id": "rb-19a", poi: "The Rusty Bucket Pub", when: new Date(2019, sep, 3, 20), timeSpecified: 1, title: "Music Quiz.", price: "£2 entry per person."},
+    {"id": "rb-20a", poi: "The Rusty Bucket Pub", when: new Date(2019, sep, 8, 18), timeSpecified: 1, title: "Gillywood + Andrew the sound guy (Folk)", price: "Free"},
     {"id": "rb-21", poi: "The Rusty Bucket Pub", when: new Date(2019, sep, 10), timeSpecified: 0, title: "Anspach & Hobday Tutored Beer Tasting", price: "£20"},
     {"id": "rb-22", poi: "The Rusty Bucket Pub", when: new Date(2019, sep, 15, 18), timeSpecified: 1, title: "JD Singfield ( Blues)", price: "Free"},
     {"id": "rb-23", poi: "The Rusty Bucket Pub", when: new Date(2019, sep, 17, 20), timeSpecified: 1, title: "General Knowledge Quiz.", price: "£2 entry per person."},
