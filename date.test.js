@@ -20,7 +20,6 @@ test('get next Sunday after Sunday 24 Nov', () => {
   expect(dateAndTime.getDateOfNextSpecificDayOfWeek(new Date(2019, 10, 24), dateAndTime.sunday)).toStrictEqual(new Date(2019,10,24))
 })
 
-// params: Fri Nov 01 2019 00:00:00 GMT+0000 (Greenwich Mean Time) and 0
 test('get next Sunday after Friday 1 Nov', () => {
   expect(dateAndTime.getDateOfNextSpecificDayOfWeek(new Date(2019, 10, 1), dateAndTime.sunday)).toStrictEqual(new Date(2019,10,3))
 })
