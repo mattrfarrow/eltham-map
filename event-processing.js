@@ -5,7 +5,7 @@ function processEvents(events) {
 function processEvent(event) {
     if(event.weekly) {
         return [0,1,2,3,4].map(week => {
-            var today = new Date()
+            var today = withoutTime(new Date())
             var firstDateWithSpecificDay = getDateOfNextSpecificDayOfWeek(today, event.weekly.day)
             firstDateWithSpecificDay.setDate(firstDateWithSpecificDay.getDate() + (week*7));
             if(event.weekly.h) {
