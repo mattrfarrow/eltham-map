@@ -6,16 +6,13 @@ fourth = 4
 
 const events = [
 
-    // 4th Sunday of the month
+    // Repeating
     {"id": "pp-01", poi: "Passey Place", oncePerMonth: {nth: fourth, day: sunday, h: 10}, timeSpecified: 1, title: "Eltham Producers Market", shortDesc: "A range of produce for sale.", price: "Free entry", website: "https://www.royalgreenwich.gov.uk/directory_record/2682/eltham_producers_market"},
-
-    // Every Monday
     {"id": "ha-01", poi: "Harris Academy", weekly: {day: monday, h: 19, m: 30}, timeSpecified: 1, title: "Ceroc Dance Class", shortDesc: "Every Monday at Harris Academy. No experience or partner needed.", url: "https://www.facebook.com/ceroceltham/"},
-
-    //Every Wednesday
     {"id": "brc-01", poi: "Blackheath Rugby Club", weekly: {day: wednesday, h: 20}, timeSpecified: 1,
         title: "Folk Mob Open-Mic Night", shortDesc: "An open-mic night with the Folk Mob - come and play or just watch and listen.",
         url: "https://sites.google.com/site/folkmobonline/folkmob-calendar-1?authuser=0", price: "Free entry"},
+
 
     {"id": "asc-02", poi: "All Saints Church", when: new Date(2019, nov, 2, 10), timeSpecified: 1, endTime: {h:14}, title: "NSPCC Craft Fair",
         shortDesc: "Variety of craft stalls, plus NSPCC stalls, including Homemade Cakes & raffle.  Light lunches available.", price: "Free entry"},
