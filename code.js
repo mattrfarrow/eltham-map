@@ -287,7 +287,7 @@ function generateWhatsOnTable(events) {
     const whatsOnTable = document.createElement("table");
     whatsOnTable.id = "eventsTable";
 
-    const now = new Date();
+    const now = withoutTime(new Date());
     let sortedEvents = events
         .slice()
         .filter(attraction => attraction.when >= now )

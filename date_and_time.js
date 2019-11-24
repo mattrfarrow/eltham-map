@@ -95,6 +95,18 @@ function addDaysToDate(theDate, daysToAdd) {
     return copiedDate;
 }
 
+function firstDayOfMonthPlusN(n) {
+    date = new Date();
+    date.setHours(0,0,0,0);
+    date.setMonth(date.getMonth()+n)
+    date.setDate(1)
+    return date
+}
+
+const firstDayOfThisMonth = firstDayOfMonthPlusN(0)
+const firstDayOfNextMonth = firstDayOfMonthPlusN(1)
+const firstDayOfMonthAfterNext = firstDayOfMonthPlusN(2)
+
 module.exports = {
     getTimeAsString,
     getDateOfNextSpecificDayOfWeek,

@@ -4,7 +4,7 @@ function processEvents(events) {
 
 function processEvent(event) {
     if(event.weekly) {
-        var ret = [0,1,2,3,4].map(week => {
+        return [0,1,2,3,4].map(week => {
             var today = new Date()
             var firstDateWithSpecificDay = getDateOfNextSpecificDayOfWeek(today, event.weekly.day)
             firstDateWithSpecificDay.setDate(firstDateWithSpecificDay.getDate() + (week*7));
@@ -14,26 +14,31 @@ function processEvent(event) {
             if(event.weekly.m) {
                 firstDateWithSpecificDay.setMinutes(event.weekly.m)
             }
-            var eventCopy = Object.assign({}, event)
-            eventCopy.when = firstDateWithSpecificDay
-            return eventCopy
+            return cloneEventWithDate(event, firstDateWithSpecificDay)
         })
-        return ret;
     } else if(event.oncePerMonth){
-        var today = new Date()
-        var dateInMonth = getDateOfNextNthSpecificDayOfMonth(today.getYear() + 1900, today.getMonth(), event.oncePerMonth.day, event.oncePerMonth.nth)
-        if(event.oncePerMonth.h) {
-            dateInMonth.setHours(event.oncePerMonth.h)
-        }
-        if(event.oncePerMonth.m) {
-            dateInMonth.setMinutes(event.oncePerMonth.m)
-        }
-        var eventCopy = Object.assign({}, event)
-        eventCopy.when = dateInMonth
-        console.log(eventCopy)
-        return [eventCopy]
+        a =  [firstDayOfThisMonth, firstDayOfNextMonth, firstDayOfMonthAfterNext].map(firstDayOfMonth => {
+            var dateInMonth = getDateOfNextNthSpecificDayOfMonth(firstDayOfMonth.getYear() + 1900, firstDayOfMonth.getMonth(), event.oncePerMonth.day, event.oncePerMonth.nth)
+            if(event.oncePerMonth.h) {
+                dateInMonth.setHours(event.oncePerMonth.h)
+            }
+            if(event.oncePerMonth.m) {
+                dateInMonth.setMinutes(event.oncePerMonth.m)
+            }
+            return cloneEventWithDate(event, dateInMonth)
+        })
+        console.log(a)
+        return a
+
     } else {
         return [event]
     }
 }
-
+function cloneEventWithDate(event, date) {
+    if(!date) {
+        throw "no date provided"
+    }
+    var eventCopy = Object.assign({}, event)
+    eventCopy.when = date
+    return eventCopy
+}
