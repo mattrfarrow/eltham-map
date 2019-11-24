@@ -29,13 +29,21 @@ function processEvent(event) {
         })
     } else if(event.dateRange) {
         var todaysDate = withoutTime(new Date())
+        if(event.startTime && event.startTime.h) {
+            todaysDate.setHours(event.startTime.h)
+        }
+        if(event.startTime && event.startTime.m) {
+            todaysDate.setMinutes(event.startTime.m)
+        }
         if(event.dateRange.endDate < todaysDate) {
             return []
         }
         if(todaysDate > event.dateRange.startDate ) {
             return [cloneEventWithDate(event, todaysDate)]
         } else {
-            return [cloneEventWithDate(event, event.dateRange.startDate)]
+            console.log(event.dateRange.startDate)
+            console.log(cloneDateWithHoursAndMinutes(event.dateRange.startDate, event.startTime.h, event.startTime.m))
+            return [cloneEventWithDate(event, cloneDateWithHoursAndMinutes(event.dateRange.startDate, event.startTime.h, event.startTime.m))]
         }
 
     } else {
@@ -49,4 +57,14 @@ function cloneEventWithDate(event, date) {
     var eventCopy = Object.assign({}, event)
     eventCopy.when = date
     return eventCopy
+}
+
+function cloneDateWithHours(date, hours) {
+}
+
+function cloneDateWithHoursAndMinutes(date, hours, minutes) {
+    var dateCopy = new Date(date.getTime())
+    date.setHours(hours)
+    date.setMinutes(minutes)
+    return dateCopy
 }
