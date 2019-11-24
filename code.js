@@ -144,7 +144,7 @@ function showDetailsOfPoiAndEvent(attraction, event) {
     }
 
     if(event && event.when && event.timeSpecified) {
-        nameDiv.innerHTML += " at "+getTimeAsString(event.when, event.until) + " on " + dateToString(event.when);
+        nameDiv.innerHTML += " at "+getTimeAsString(event.when, event.endTime) + " on " + dateToString(event.when);
     }
     poiDetailsBox.appendChild(nameDiv);
 
@@ -223,7 +223,7 @@ function generateWhatsOnTableRow(event, attraction) {
     if(event.timeSpecified) {
         timeDiv = document.createElement("div");
 
-        timeDiv.innerHTML = getTimeAsString(event.when, event.until)
+        timeDiv.innerHTML = getTimeAsString(event.when, event.endTime)
         timeDiv.className = "event-time";
     }
 

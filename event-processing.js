@@ -47,7 +47,6 @@ function processEvent(event) {
             }
             return [cloneEventWithDate(event, date)]
         }
-
     } else {
         return [event]
     }
