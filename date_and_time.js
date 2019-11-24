@@ -74,9 +74,24 @@ function getDateOfNextSpecificDayOfWeek(firstCandidateDate, dayOfWeek) {
     return copiedDate;
 }
 
+function getDateOfNextNthSpecificDayOfMonth(year, month, dayOfWeek, nthInMonth) {
+    firstDayOfMonth = new Date(year, month, 1)
+    firstDayWithDayOfWeek = getDateOfNextSpecificDayOfWeek(firstDayOfMonth, dayOfWeek)
+    return addDaysToDate(firstDayWithDayOfWeek, (nthInMonth-1)*7)
+}
+
+function addDaysToDate(theDate, daysToAdd) {
+    var copiedDate = new Date(theDate.getTime());
+    copiedDate.setDate(copiedDate.getDate() + daysToAdd)
+    console.log(copiedDate)
+    return copiedDate;
+}
+
 module.exports = {
     getTimeAsString,
     getDateOfNextSpecificDayOfWeek,
+    getDateOfNextNthSpecificDayOfMonth,
+    addDaysToDate,
     monday,
     saturday
 }
