@@ -8,33 +8,15 @@ function processEvent(event) {
             var today = withoutTime(new Date())
             var firstDateWithSpecificDay = getDateOfNextSpecificDayOfWeek(today, event.weekly.day)
             firstDateWithSpecificDay.setDate(firstDateWithSpecificDay.getDate() + (week*7));
-            if(event.weekly.h) {
-                firstDateWithSpecificDay.setHours(event.weekly.h)
-            }
-            if(event.weekly.m) {
-                firstDateWithSpecificDay.setMinutes(event.weekly.m)
-            }
             return cloneEventWithDate(event, firstDateWithSpecificDay)
         })
     } else if(event.oncePerMonth){
         return  [firstDayOfThisMonth, firstDayOfNextMonth, firstDayOfMonthAfterNext].map(firstDayOfMonth => {
             var dateInMonth = getDateOfNextNthSpecificDayOfMonth(firstDayOfMonth.getYear() + 1900, firstDayOfMonth.getMonth(), event.oncePerMonth.day, event.oncePerMonth.nth)
-            if(event.oncePerMonth.h) {
-                dateInMonth.setHours(event.oncePerMonth.h)
-            }
-            if(event.oncePerMonth.m) {
-                dateInMonth.setMinutes(event.oncePerMonth.m)
-            }
             return cloneEventWithDate(event, dateInMonth)
         })
     } else if(event.dateRange) {
         var todaysDate = withoutTime(new Date())
-        if(event.startTime && event.startTime.h) {
-            todaysDate.setHours(event.startTime.h)
-        }
-        if(event.startTime && event.startTime.m) {
-            todaysDate.setMinutes(event.startTime.m)
-        }
         if(event.dateRange.endDate < todaysDate) {
             return []
         }

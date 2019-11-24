@@ -1,13 +1,13 @@
-const getTimeAsString = (date, end) => {
-    if(!date) return "";
-    const startMinutes = date.getMinutes() && date.getMinutes() !== 0
-        ? date.getMinutes()
+const getTimeAsString = (startTime, endTime) => {
+    if(!startTime) return "";
+    const startMinutes = startTime && startTime.m && startTime.m !== 0
+        ? startTime.m
         : "00";
 
-    let hours = date.getHours();
+    let hours = startTime.h;
     let startHours =  hours>12 ? hours-12 : hours;
     let startAmOrPm;
-    if(date.getHours()>11) {
+    if(startTime.h>11) {
         startAmOrPm = "pm";
     } else {
         startAmOrPm = "am";
@@ -15,7 +15,7 @@ const getTimeAsString = (date, end) => {
 
 
     let endAmOrPm;
-    if(end && end.h && end.h>11) {
+    if(endTime && endTime.h && endTime.h>11) {
         endAmOrPm = "pm";
     } else {
         endAmOrPm = "am";
@@ -23,16 +23,16 @@ const getTimeAsString = (date, end) => {
 
 
     var ret = startHours + ":" + startMinutes;
-    if(!end || startAmOrPm != endAmOrPm) {
+    if(!endTime || startAmOrPm != endAmOrPm) {
         ret += startAmOrPm;
     }
 
-    if(end && end.h) {
-        let endHours = end.h>12 ? end.h-12 : end.h;
+    if(endTime && endTime.h) {
+        let endHours = endTime.h>12 ? endTime.h-12 : endTime.h;
         ret += "-";
         ret += endHours;
-        if(end.m) {
-            ret +=  ":" + end.m
+        if(endTime.m) {
+            ret +=  ":" + endTime.m
         } else {
             ret +=  ":00"
         }
