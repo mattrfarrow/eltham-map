@@ -41,9 +41,11 @@ function processEvent(event) {
         if(todaysDate > event.dateRange.startDate ) {
             return [cloneEventWithDate(event, todaysDate)]
         } else {
-            console.log(event.dateRange.startDate)
-            console.log(cloneDateWithHoursAndMinutes(event.dateRange.startDate, event.startTime.h, event.startTime.m))
-            return [cloneEventWithDate(event, cloneDateWithHoursAndMinutes(event.dateRange.startDate, event.startTime.h, event.startTime.m))]
+            date = event.dateRange.startDate
+            if(event.startTime) {
+                date = cloneDateWithHoursAndMinutes(date, event.startTime.h, event.startTime.m)
+            }
+            return [cloneEventWithDate(event, date)]
         }
 
     } else {
