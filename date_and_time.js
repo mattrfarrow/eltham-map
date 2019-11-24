@@ -68,4 +68,15 @@ function withoutTime(date) {
     return date;
 }
 
-//module.exports = getTimeAsString;
+function getDateOfNextSpecificDayOfWeek(firstCandidateDate, dayOfWeek) {
+    var copiedDate = new Date(firstCandidateDate.getTime());
+    copiedDate.setDate(firstCandidateDate.getDate() + dayOfWeek - firstCandidateDate.getDay());
+    return copiedDate;
+}
+
+module.exports = {
+    getTimeAsString,
+    getDateOfNextSpecificDayOfWeek,
+    monday,
+    saturday
+}
