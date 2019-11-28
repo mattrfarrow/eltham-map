@@ -40,9 +40,7 @@ function cloneEventWithDate(event, date) {
     var eventCopy = Object.assign({}, event)
     eventCopy.when = date
     dateDesc = getDateDescription(event, date)
-    console.log(dateDesc)
     eventCopy.dateDescription = dateDesc
-    console.log(event)
     return eventCopy
 }
 

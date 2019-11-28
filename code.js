@@ -220,7 +220,6 @@ function generateWhatsOnTableRow(event, attraction) {
     if(event.dateDescription) {
         locationDiv.innerHTML = "At " + attraction.name + " " + event.dateDescription
     } else {
-        console.log(event)
         locationDiv.innerHTML = "At " + attraction.name
     }
 

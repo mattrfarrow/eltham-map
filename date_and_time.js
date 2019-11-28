@@ -91,7 +91,6 @@ function getDateDescription(event) {
         } else {
             dateString = " on " + startDate.getDate() + " " + NUM_TO_SHORT_MONTH[startDate.getMonth()] + " - " + endDate.getDate() + " " + NUM_TO_SHORT_MONTH[endDate.getMonth()] + ".";
         }
-//        console.log("Setting something for "+ event + ": "+dateString)
         return dateString
     } else if(event.weekly) {
         return "every " + NUM_TO_DAY[event.weekly.day] + "."
@@ -124,7 +123,6 @@ function getDateOfNextNthSpecificDayOfMonth(year, month, dayOfWeek, nthInMonth) 
 function addDaysToDate(theDate, daysToAdd) {
     var copiedDate = new Date(theDate.getTime());
     copiedDate.setDate(copiedDate.getDate() + daysToAdd)
-    console.log(copiedDate)
     return copiedDate;
 }
 
