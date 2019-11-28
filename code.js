@@ -66,6 +66,7 @@ const map = new mapboxgl.Map({
 
 attractions.forEach(addMarkers);
 processedEvents = processEvents(events)
+console.log(processedEvents)
 
 document.getElementById("attractions").appendChild(generateAttractionsTable(attractions));
 document.getElementById("attractions").style.display = "none";
@@ -216,7 +217,13 @@ function generateWhatsOnTableRow(event, attraction) {
 
     const locationDiv = document.createElement("div");
 
-    locationDiv.innerHTML = "At " + attraction.name;
+    if(event.dateDescription) {
+        locationDiv.innerHTML = "At " + attraction.name + " " + event.dateDescription
+    } else {
+        console.log(event)
+        locationDiv.innerHTML = "At " + attraction.name
+    }
+
     locationDiv.className = "attraction-location";
 
     let timeDiv;

@@ -54,6 +54,14 @@ const oct = 9;
 const nov = 10;
 const dec = 11;
 
+var NUM_TO_SHORT_MONTH = [
+  'Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'
+];
+
+var NUM_TO_DAY = [
+  'OOOOPS!!!! 1-based', 'Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'
+];
+
 const sunday = 0
 const monday = 1
 const tuesday = 2
@@ -66,6 +74,25 @@ function withoutTime(date) {
     var date = new Date(date.getTime());
     date.setHours(0,0,0,0);
     return date;
+}
+
+function getDateDescription(event) {
+//    console.log(event)
+//    console.log(event.dateRange)
+    if(event && event.dateRange) {
+        startDate = event.dateRange.startDate
+        endDate = event.dateRange.endDate
+        if(startDate.getMonth() === endDate.getMonth()) {
+            dateString = " on " + startDate.getDate() + "-" + endDate.getDate() + " " + NUM_TO_SHORT_MONTH[endDate.getMonth()]+ ".";
+        } else {
+            dateString = " on " + startDate.getDate() + " " + NUM_TO_SHORT_MONTH[startDate.getMonth()] + " - " + endDate.getDate() + " " + NUM_TO_SHORT_MONTH[endDate.getMonth()] + ".";
+        }
+//        console.log("Setting something for "+ event + ": "+dateString)
+        return dateString
+    } else if(event.weekly) {
+        return "every " + NUM_TO_DAY[event.weekly.day] + "."
+    }
+    return undefined
 }
 
 function getDateOfNextSpecificDayOfWeek(firstCandidateDate, dayOfWeek) {
