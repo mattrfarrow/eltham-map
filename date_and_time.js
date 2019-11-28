@@ -59,8 +59,12 @@ var NUM_TO_SHORT_MONTH = [
 ];
 
 var NUM_TO_DAY = [
-  'OOOOPS!!!! 1-based', 'Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'
+  'Sunday', 'Monday','Tuesday','Wednesday','Thursday','Friday','Saturday',
 ];
+
+var NUM_TO_NTH = [
+    'OOPS!! 1-based', 'first', 'second', 'third', 'fourth', 'fifth'
+]
 
 const sunday = 0
 const monday = 1
@@ -91,6 +95,8 @@ function getDateDescription(event) {
         return dateString
     } else if(event.weekly) {
         return "every " + NUM_TO_DAY[event.weekly.day] + "."
+    } else if(event.oncePerMonth) {
+        return " on the " + NUM_TO_NTH[event.oncePerMonth.nth] + " " + NUM_TO_DAY[event.oncePerMonth.day] + " of each month."
     }
     return undefined
 }
