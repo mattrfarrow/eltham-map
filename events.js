@@ -46,7 +46,7 @@ const events = [
         title: "Live Music - Be Sharp", shortDesc: "A steaming guitar-based trio.  And a BBQ!", price: "Free entry"},
 
     {"id": "ep-13", poi: "Eltham Palace", dateRange: {startDate: new Date(2019, nov, 26), endDate: new Date(2019, nov, 29) }, startTime: {h:19, m:30},
-            title: "Nell Gwynn", shortDesc: "A hilarious and heart warming production in the beautiful surroundings of our Great Hall. Runs from Tues 26 - Fri 29. ", price: "Adults £15.  Members £12.",
+            title: "Nell Gwynn", shortDesc: "A hilarious and heart warming production in the beautiful surroundings of our Great Hall. ", price: "Adults £15.  Members £12.",
             url: "https://www.english-heritage.org.uk/visit/whats-on/eltham-palace-nell-gwynne-26-29-nov-2019/"},
     {"id": "ep-12", poi: "Eltham Palace", dateRange: {startDate: new Date(2019, dec, 5), endDate: new Date(2019, dec, 8) },
         title: "Enchanted Eltham Palace", shortDesc: "Make the most of winter evenings with an enchanting experience of light, colour and sound as our grounds are transformed into an illuminated world.", url: "https://www.english-heritage.org.uk/visit/whats-on/eltham-enchanted-5-8-dec-2019/", price: "From £7.50/child, £12/adult"},
