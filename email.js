@@ -15,44 +15,48 @@ function getEvents() {
 function eventIsDuringNextWeek(event) {
     todayPlusTenDays = new Date();
     todayPlusTenDays.setDate(todayPlusTenDays.getDate()+10);
-
-    console.log(todayPlusTenDays)
-    console.log("vs")
-    console.log(event.when);
     include = event.when<todayPlusTenDays
-    console.log(include)
     return include;
 }
 
+function eventShouldBeBookedAhead(event) {
+    ret = event.bookAhead
+    return ret
+}
+
 function addGeneratedContent() {
+    const eventsThisWeekDiv = document.getElementById("events-this-week");
+
     var events = getEvents().filter(eventIsDuringNextWeek);
-    console.log("filtered");
-
-    const emailContent = document.getElementById("email-content");
-
-    let lastEventDate;
-
     const eventsTable = document.createElement("table");
-
-
+    let lastEventDate;
     events.forEach(function(event, index) {
-
         if(!lastEventDate || withoutTime(lastEventDate).getTime() !== withoutTime(event.when).getTime()) {
             eventsTable.appendChild(generateDateRow(event.when));
         }
-        const poi = attractions.find(function (attraction) {
-            return event.poi === attraction.name
-        });
 
         const isLastEventInList = index>=events.length-1;
         eventsTable.appendChild(generateRowForEvent(event, isLastEventInList));
         lastEventDate = event.when;
-
-
-
     });
+    eventsThisWeekDiv.appendChild(eventsTable);
 
-    emailContent.appendChild(eventsTable);
+
+    const eventsToBookAheadDiv = document.getElementById("events-to-book-ahead");
+
+    var eventsToBookAhead = getEvents().filter(eventShouldBeBookedAhead);
+    const bookAheadTable = document.createElement("table");
+    lastEventDate = undefined;
+    eventsToBookAhead.forEach(function(event, index) {
+        if(!lastEventDate || withoutTime(lastEventDate).getTime() !== withoutTime(event.when).getTime()) {
+            bookAheadTable.appendChild(generateDateRow(event.when));
+        }
+
+        const isLastEventInList = index>=eventsToBookAhead.length-1;
+        bookAheadTable.appendChild(generateRowForEvent(event, isLastEventInList));
+        lastEventDate = event.when;
+    });
+    eventsToBookAheadDiv.appendChild(bookAheadTable);
 }
 
 function generateDateRow(date) {
