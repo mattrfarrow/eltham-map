@@ -10,9 +10,23 @@ function getEvents() {
     return sortedEvents;
 }
 
-function addGeneratedContent() {
 
-    var events = getEvents();
+
+function eventIsDuringNextWeek(event) {
+    todayPlusTenDays = new Date();
+    todayPlusTenDays.setDate(todayPlusTenDays.getDate()+10);
+
+    console.log(todayPlusTenDays)
+    console.log("vs")
+    console.log(event.when);
+    include = event.when<todayPlusTenDays
+    console.log(include)
+    return include;
+}
+
+function addGeneratedContent() {
+    var events = getEvents().filter(eventIsDuringNextWeek);
+    console.log("filtered");
 
     const emailContent = document.getElementById("email-content");
 
