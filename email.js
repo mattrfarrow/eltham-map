@@ -68,7 +68,7 @@ function dateToString(date) {
 
 
 function generateRowForEvent(event, isLastEventInList)  {
-    const timeText = getTimeAsString(event.when, event.until)
+    const timeText = getTimeAsString(event.startTime, event.endTime)
 
     const eventTr = document.createElement("tr");
 
@@ -85,9 +85,11 @@ function generateRowForEvent(event, isLastEventInList)  {
     eventTitleDiv.appendChild(eventTitleWithLink);
     eventTd.appendChild(eventTitleDiv);
 
-    eventDescDiv = document.createElement("div");
-    eventDescDiv.innerHTML = event.shortDesc;
-    eventTd.appendChild(eventDescDiv);
+    if(event.shortDesc) {
+        eventDescDiv = document.createElement("div");
+        eventDescDiv.innerHTML = event.shortDesc;
+        eventTd.appendChild(eventDescDiv);
+    }
 
     eventLocationDiv = document.createElement("div");
     eventLocationDiv.innerHTML = "<em>At " + event.poi +"</em>";

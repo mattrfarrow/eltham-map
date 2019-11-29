@@ -66,7 +66,6 @@ const map = new mapboxgl.Map({
 
 attractions.forEach(addMarkers);
 processedEvents = processEvents(events)
-console.log(processedEvents)
 
 document.getElementById("attractions").appendChild(generateAttractionsTable(attractions));
 document.getElementById("attractions").style.display = "none";
