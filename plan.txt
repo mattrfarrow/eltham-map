@@ -5,7 +5,7 @@ Add a param to email.html?days=7 ... for the number of days to include in the em
 Add a section to the email with things to book ahead
 Autogenerate the weather section
 Autodownload future public transport
-
+Pictures?
 
 https://momentjs.com/
 immutablejs
