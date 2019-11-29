@@ -1,19 +1,19 @@
 Before Launch
 -------------
-End times
+
 Events on/spanning multiple days?
 https://momentjs.com/
 immutablejs
 
-Add price info to events - and how to buy tickets
+Add vue cinema
+Add eltham escape rooms
+Add https://www.freshgroundeltham.co.uk/ ?
+
 Test things ... Pingdom equivalent or browser tests
 
-
 Add contact details of more places?
+
 Add some icons to make the buttons more obviously buttons?
-
-
-icons?
 https://www.flaticon.com/packs/summer-81
 https://freeicons.io/search-icons?search=calendar
 
