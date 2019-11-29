@@ -45,7 +45,7 @@ const events = [
     {"id": "gmg-06", poi: "Gerald Moore Gallery", when: new Date(2019, dec, 3), startTime: {h:9}, endTime: {h:11},
         title: "Christmas Wreath Making", shortDesc: "Make your own wreath to take home. We will be using a wire frame and moss with a selection of berries, dried fruit, ribbons and more to decorate.", price: "£25 for the day.", url: "https://geraldmooregallery.org/adults-art-classes/"},
     {"id": "gmg-07", poi: "Gerald Moore Gallery", when: new Date(2019, dec, 10), startTime: {h:9}, endTime: {h:11},
-        title: "Christmas Wreath Making", shortDesc: "Decorate your very own Christmas glass baubles with paint and glitter to hang on your Christmas tree.", price: "£20 for the day.", url: "https://geraldmooregallery.org/adults-art-classes/", bookAhead: true},
+        title: "Christmas Bauble Decorating", shortDesc: "Decorate your very own Christmas glass baubles with paint and glitter to hang on your Christmas tree.", price: "£20 for the day.", url: "https://geraldmooregallery.org/adults-art-classes/", bookAhead: true},
 
     // http://www.bobhopetheatre.co.uk/
     {"id": "bht-05", poi: "Bob Hope Theatre", dateRange: {startDate: new Date(2019, dec, 6), endDate: new Date(2019, dec, 7) },
