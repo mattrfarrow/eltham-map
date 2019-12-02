@@ -86,4 +86,18 @@ const attractions = [
         desc: "An art gallery with regularly changing pieces of art from both local and international artists.",
         address: "13 Well Hall Parade, Well Hall Road, London, SE9 6SP",
         website: "https://www.capitalartgallery.co.uk/our_story"},
+
+    {name: "Eltham Grill House", coords: [0.053205, 51.450234],
+        desc: "Newly-refurbished grill restaurant specialize in delicious Charcoal Grills and Turkish cuisine as well as fish and chips.",
+        address: "2-3 Chequers Parade, Eltham, London SE9 1DD",
+        website: "http://www.elthamgrillhouse.co.uk/"},
+
+    {name: "Eltham Park Methodist Church", coords: [0.058256, 51.458809],
+        desc: "A church on Westmount Road.",
+        address: "Westmount Road, Eltham, SE9 1XX",
+        website: "https://epmethodistchurch.org.uk/"},
+    {name: "Holy Trinity Church", coords: [0.064541, 51.448372],
+        desc: "A church on Westmount Road.",
+        address: "Westmount Road, Eltham, SE9 1XX",
+        website: "http://www.ht-eltham.org.uk/"},
 ];

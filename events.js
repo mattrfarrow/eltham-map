@@ -15,7 +15,16 @@ const events = [
         title: "Folk Mob Open-Mic Night", shortDesc: "An open-mic night with the Folk Mob - come and play or just watch and listen.",
         url: "https://sites.google.com/site/folkmobonline/folkmob-calendar-1?authuser=0", price: "Free entry"},
 
+    // https://www.elthamenviros.eco/
+    // http://www.elthamchoral.org.uk/events.html
 
+    {"id": "epmc-01", poi: "Holy Trinity Church", when: new Date(2019, dec, 14), startTime: {h:19}, title: "The Christmas Concert",
+            shortDesc: "By the Eltham Choral Society", price: "Free entry", url: "http://www.elthamchoral.org.uk/events.html", bookAhead: true,
+            price: "In advance £10, At the door: £12"},
+    {"id": "epmc-01", poi: "Holy Trinity Church", when: new Date(2019, dec, 15), startTime: {h:15}, endTime: {h:17},
+            title: "Messy Church",
+            shortDesc: "Church with a difference", price: "Free entry", url: "https://twitter.com/knowlesjune5/status/1201219984640430081?ref_src=twsrc%5Etfw%7Ctwcamp%5Eembeddedtimeline%7Ctwterm%5Eprofile%3Ahteltham%7Ctwcon%5Etimelinechrome&ref_url=http%3A%2F%2Fwww.ht-eltham.org.uk%2Fevents-2%2F", bookAhead: true,
+            price: "Donations accepted"},
     {"id": "asc-02", poi: "All Saints Church", when: new Date(2019, nov, 2), startTime: {h:10}, endTime: {h:14}, title: "NSPCC Craft Fair",
         shortDesc: "Variety of craft stalls, plus NSPCC stalls, including Homemade Cakes & raffle.  Light lunches available.", price: "Free entry"},
 
@@ -55,6 +64,9 @@ const events = [
     {"id": "bht-07", poi: "Bob Hope Theatre", when: new Date(2019, dec, 15), startTime: {h:19, m:30},
         title: "Shane Hampsheir's Christmas Swingalong", shortDesc: "Shane and his band will take you through some of the most iconic yuletide tunes ever written AND you can join in!",
          url: "http://www.bobhopetheatre.co.uk/shane.html", price: "Tickets £14", bookAhead: true},
+    {"id": "bht-08", poi: "Bob Hope Theatre", when: new Date(2019, dec, 16), startTime: {h:19, m:30},
+        title: "Quiz Night", shortDesc: "A quiz night in the theatre bar with some drinks and competitive quiz mastery. Teams of up to 6 people. Email quiz@bobhopetheatre.co.uk to book.",
+         url: "http://www.bobhopetheatre.co.uk/quiznights.html", price: "Admission £5", bookAhead: true},
 
     {"id": "rb-29", poi: "The Rusty Bucket Pub", when: new Date(2019, dec, 1), startTime: {h: 18},
         title: "Live music: Rockustic", price: "Free entry", shortDesc: "Late afternoon/early evening"},
@@ -64,6 +76,8 @@ const events = [
         title: "Live music: The Peas Xmas Special (not too be missed)", price: "Free entry"},
     {"id": "rb-32", poi: "The Rusty Bucket Pub", when: new Date(2019, dec, 29), startTime: {h: 18},
         title: "Live music: Daisy (2018 open mic competition winner)", price: "Free entry"},
+    {"id": "rb-32a", poi: "The Rusty Bucket Pub", when: new Date(2019, dec, 31), startTime: {h: 16},
+        title: "NYE Party", price: "Free entry"},
     {"id": "rb-33", poi: "The Rusty Bucket Pub", when: new Date(2020, jan, 5), startTime: {h: 18},
         title: "Live music: Harvey Montague", price: "Free entry"},
     {"id": "rb-34", poi: "The Rusty Bucket Pub", when: new Date(2020, jan, 12), startTime: {h: 18},
@@ -120,11 +134,22 @@ const events = [
     {"id": "cag-01", poi: "Capital Art Gallery", when: new Date(2019, jul, 6), startTime: {h:12},
         title: "Summer Open Art Exhibition", shortDesc: "A 2-day event showcasing local and international artists.  Hundreds of pieces of art available to purchase.", url: "https://www.capitalartgallery.co.uk/upcoming-events"},
 
-    {"id": "tlp-01", poi: "The Long Pond", when: new Date(2019, oct, 21), startTime: {h:19},
-        title: "Wine Tasting", shortDesc: "A 2-day event showcasing local and international artists.  Hundreds of pieces of art available to purchase.", url: "https://www.capitalartgallery.co.uk/upcoming-events", price: "£10. Book in person in advance. Limited spaces."},
+    {"id": "tlp-02", poi: "The Long Pond", when: new Date(2019, dec, 5), startTime: {h:18},
+        title: "Lights Up!",
+        shortDesc: "The Westmount Road lights outside the Long Pond will be switched on at 6pm, following carol singing by the Three Churches Choir.  With mulled wine, burgers and a visit from Santa", price: "Free."},
+    {"id": "tlp-03", poi: "The Long Pond", when: new Date(2019, dec, 14), startTime: {h:18, m: 30},
+        title: "The Long Pond's 5th Birthday celebration",
+        shortDesc: "With music from the Pub Rock Supergroup at 8:30.", price: "Free."},
+    {"id": "tlp-04", poi: "The Long Pond", when: new Date(2019, dec, 18),
+        title: "Live music: Celtic Hearts",
+        shortDesc: "With music from the Pub Rock Supergroup at 8:30.", price: "Free."},
 
-    {"id": "eurc-01", poi: "Eltham United Reformed Church", when: new Date(2019, oct, 26), startTime: {h:10, m:30}, endTime: {h:16, m:30},
-        title: "Meccano Show 2019", shortDesc: "London’s most popular Meccano Show returns to Eltham for its 41st year!",
-        url: "https://selmec.org.uk/events/meccano-show-2019", price: "£5.  Accompanied children free."},
+    {"id": "eurc-03", poi: "Eltham United Reformed Church", when: new Date(2019, dec, 12), startTime: {h:18, m:30},
+        title: "Christmas Concert", shortDesc: "With music for all ages, refreshments served.",
+        price: "Free."},
+
+    {"id": "egh-01", poi: "Eltham Grill House", when: new Date(2020, jan, 13), startTime: {h:10, m:30}, endTime: {h:16, m:30},
+        title: "Gala Evening in aid of Cancer Research UK", shortDesc: "Two friezes from the pre-refurbished restaurant will be auctioned for charity!  Tickets available online or from 020 8859 0807.",
+        price: "Tickets £17.50", bookAhead: true}
 
 ];
