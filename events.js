@@ -25,8 +25,9 @@ const events = [
             title: "Messy Church",
             shortDesc: "Church with a difference", price: "Free entry", url: "https://twitter.com/knowlesjune5/status/1201219984640430081?ref_src=twsrc%5Etfw%7Ctwcamp%5Eembeddedtimeline%7Ctwterm%5Eprofile%3Ahteltham%7Ctwcon%5Etimelinechrome&ref_url=http%3A%2F%2Fwww.ht-eltham.org.uk%2Fevents-2%2F", bookAhead: true,
             price: "Donations accepted"},
-    {"id": "asc-02", poi: "All Saints Church", when: new Date(2019, nov, 2), startTime: {h:10}, endTime: {h:14}, title: "NSPCC Craft Fair",
-        shortDesc: "Variety of craft stalls, plus NSPCC stalls, including Homemade Cakes & raffle.  Light lunches available.", price: "Free entry"},
+
+    {"id": "asc-02", poi: "All Saints Church", when: new Date(2019, dec, 7), startTime: {h:10}, endTime: {h:12}, title: "NSPCC Mince Pie Morning",
+         price: "Free entry"},
 
     {"id": "sc-08a", poi: "Severndroog Castle", when: new Date(2019, dec,  14), startTime: {h:11}, endTime: {h:13, m:15},
             title: "Christmas at the Castle.", url: "https://www.severndroogcastle.org.uk/ChristmasAtTheCastle.html",
