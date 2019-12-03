@@ -45,8 +45,16 @@ const events = [
         title: "New Years Eve - Dinner & Party Ticket", shortDesc: "Includes 3-course dinner, DJ, Casino Tables, LED Dancefloor, Photobooth & Midnight Snack.",
         url: "https://www.robovoucher.com/buy/view/txzdaw1fzu/", price: "£68.50", bookAhead: true},
 
-    {"id": "sh-08", poi: "Shrewsbury House", when: new Date(2019, jul, 20), startTime: {h:12},
-        title: "Summer Fete and Craft Fair", shortDesc: "Lots to see and do for the whole family plus a wide range of stall holders selling all sorts of handmade goods.", url: "https://shrewsburyhouse.org/events/events/summer-fete-and-craft-fair/", price: "Free entry"},
+    {"id": "sh-09", poi: "Shrewsbury House", when: new Date(2019, dec, 13), startTime: {h:17}, endTime: {h:20},
+        title: "Children's Christmas Party", shortDesc: "An evening of festive family fun. There will be games, crafts, facepainting, Derrick's disco, and of course Santa's Grotto with a gift for every child.  Tickets available from www.wegottickets.com/event/488822",
+        url: "https://shrewsburyhouse.org/events/events/childrens-christmas-party/", price: "£5 per child", bookAhead: true},
+    {"id": "sh-10", poi: "Shrewsbury House", when: new Date(2019, dec, 16), startTime: {h:10, m: 30}, endTime: {h:12, m:30},
+        title: "Carol Singing & Mince pies", shortDesc: "Our last get together Monday of the year & the group will be singing their favourite Christmas carols and enjoying a few mince pies! Come and join them and get into the festive spirit!",
+        url: "https://shrewsburyhouse.org/events/events/get-together-mondays-carol-singing-mince-pies/", price: "Free"},
+    {"id": "sh-11", poi: "Shrewsbury House", when: new Date(2019, dec, 17), startTime: {h:10, m: 30}, endTime: {h:12, m:30},
+        title: "Community Christmas Dinner", shortDesc: "A festive feast and a tipple, entertainment from the choir, a raffle and bingo. It's going to be a real Christmas Cracker!  Tickets available from www.wegottickets.com/event/488994",
+        url: "https://shrewsburyhouse.org/events/events/get-together-mondays-carol-singing-mince-pies/", price: "£15 per person"},
+
 
     {"id": "gmg-04", poi: "Gerald Moore Gallery", when: new Date(2019, dec, 4), startTime: {h:9, m:30}, endTime: {h:11, m:30},
         title: "Painting from Beginning to End", shortDesc: "Learn how to prime boards, stretch canvas and paint from life in this friendly class suitable for all abilities.", price: "£25 for the day.", url: "https://geraldmooregallery.org/adults-art-classes/"},
