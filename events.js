@@ -136,12 +136,17 @@ const events = [
     {"id": "wf-04", poi: "Woodlands Farm", when: new Date(2019, sep, 28), startTime: {h:10}, endTime: {h:17},
         title: "London Harvest Festival", shortDesc: "Celebrate London’s outdoor heritage at the 21st London Harvest Festival.",
         url: "https://tockify.com/woodlands.farm/detail/145/1569661200000", price: "£10/person, £6 for farm members"},
+    {"id": "wf-05", poi: "Woodlands Farm", when: new Date(2019, dec, 7), startTime: {h:10},
+        title: "Film: Stick Man", shortDesc: "Watch The Stick Man film, explore The Stick Man Activity Trail and meet Father Christmas for your present.  At 10am, 11am and 1pm.",
+        url: "https://tockify.com/woodlands.farm/detail/153/1575676800000", price: "£8/child."},
 
     {"id": "ccc-03", poi: "Christchurch Community Centre", when: new Date(2019, jul, 6), startTime: {h:10},
         title: "Eltham Producers Market", shortDesc: "Stalls offering a wide range of fresh produce from the South East.", url: "https://www.royalgreenwich.gov.uk/directory_record/2682/eltham_producers_market"},
 
     {"id": "cag-01", poi: "Capital Art Gallery", when: new Date(2019, jul, 6), startTime: {h:12},
         title: "Summer Open Art Exhibition", shortDesc: "A 2-day event showcasing local and international artists.  Hundreds of pieces of art available to purchase.", url: "https://www.capitalartgallery.co.uk/upcoming-events"},
+    {"id": "cag-02", poi: "Capital Art Gallery", dateRange: {eee: new Date(2019, dec, 7), startDate: new Date(2019, dec, 7), endDate: new Date(2019, dec, 8) }, startTime: {h:12}, endTime: {h:18},
+        title: "Christmas Open Art Exhibition", shortDesc: "Come along and see the huge variety of art on display.", url: "https://www.capitalartgallery.co.uk/upcoming-events"},
 
     {"id": "tlp-02", poi: "The Long Pond", when: new Date(2019, dec, 5), startTime: {h:18},
         title: "Lights Up!",
