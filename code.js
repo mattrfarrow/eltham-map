@@ -14,6 +14,19 @@ function show(el){
     el.style.display="block";
 }
 
+function sortAndFilterEvents(eventsIn) {
+    const now = withoutTime(new Date());
+    if(!now) {
+        throw "no withoutTime"
+    }
+    let ret = eventsIn
+        .slice()
+        .filter(attraction => attraction.when >= now )
+    ;
+    ret.sort(function(a,b){return a.when - b.when;});
+    return ret;
+}
+
 zoomMapToCoords = function(poi) {
     map.panTo(poi.coords);
     if(mobile) {
@@ -65,7 +78,8 @@ const map = new mapboxgl.Map({
 });
 
 attractions.forEach(addMarkers);
-processedEvents = processEvents(events)
+processedEvents = processEvents(events);
+sortedEvents = sortAndFilterEvents(processedEvents);
 
 document.getElementById("attractions").appendChild(generateAttractionsTable(attractions));
 document.getElementById("attractions").style.display = "none";
@@ -291,13 +305,6 @@ function generateDateRow(date) {
 function generateWhatsOnTable(events) {
     const whatsOnTable = document.createElement("table");
     whatsOnTable.id = "eventsTable";
-
-    const now = withoutTime(new Date());
-    let sortedEvents = events
-        .slice()
-        .filter(attraction => attraction.when >= now )
-    ;
-    sortedEvents.sort(function(a,b){return a.when - b.when;});
 
     var lastEventDate;
 

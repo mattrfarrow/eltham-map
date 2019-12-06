@@ -80,6 +80,18 @@ function withoutTime(date) {
     return date;
 }
 
+function isValidDate(d) {
+    if (Object.prototype.toString.call(d) === "[object Date]") {
+        if (isNaN(d.getTime())) {
+            return false
+        } else {
+            return true
+        }
+    } else {
+        return false
+    }
+}
+
 function getDateDescription(event) {
 //    console.log(event)
 //    console.log(event.dateRange)
