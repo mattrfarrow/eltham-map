@@ -1,6 +1,8 @@
+var processedEvents = processEvents(events)
+
 function getEvents() {
     const now = new Date();
-    let sortedEvents = events
+    let sortedEvents = processedEvents
         .slice()
         .filter(attraction => attraction.when >= now)
     ;
